@@ -1,0 +1,170 @@
+extName: Udemy TTS - Translate & Read Subtitles Aloud
+extDescription: Reads Udemy subtitles aloud in your language. After a quick setup, natural translation powered by generative AI is also supported.
+widget:
+  master: "Enable"
+  title: Udemy TTS
+  enable: TTS
+  volume: Volume
+  speed: Speed
+  autoSpeed: Auto speed
+  translate: Translate
+  translateNoKey: Set an API key in the extension settings to enable translation
+  cacheNone: None
+  cacheClear: Clear translation cache
+  settings: Settings
+  subtitleOverlay: Subtitles
+options:
+  title: Udemy TTS Settings
+  tabs:
+    general: General
+    language: Language
+    speech: Speech
+    translation: Translation
+    subtitle: Subtitles
+    dictionary: Dictionary
+    advanced: Advanced
+  general:
+    heading: General
+    enableAll: Enable all features
+  language:
+    heading: Language
+    target: Target language
+  speech:
+    heading: Speech
+    ttsHeading: TTS
+    provider: "Voice provider"
+    providerStandard: "Standard"
+    voicevoxHint: "To use VOICEVOX, the editor or engine must be running. Normally the server starts automatically and becomes available at http://127.0.0.1:50021. First, click \"Grant access to this host\" to allow the connection."
+    voicevoxUrl: "VOICEVOX URL"
+    enabled: Enable TTS
+    voice: Voice
+    loadVoices: Load voices
+    loading: Loading…
+    loadFailed: Failed to load voices
+    rate: Base speed
+    pitch: Pitch
+    volume: Volume
+    autoRate: Auto speed adjustment
+    autoRateHint: Speeds up playback gradually so speech catches up with the video
+    autoRateMode: Adjustment method
+    autoRateNatural: Natural
+    autoRateStrong: Strong
+    autoRateModeDesc:
+      natural: "Adjusts the speed gently with natural correction."
+      strong: "Adjusts the speed quickly with strong correction. Recommended when you want to sync with the subtitles."
+  translation:
+    heading: Translation
+    translateEnabled: Enable translation
+    personality: Translation style
+    personalityStandard: Standard
+    personalityConcise: Concise
+    personalityFriendly: Friendly
+    personalityCustom: "Custom"
+    personalityDesc:
+      standard: "Translates faithfully to the source into natural text."
+      concise: "Removes redundant expressions and translates into short, concise text. Recommended for TTS."
+      friendly: "Translates into casual, friendly, and soft text."
+      custom: "Translates according to your own instructions below."
+    customPersonality: "Custom instructions"
+    customPersonalityPlaceholder: "Example: Translate into formal, polite language."
+  subtitle:
+    enabled: Enable subtitles
+    heading: Subtitles
+    fontSize: Font size
+    textColor: Text color
+    backgroundColor: Background color
+  provider:
+    labelCompatible: OpenAI-compatible
+    labelDevice: Browser built-in
+    deviceHint: "Uses the browser's built-in on-device translation. Free and offline, though not available in every browser. The language model downloads on first use, and translations tend to be more literal."
+    heading: Translation provider
+    provider: Provider
+    apiKey: API key
+    model: Model
+    modelPlaceholder: Model name (e.g. llama-3.3-70b)
+    sort: "Provider priority"
+    sortDesc:
+      none: "Do not specify how to prioritize providers."
+      price: "Prioritizes the provider with the lowest price."
+      throughput: "Prioritizes the provider with the highest throughput."
+      latency: "Prioritizes the provider with the fastest response."
+    extraBody: Extra request body (JSON)
+    extraBodyHint: Deep-merged into the API request body
+    jsonSchema: "Use structured output"
+    jsonSchemaHint: "Enable only if the endpoint supports structured output (response_format: json_schema). When off, a format instruction is appended to the prompt."
+    baseUrl: Base URL
+    baseUrlHint: "OpenAI-compatible endpoint, e.g. https://api.groq.com/openai/v1"
+    grantPermission: Grant access to this host
+    test: Test connection
+    testing: Testing…
+    testOk: Connection OK
+    errNoKey: API key is not set
+    errNoModel: Model is not set
+    show: Show
+    hide: Hide
+  cache:
+    heading: Translation cache
+    hint: Translations are cached per lecture in your browser
+    refresh: Refresh
+    clearAll: Delete all
+    confirmClearAll: Delete ALL cached translations?
+    confirmDeleteCourse: Delete all cached lectures of this course?
+    delete: Delete
+    empty: No cached translations
+    total: Total
+  dictionary:
+    heading: Pronunciations
+    hint: Replace words before speech synthesis (e.g. technical terms TTS mispronounces)
+    word: Word
+    reading: Reading
+    add: Add
+    remove: Remove
+    empty: No entries yet
+  advanced:
+    heading: Advanced
+    logLevel: Log level
+guide:
+  title: "How to use translation providers"
+  intro: "Translation uses generative AI. Pick one of the providers below, get an API key, and set it in the extension settings — it only takes a few minutes."
+  privacy: "Your API key is stored only in your browser and is sent only to the provider you selected."
+  disclaimer: "You use and pay for the provider at your own risk. We recommend setting a spend limit just in case."
+  commonStep: "Paste the copied key into the \"API key\" field in the extension settings, choose a model, and click \"Test connection\"."
+  openSettings: "Open settings"
+  optionsLink: "How to use translation providers"
+  modelsHeading: "Available models"
+  modelsHint: "The extension offers the following models as presets. Translation processes many short subtitles, so a cheap, fast model is plenty. Here is how each model compares on quality, speed, and cost."
+  keyHeading: "Getting an API key"
+  billingHeading: "Pricing and payment"
+  limitHeading: "Controlling your spend"
+  models:
+    gemini31FlashLite: "Speed: High | Accuracy: Medium | Cost: Low | Accuracy is plenty for translation. Recommended if you're not sure."
+    gemini35FlashLite: "Speed: High | Accuracy: High | Cost: Medium | The successor to the 3.1 series, with notably higher accuracy but a somewhat higher price."
+    gemma431bIt: "Speed: Low | Accuracy: Low | Cost: Free | Usable on the free tier. The pick when you mainly want to keep costs down."
+    gpt54Mini: "Speed: Medium | Accuracy: High | Cost: High | Cost is high, so it fits when you prioritize quality."
+    gpt54Nano: "Speed: Medium | Accuracy: Medium | Cost: Low | Cheaper than mini, but practical for translation."
+    deepseekV4Flash: "Speed: Medium | Accuracy: High | Cost: Low | Quite cheap, yet accuracy is high. The top pick when cost matters."
+    qwen36Flash: "Speed: High | Accuracy: Medium | Cost: Low | Inexpensive, with decent accuracy too."
+  gemini:
+    tagline: "Gemini is available, plus the free Gemma. Recommended if you're not sure which to pick."
+    step1: "Open Google AI Studio and sign in with your Google account."
+    step2: "Click \"Create API key\", name the key, choose a project (or use \"Create project\"), then click \"Create key\"."
+    step3: "Copy the API key that is shown."
+    note: "The free tier has rate limits, but it is usually enough for watching lectures."
+    billing: "No payment info is needed on the free tier. Enabling billing relaxes rate limits even for free models, but note that billing is prepaid: your API key stops working until you buy credits. To enable billing, use \"Set up billing\" on the Billing page to register your payment info, then buy credits with \"Buy credits\" (the minimum amount is shown in the UI)."
+    limit: "On the Spend page, \"Monthly spend cap\" sets a monthly usage limit. Use \"Edit spend cap\" to set the amount."
+  openai:
+    tagline: "ChatGPT models are available. You need to buy credit in advance."
+    step1: "Sign in to the OpenAI Platform and open the API keys page."
+    step2: "Click \"Create new secret key\" and give it any name."
+    step3: "Copy the key. It is shown only once, so copy it on the spot."
+    note: "This is separate from a paid ChatGPT plan."
+    billing: "You need to buy credit in advance. On the Billing page, register a payment method via \"Add payment details\", then buy credit via \"Add to credit balance\"."
+    limit: "On the Limits page, use \"Edit spend limit\" to set a monthly usage limit."
+  openrouter:
+    tagline: "Many models are available. You need to buy credits in advance."
+    step1: "Sign in to OpenRouter and open the API keys page."
+    step2: "Click \"New Key\", give it any name, and click \"Create\". The spend limit described below is also entered here."
+    step3: "Copy the key. It is shown only once, so copy it on the spot."
+    note: "Provider priority can be tuned in the extension settings."
+    billing: "You need to buy credits in advance. On the Credits page, click \"Add Credits\", enter an amount, and confirm with \"Purchase\"."
+    limit: "When creating a key, enter an amount in \"Credit limit\" and pick a period in \"Reset limit every...\" to set a usage cap per period."

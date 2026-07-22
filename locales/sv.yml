@@ -1,0 +1,170 @@
+extName: Udemy TTS - Översätt och läs upp undertexter
+extDescription: Läser upp Udemys undertexter på ditt språk. Efter konfiguration stöds även naturlig översättning med generativ AI.
+widget:
+  master: "Aktivera"
+  title: Udemy TTS
+  enable: TTS
+  volume: Volym
+  speed: Hastighet
+  autoSpeed: Autohastighet
+  translate: Översätt
+  translateNoKey: Ange en API-nyckel i tilläggets inställningar för att aktivera översättning
+  cacheNone: Ingen
+  cacheClear: Rensa översättningscache
+  settings: Inställningar
+  subtitleOverlay: Undertexter
+options:
+  title: Udemy TTS-inställningar
+  tabs:
+    general: Allmänt
+    language: Språk
+    speech: Tal
+    translation: Översättning
+    subtitle: Undertexter
+    dictionary: Ordlista
+    advanced: Avancerat
+  general:
+    heading: Allmänt
+    enableAll: Aktivera alla funktioner
+  language:
+    heading: Språk
+    target: Målspråk
+  speech:
+    heading: Tal
+    ttsHeading: TTS
+    provider: "Röstleverantör"
+    providerStandard: "Standard"
+    voicevoxHint: "För att använda VOICEVOX måste editorn eller motorn vara igång. Normalt startar servern automatiskt och blir tillgänglig på http://127.0.0.1:50021. Klicka först på \"Bevilja åtkomst till denna värd\" för att tillåta anslutningen."
+    voicevoxUrl: "VOICEVOX URL"
+    enabled: Aktivera TTS
+    voice: Röst
+    loadVoices: Läs in röster
+    loading: Läser in…
+    loadFailed: Det gick inte att läsa in röster
+    rate: Bashastighet
+    pitch: Tonhöjd
+    volume: Volym
+    autoRate: Automatisk hastighetsjustering
+    autoRateHint: Snabbar gradvis upp uppspelningen så att talet hinner ikapp videon
+    autoRateMode: Justeringsmetod
+    autoRateNatural: Naturlig
+    autoRateStrong: Kraftig
+    autoRateModeDesc:
+      natural: "Justerar hastigheten mjukt med naturlig korrigering."
+      strong: "Justerar hastigheten snabbt med kraftig korrigering. Rekommenderas när du vill synkronisera med undertexterna."
+  translation:
+    heading: Översättning
+    translateEnabled: Aktivera översättning
+    personality: Översättningsstil
+    personalityStandard: Standard
+    personalityConcise: Kortfattad
+    personalityFriendly: Vänlig
+    personalityCustom: "Anpassad"
+    personalityDesc:
+      standard: "Översätter troget till originalet till naturlig text."
+      concise: "Tar bort överflödiga uttryck och översätter till kort och koncis text. Rekommenderas för uppläsning."
+      friendly: "Översätter till vardaglig, vänlig och mjuk text."
+      custom: "Översätter enligt dina egna instruktioner nedan."
+    customPersonality: "Anpassade instruktioner"
+    customPersonalityPlaceholder: "Exempel: Översätt till formellt, artigt språk."
+  subtitle:
+    enabled: Aktivera undertexter
+    heading: Undertexter
+    fontSize: Teckenstorlek
+    textColor: Textfärg
+    backgroundColor: Bakgrundsfärg
+  provider:
+    labelCompatible: OpenAI-kompatibel
+    labelDevice: Inbyggd i webbläsaren
+    deviceHint: "Använder webbläsarens inbyggda översättning på enheten. Gratis och offline, men inte tillgänglig i alla webbläsare. Språkmodellen laddas ner vid första användningen och översättningarna tenderar att bli mer ordagranna."
+    heading: Översättningsleverantör
+    provider: Leverantör
+    apiKey: API-nyckel
+    model: Modell
+    modelPlaceholder: Modellnamn (t.ex. llama-3.3-70b)
+    sort: "Leverantörsprioritet"
+    sortDesc:
+      none: "Ange ingen metod för att prioritera leverantörer."
+      price: "Prioriterar leverantören med lägst pris."
+      throughput: "Prioriterar leverantören med högst genomströmning."
+      latency: "Prioriterar leverantören med snabbast svar."
+    extraBody: Extra begärandekropp (JSON)
+    extraBodyHint: Sammanfogas djupt i API-begärans kropp
+    jsonSchema: "Använd strukturerad utdata"
+    jsonSchemaHint: "Aktivera endast om endpointen stöder strukturerad utdata (response_format: json_schema). När det är av läggs en formatinstruktion till i prompten."
+    baseUrl: Bas-URL
+    baseUrlHint: "OpenAI-kompatibel slutpunkt, t.ex. https://api.groq.com/openai/v1"
+    grantPermission: Bevilja åtkomst till denna värd
+    test: Testa anslutning
+    testing: Testar…
+    testOk: Anslutning OK
+    errNoKey: API-nyckel är inte angiven
+    errNoModel: Modell är inte angiven
+    show: Visa
+    hide: Dölj
+  cache:
+    heading: Översättningscache
+    hint: Översättningar cachas per föreläsning i din webbläsare
+    refresh: Uppdatera
+    clearAll: Ta bort alla
+    confirmClearAll: Ta bort ALLA cachade översättningar?
+    confirmDeleteCourse: Ta bort alla cachade föreläsningar för den här kursen?
+    delete: Ta bort
+    empty: Inga cachade översättningar
+    total: Totalt
+  dictionary:
+    heading: Uttal
+    hint: Ersätt ord före talsyntes (t.ex. facktermer som TTS uttalar fel)
+    word: Ord
+    reading: Uttal
+    add: Lägg till
+    remove: Ta bort
+    empty: Inga poster ännu
+  advanced:
+    heading: Avancerat
+    logLevel: Loggnivå
+guide:
+  title: "Så använder du översättningsleverantörer"
+  intro: "Översättningen använder generativ AI. Välj en av leverantörerna nedan, skaffa en API-nyckel och ange den i tilläggets inställningar — det tar bara några minuter."
+  privacy: "Din API-nyckel lagras endast i din webbläsare och skickas bara till den leverantör du valt."
+  disclaimer: "Du använder och betalar för leverantören på egen risk. Vi rekommenderar att du sätter en utgiftsgräns för säkerhets skull."
+  commonStep: "Klistra in den kopierade nyckeln i fältet \"API-nyckel\" i tilläggets inställningar, välj en modell och klicka på \"Testa anslutning\"."
+  openSettings: "Öppna inställningar"
+  optionsLink: "Så använder du översättningsleverantörer"
+  modelsHeading: "Tillgängliga modeller"
+  modelsHint: "Tillägget erbjuder följande modeller som förinställningar. Översättning bearbetar många korta undertexter, så en billig och snabb modell räcker gott. Så här står sig modellerna vad gäller kvalitet, hastighet och kostnad."
+  keyHeading: "Skaffa en API-nyckel"
+  billingHeading: "Priser och betalning"
+  limitHeading: "Kontrollera dina utgifter"
+  models:
+    gemini31FlashLite: "Hastighet: Hög | Noggrannhet: Medel | Kostnad: Låg | Noggrannheten är gott och väl nog för översättning. Rekommenderas om du är osäker."
+    gemini35FlashLite: "Hastighet: Hög | Noggrannhet: Hög | Kostnad: Medel | Efterföljaren till 3.1-serien med betydligt högre noggrannhet, men något högre kostnad."
+    gemma431bIt: "Hastighet: Låg | Noggrannhet: Låg | Kostnad: Gratis | Användbar på gratisnivån. Valet när du främst vill hålla nere kostnaderna."
+    gpt54Mini: "Hastighet: Medel | Noggrannhet: Hög | Kostnad: Hög | Kostnaden är hög, så den passar när du prioriterar kvalitet."
+    gpt54Nano: "Hastighet: Medel | Noggrannhet: Medel | Kostnad: Låg | Billigare än mini, men praktisk för översättning."
+    deepseekV4Flash: "Hastighet: Medel | Noggrannhet: Hög | Kostnad: Låg | Ganska billig, men ändå med hög noggrannhet. Det bästa valet när kostnaden spelar roll."
+    qwen36Flash: "Hastighet: Hög | Noggrannhet: Medel | Kostnad: Låg | Billig, och noggrannheten är också hyfsad."
+  gemini:
+    tagline: "Gemini är tillgänglig, plus gratis Gemma. Rekommenderas om du är osäker på vad du ska välja."
+    step1: "Öppna Google AI Studio och logga in med ditt Google-konto."
+    step2: "Klicka på \"Skapa API-nyckel\", namnge nyckeln, välj ett projekt (eller använd \"Skapa projekt\") och klicka sedan på \"Skapa nyckel\"."
+    step3: "Kopiera API-nyckeln som visas."
+    note: "Gratisnivån har hastighetsgränser, men det räcker oftast för att titta på föreläsningar."
+    billing: "På gratisnivån behövs ingen betalningsinformation. Om du aktiverar fakturering mildras hastighetsgränserna även för gratismodeller, men observera: faktureringen är förbetald och din API-nyckel slutar fungera tills du köper krediter. För att aktivera fakturering, använd \"Konfigurera fakturering\" på sidan Fakturering för att registrera din betalningsinformation och köp sedan krediter med \"Köp krediter\" (minimibeloppet visas på skärmen)."
+    limit: "På sidan Utgifter anger \"Månatlig utgiftsgräns\" en månatlig användningsgräns. Använd \"Redigera utgiftsgräns\" för att ställa in beloppet."
+  openai:
+    tagline: "ChatGPT-modeller är tillgängliga. Du måste köpa kredit i förväg."
+    step1: "Logga in på OpenAI Platform och öppna sidan API keys."
+    step2: "Klicka på \"Create new secret key\" och ge den valfritt namn."
+    step3: "Kopiera nyckeln. Den visas bara en gång, så kopiera den direkt."
+    note: "Detta är skilt från ett betalt ChatGPT-abonnemang."
+    billing: "Du måste köpa kredit i förväg. På sidan Billing registrerar du en betalningsmetod via \"Add payment details\" och köper sedan kredit via \"Add to credit balance\"."
+    limit: "På sidan Limits använder du \"Edit spend limit\" för att ställa in en månatlig användningsgräns."
+  openrouter:
+    tagline: "Många modeller är tillgängliga. Du måste köpa krediter i förväg."
+    step1: "Logga in på OpenRouter och öppna sidan API keys."
+    step2: "Klicka på \"New Key\", ge den valfritt namn och klicka på \"Create\". Utgiftsgränsen som beskrivs nedan anges också här."
+    step3: "Kopiera nyckeln. Den visas bara en gång, så kopiera den direkt."
+    note: "Leverantörsprioriteten kan finjusteras i tilläggets inställningar."
+    billing: "Du måste köpa krediter i förväg. På sidan Credits klickar du på \"Add Credits\", anger ett belopp och bekräftar med \"Purchase\"."
+    limit: "När du skapar en nyckel anger du ett belopp i \"Credit limit\" och väljer en period i \"Reset limit every...\" för att sätta en användningsgräns per period."

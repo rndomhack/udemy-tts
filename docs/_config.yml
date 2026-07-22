@@ -1,0 +1,8 @@
+title: Udemy TTS
+description: >-
+  Listen to Udemy lectures in your own language. A browser extension that
+  translates subtitles with an LLM and reads them aloud in real time.
+url: "https://rndomhack.github.io"
+baseurl: "/udemy-tts"
+markdown: kramdown
+plugins: []

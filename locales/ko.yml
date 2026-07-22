@@ -1,0 +1,170 @@
+extName: Udemy TTS - 자막 번역 & 음성 읽어주기
+extDescription: Udemy 자막을 사용자의 언어로 읽어줍니다. 설정하면 생성형 AI를 통한 자연스러운 번역도 지원합니다.
+widget:
+  master: "사용"
+  title: Udemy TTS
+  enable: 읽어주기
+  volume: 볼륨
+  speed: 속도
+  autoSpeed: 자동 속도
+  translate: 번역
+  translateNoKey: 번역을 사용하려면 확장 프로그램 설정에서 API 키를 설정하세요
+  cacheNone: 없음
+  cacheClear: 번역 캐시 삭제
+  settings: 설정
+  subtitleOverlay: 자막
+options:
+  title: Udemy TTS 설정
+  tabs:
+    general: 일반
+    language: 언어
+    speech: 음성
+    translation: 번역
+    subtitle: 자막
+    dictionary: 사전
+    advanced: 고급
+  general:
+    heading: 일반
+    enableAll: 모든 기능 사용
+  language:
+    heading: 언어
+    target: 대상 언어
+  speech:
+    heading: 음성
+    ttsHeading: 읽어주기
+    provider: "음성 제공자"
+    providerStandard: "표준"
+    voicevoxHint: "VOICEVOX를 사용하려면 에디터 또는 엔진이 실행 중이어야 합니다. 보통 서버가 자동으로 시작되어 http://127.0.0.1:50021 에서 접근할 수 있게 됩니다. 먼저 \"이 호스트에 대한 접근 허용\"을 클릭해 통신을 허용하세요."
+    voicevoxUrl: "VOICEVOX URL"
+    enabled: 읽어주기 사용
+    voice: 음성
+    loadVoices: 음성 목록 불러오기
+    loading: 불러오는 중…
+    loadFailed: 음성 목록을 불러오지 못했습니다
+    rate: 기준 속도
+    pitch: 피치
+    volume: 볼륨
+    autoRate: 자동 속도 조절
+    autoRateHint: 음성이 영상을 따라잡도록 재생 속도를 완만하게 조절합니다
+    autoRateMode: 조정 방식
+    autoRateNatural: 자연스럽게
+    autoRateStrong: 강력하게
+    autoRateModeDesc:
+      natural: "자연스러운 보정으로 속도를 완만하게 조정합니다."
+      strong: "강력한 보정으로 속도를 빠르게 조정합니다. 자막과 동기화하려는 경우에 권장합니다."
+  translation:
+    heading: 번역
+    translateEnabled: 번역 사용
+    personality: 번역 스타일
+    personalityStandard: 표준
+    personalityConcise: 간결
+    personalityFriendly: 친근함
+    personalityCustom: "사용자 지정"
+    personalityDesc:
+      standard: "원문에 충실하게 자연스러운 문장으로 번역합니다."
+      concise: "장황한 표현을 없애고 짧고 간결한 문장으로 번역합니다. 읽어주기에 권장합니다."
+      friendly: "구어적이고 친근하며 부드러운 문장으로 번역합니다."
+      custom: "아래에 입력한 지시에 따라 번역합니다."
+    customPersonality: "사용자 지정 지시"
+    customPersonalityPlaceholder: "예: 격식 있고 정중한 문체로 번역하세요."
+  subtitle:
+    enabled: 자막 사용
+    heading: 자막
+    fontSize: 글자 크기
+    textColor: 글자 색상
+    backgroundColor: 배경 색상
+  provider:
+    labelCompatible: OpenAI 호환
+    labelDevice: 브라우저 내장
+    deviceHint: "브라우저에 내장된 온디바이스 번역을 사용합니다. 무료이며 오프라인에서 작동하지만 모든 브라우저에서 지원되지는 않습니다. 언어 모델은 처음 사용할 때 다운로드되며, 번역은 다소 직역에 가깝습니다."
+    heading: 번역 제공자
+    provider: 제공자
+    apiKey: API 키
+    model: 모델
+    modelPlaceholder: 모델 이름 (예 llama-3.3-70b)
+    sort: "제공자 우선순위"
+    sortDesc:
+      none: "제공자 우선순위 지정 방법을 설정하지 않습니다."
+      price: "가격이 가장 저렴한 제공자를 우선합니다."
+      throughput: "처리 속도가 가장 높은 제공자를 우선합니다."
+      latency: "응답이 가장 빠른 제공자를 우선합니다."
+    extraBody: 추가 요청 본문 (JSON)
+    extraBodyHint: API 요청 본문에 딥 머지됩니다
+    jsonSchema: "구조화된 출력 사용"
+    jsonSchemaHint: "엔드포인트가 구조화된 출력 (response_format: json_schema)을 지원하는 경우에만 켜세요. 끄면 프롬프트에 형식 지시가 추가됩니다."
+    baseUrl: Base URL
+    baseUrlHint: "OpenAI 호환 엔드포인트, 예 https://api.groq.com/openai/v1"
+    grantPermission: 이 호스트에 대한 접근 허용
+    test: 연결 테스트
+    testing: 테스트 중…
+    testOk: 연결 성공
+    errNoKey: API 키가 설정되지 않았습니다
+    errNoModel: 모델이 설정되지 않았습니다
+    show: 표시
+    hide: 숨기기
+  cache:
+    heading: 번역 캐시
+    hint: 번역은 강의별로 브라우저에 캐시됩니다
+    refresh: 새로고침
+    clearAll: 모두 삭제
+    confirmClearAll: 모든 번역 캐시를 삭제하시겠습니까?
+    confirmDeleteCourse: 이 코스의 모든 강의 캐시를 삭제하시겠습니까?
+    delete: 삭제
+    empty: 캐시가 없습니다
+    total: 합계
+  dictionary:
+    heading: 발음 대체
+    hint: 음성 합성 전에 단어를 치환합니다 (읽어주기가 잘못 읽는 전문 용어 등)
+    word: 단어
+    reading: 발음
+    add: 추가
+    remove: 삭제
+    empty: 항목이 없습니다
+  advanced:
+    heading: 고급
+    logLevel: 로그 레벨
+guide:
+  title: "번역 제공자 사용 방법"
+  intro: "번역에는 생성형 AI를 사용합니다. 아래 제공자 중 하나를 선택해 API 키를 발급받고 확장 프로그램 설정에 등록하세요. 몇 분이면 완료됩니다."
+  privacy: "API 키는 사용자의 브라우저에만 저장되며 선택한 제공자에게만 전송됩니다."
+  disclaimer: "제공자의 이용과 결제는 본인 책임입니다. 만일을 대비해 지출 한도 설정을 권장합니다."
+  commonStep: "복사한 키를 확장 프로그램 설정의 \"API 키\" 입력란에 붙여넣고 모델을 선택한 뒤 \"연결 테스트\"를 클릭하세요."
+  openSettings: "설정 열기"
+  optionsLink: "번역 제공자 사용 방법"
+  modelsHeading: "사용 가능한 모델"
+  modelsHint: "확장 프로그램은 다음 모델을 프리셋으로 제공합니다. 번역은 짧은 자막을 대량으로 처리하므로 저렴하고 빠른 모델이면 충분합니다. 각 모델의 품질, 속도, 비용 비교는 다음과 같습니다."
+  keyHeading: "API 키 발급"
+  billingHeading: "요금 및 결제"
+  limitHeading: "지출 관리"
+  models:
+    gemini31FlashLite: "속도: 높음 | 정확도: 중간 | 비용: 낮음 | 정확도는 번역에 충분합니다. 어떤 것을 고를지 모르겠다면 추천합니다."
+    gemini35FlashLite: "속도: 높음 | 정확도: 높음 | 비용: 중간 | 3.1 시리즈의 후속 모델로 정확도가 크게 향상되었지만, 비용은 다소 높습니다."
+    gemma431bIt: "속도: 낮음 | 정확도: 낮음 | 비용: 무료 | 무료 등급에서 사용할 수 있습니다. 주로 비용을 낮추고 싶을 때 선택합니다."
+    gpt54Mini: "속도: 중간 | 정확도: 높음 | 비용: 높음 | 비용이 높은 편이라 품질을 우선한다면 적합합니다."
+    gpt54Nano: "속도: 중간 | 정확도: 중간 | 비용: 낮음 | mini보다 저렴하지만 번역에는 실용적입니다."
+    deepseekV4Flash: "속도: 중간 | 정확도: 높음 | 비용: 낮음 | 꽤 저렴하면서도 정확도가 높습니다. 비용이 중요할 때 최고의 선택입니다."
+    qwen36Flash: "속도: 높음 | 정확도: 중간 | 비용: 낮음 | 저렴하고 정확도도 괜찮습니다."
+  gemini:
+    tagline: "Gemini를 사용할 수 있으며 무료인 Gemma도 있습니다. 어떤 것을 고를지 모르겠다면 추천합니다."
+    step1: "Google AI Studio를 열고 Google 계정으로 로그인하세요."
+    step2: "\"API 키 만들기\"를 클릭하고 키 이름을 지정한 뒤 프로젝트를 선택하고(없으면 \"프로젝트 만들기\" 사용), \"키 만들기\"를 클릭하세요."
+    step3: "표시된 API 키를 복사하세요."
+    note: "무료 등급에는 사용량 제한이 있지만 강의 시청에는 대체로 충분합니다."
+    billing: "무료 등급에서는 결제 정보가 필요 없습니다. 결제를 사용 설정하면 무료 모델에서도 사용량 제한이 완화되지만, 선불제이므로 크레딧을 구매할 때까지 API 키를 사용할 수 없게 되는 점에 유의하세요. 결제를 사용 설정하려면 결제 페이지에서 \"결제 설정\"으로 결제 정보를 등록한 뒤 \"크레딧 구매\"로 크레딧을 구매하세요 (최소 금액은 화면에 표시됩니다)."
+    limit: "지출 페이지에서 \"월별 지출 한도\"로 월간 사용량 한도를 설정합니다. \"지출 한도 수정\"으로 금액을 지정하세요."
+  openai:
+    tagline: "ChatGPT 모델을 사용할 수 있습니다. 미리 크레딧을 구매해야 합니다."
+    step1: "OpenAI Platform에 로그인하고 API keys 페이지를 여세요."
+    step2: "\"Create new secret key\"를 클릭하고 아무 이름이나 지정하세요."
+    step3: "키를 복사하세요. 한 번만 표시되므로 바로 복사해야 합니다."
+    note: "유료 ChatGPT 요금제와는 별개입니다."
+    billing: "미리 크레딧을 구매해야 합니다. Billing 페이지에서 \"Add payment details\"로 결제 수단을 등록한 뒤 \"Add to credit balance\"로 크레딧을 구매하세요."
+    limit: "Limits 페이지에서 \"Edit spend limit\"으로 월간 사용량 한도를 설정하세요."
+  openrouter:
+    tagline: "다양한 모델을 사용할 수 있습니다. 미리 크레딧을 구매해야 합니다."
+    step1: "OpenRouter에 로그인하고 API keys 페이지를 여세요."
+    step2: "\"New Key\"를 클릭하고 아무 이름이나 지정한 뒤 \"Create\"를 클릭하세요. 아래에서 설명하는 지출 한도도 여기서 입력합니다."
+    step3: "키를 복사하세요. 한 번만 표시되므로 바로 복사해야 합니다."
+    note: "제공자 우선순위는 확장 프로그램 설정에서 조정할 수 있습니다."
+    billing: "미리 크레딧을 구매해야 합니다. Credits 페이지에서 \"Add Credits\"를 클릭하고 금액을 입력한 뒤 \"Purchase\"로 확정하세요."
+    limit: "키를 생성할 때 \"Credit limit\"에 금액을 입력하고 \"Reset limit every...\"에서 주기를 선택하면 주기별 사용량 한도를 설정할 수 있습니다."

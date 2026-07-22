@@ -1,0 +1,170 @@
+extName: Udemy TTS - 字幕の翻訳 & 読み上げ
+extDescription: Udemyの字幕をあなたの言語で読み上げます。設定すれば、生成AIによる自然な翻訳にも対応。
+widget:
+  master: 有効
+  title: Udemy TTS
+  enable: 読み上げ
+  volume: 音量
+  speed: 速度
+  autoSpeed: 自動速度
+  translate: 翻訳
+  translateNoKey: 翻訳を有効にするには拡張機能の設定で API キーを設定してください
+  cacheNone: なし
+  cacheClear: 翻訳キャッシュ削除
+  settings: 設定
+  subtitleOverlay: 字幕
+options:
+  title: Udemy TTS 設定
+  tabs:
+    general: 全般
+    language: 言語
+    speech: 音声
+    translation: 翻訳
+    subtitle: 字幕
+    dictionary: 辞書
+    advanced: 詳細
+  general:
+    heading: 全般
+    enableAll: すべての機能を有効にする
+  language:
+    heading: 言語
+    target: 翻訳先言語
+  speech:
+    heading: 音声
+    ttsHeading: 読み上げ
+    provider: "音声プロバイダ"
+    providerStandard: "標準"
+    voicevoxHint: "VOICEVOX を利用するには、エディターまたはエンジンを起動しておく必要があります。通常は自動的にサーバが立ち上がり、http://127.0.0.1:50021 でアクセスできるようになります。まずは「このホストへのアクセスを許可」をクリックして通信を許可してください。"
+    voicevoxUrl: "VOICEVOX URL"
+    enabled: 読み上げを有効にする
+    voice: 音声
+    loadVoices: 音声一覧を読込
+    loading: 読込中…
+    loadFailed: 音声一覧の取得に失敗しました
+    rate: 基準速度
+    pitch: ピッチ
+    volume: 音量
+    autoRate: 自動速度調整
+    autoRateHint: 動画に追いつくよう再生速度を緩やかに調整します
+    autoRateMode: 調整方法
+    autoRateNatural: 自然
+    autoRateStrong: 強力
+    autoRateModeDesc:
+      natural: "自然な補正により、緩やかに速度を調整します。"
+      strong: "強力な補正により、素早く速度を調整します。字幕と同期させたい場合におすすめです。"
+  translation:
+    heading: 翻訳
+    translateEnabled: 翻訳を有効にする
+    personality: 翻訳スタイル
+    personalityStandard: 標準
+    personalityConcise: 簡潔
+    personalityFriendly: フレンドリー
+    personalityCustom: "カスタム"
+    personalityDesc:
+      standard: "原文に忠実で、自然な文章に翻訳します。"
+      concise: "冗長な表現を省き、短く簡潔な文章に翻訳します。読み上げの場合におすすめです。"
+      friendly: "口語的で親しみやすい、柔らかな文章に翻訳します。"
+      custom: "下の欄に入力した指示に従って翻訳します。"
+    customPersonality: "カスタム指示"
+    customPersonalityPlaceholder: "例: 丁寧なですます調で翻訳してください。"
+  subtitle:
+    enabled: 字幕を有効にする
+    heading: 字幕
+    fontSize: 文字サイズ
+    textColor: 文字色
+    backgroundColor: 背景色
+  provider:
+    labelCompatible: OpenAI 互換
+    labelDevice: ブラウザ組み込み
+    deviceHint: "ブラウザ組み込みのオンデバイス翻訳を使います。無料・オフライン対応で、ブラウザによっては使用できません。言語モデルは初回利用時にダウンロードされ、翻訳は直訳寄りになります。"
+    heading: 翻訳プロバイダ
+    provider: プロバイダ
+    apiKey: API キー
+    model: モデル
+    modelPlaceholder: モデル名 (例 llama-3.3-70b)
+    sort: "プロバイダの優先順位"
+    sortDesc:
+      none: "プロバイダの優先順位の方法を指定しません。"
+      price: "価格が最も安いプロバイダを優先します。"
+      throughput: "処理速度が最も高いプロバイダを優先します。"
+      latency: "応答が最も速いプロバイダを優先します。"
+    extraBody: 追加ボディ (JSON)
+    extraBodyHint: API リクエストボディに深いマージで合成されます
+    jsonSchema: "構造化出力を使う"
+    jsonSchemaHint: "エンドポイントが構造化出力 (response_format: json_schema) に対応している場合のみ有効にしてください。オフの場合はプロンプトに形式指示を追加します。"
+    baseUrl: Base URL
+    baseUrlHint: "OpenAI 互換エンドポイント (例 https://api.groq.com/openai/v1)"
+    grantPermission: このホストへのアクセスを許可
+    test: 接続テスト
+    testing: テスト中…
+    testOk: 接続 OK
+    errNoKey: API キーが未設定です
+    errNoModel: モデルが未設定です
+    show: 表示
+    hide: 隠す
+  cache:
+    heading: 翻訳キャッシュ
+    hint: 翻訳は講義ごとにブラウザ内にキャッシュされます
+    refresh: 更新
+    clearAll: 全て削除
+    confirmClearAll: 全ての翻訳キャッシュを削除しますか?
+    confirmDeleteCourse: このコースの全講義のキャッシュを削除しますか?
+    delete: 削除
+    empty: キャッシュはありません
+    total: 合計
+  dictionary:
+    heading: 読み替え
+    hint: 音声合成前に単語を置換します (読み上げで読み間違える専門用語など)
+    word: 単語
+    reading: 読み
+    add: 追加
+    remove: 削除
+    empty: エントリがありません
+  advanced:
+    heading: 詳細
+    logLevel: ログレベル
+guide:
+  title: "翻訳プロバイダの利用方法"
+  intro: "翻訳には生成AIを使用します。以下のプロバイダから1つ選んでAPIキーを取得し、拡張機能の設定に登録してください。数分で完了します。"
+  privacy: "APIキーはブラウザ内にのみ保存され、選択したプロバイダ以外には送信されません。"
+  disclaimer: "プロバイダの利用および課金は自己責任です。万が一に備えて、利用額の制限の設定をおすすめします。"
+  commonStep: "コピーしたキーを拡張機能設定の「API キー」欄に貼り付け、モデルを選んで「接続テスト」をクリックします。"
+  openSettings: "設定を開く"
+  optionsLink: "翻訳プロバイダの利用方法"
+  modelsHeading: "使用可能なモデル"
+  modelsHint: "拡張機能では以下のモデルをプリセットから選択できます。翻訳は短い字幕を大量に処理するため、安く高速なモデルで十分です。各モデルの精度・速度・料金の傾向は次のとおりです。"
+  keyHeading: "APIキーの取得"
+  billingHeading: "料金と支払い"
+  limitHeading: "利用額の制限"
+  models:
+    gemini31FlashLite: "速度: 高 | 精度: 中 | 料金: 低 | 精度は翻訳には十分。迷ったらこれがおすすめです。"
+    gemini35FlashLite: "速度: 高 | 精度: 高 | 料金: 中 | 3.1 系の後継で、精度が大きく向上しています。ただし料金はやや高めです。"
+    gemma431bIt: "速度: 低 | 精度: 低 | 料金: 無 | 無料枠で使えます。とにかく費用を抑えたい場合の選択肢です。"
+    gpt54Mini: "速度: 中 | 精度: 高 | 料金: 高 | 料金は高めなので、品質を重視する場合に向きます。"
+    gpt54Nano: "速度: 中 | 精度: 中 | 料金: 低 | miniより安いですが、翻訳には実用的です。"
+    deepseekV4Flash: "速度: 中 | 精度: 高 | 料金: 低 | かなり安めですが、精度は高いです。コスト重視なら一番のおすすめです。"
+    qwen36Flash: "速度: 高 | 精度: 中 | 料金: 低 | 安価で、精度もそれなりです。"
+  gemini:
+    tagline: "Geminiが使用でき、無料のGemmaもあります。迷ったらこれがおすすめです。"
+    step1: "Google AI Studio を開き、Google アカウントでサインインします。"
+    step2: "「API キーを作成」をクリックし、キー名を設定してプロジェクトを選択し (無い場合は「プロジェクトを作成」)、「キーを作成」をクリックします。"
+    step3: "表示された API キーをコピーします。"
+    note: "無料枠にはレート制限がありますが、講義の視聴には通常十分です。"
+    billing: "無料枠なら支払い情報の登録は不要です。課金を有効にすると無料のモデルでもレート制限が緩和されますが、先払い制のため、クレジットを購入するまで API キーが使えなくなる点に注意してください。課金する場合は「課金」ページの「お支払情報を設定」から支払い情報を登録し、続けて「クレジットを購入」で必要額 (最低額は画面に表示されます) を購入します。"
+    limit: "「利用額」ページの「1 か月の費用の上限」で月間の利用上限を設定できます。「費用の上限を編集」で金額を指定します。"
+  openai:
+    tagline: "ChatGPTが使用できます。事前にクレジットの購入が必要です。"
+    step1: "OpenAI Platform にサインインし、API keys ページを開きます。"
+    step2: "「Create new secret key」をクリックし、任意の名前を付けます。"
+    step3: "キーをコピーします。表示は一度きりなので、その場でコピーしてください。"
+    note: "ChatGPT の有料プランとは別契約です。"
+    billing: "事前にクレジットの購入が必要です。Billing ページで「Add payment details」から支払い方法を登録し、「Add to credit balance」でクレジットを購入します。"
+    limit: "Limits ページの「Edit spend limit」で月間利用上限を設定できます。"
+  openrouter:
+    tagline: "多数のモデルを利用可能。事前にクレジットの購入が必要です。"
+    step1: "OpenRouter にサインインし、API keys ページを開きます。"
+    step2: "「New Key」をクリックし、任意の名前を付けて「Create」をクリックします。下記の利用額の制限もここで入力します。"
+    step3: "キーをコピーします。表示は一度きりなので、その場でコピーしてください。"
+    note: "プロバイダの優先順位は拡張機能の設定で調整できます。"
+    billing: "事前にクレジットの購入が必要です。Credits ページの「Add Credits」から金額を指定して「Purchase」で購入します。"
+    limit: "キー作成時の「Credit limit」欄に金額を入力し、「Reset limit every...」で周期を選ぶと、期間ごとの利用上限を設定できます。"

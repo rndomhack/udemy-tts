@@ -1,0 +1,170 @@
+extName: Udemy TTS - Feliratok fordítása és felolvasása
+extDescription: Felolvassa a Udemy feliratait az Ön nyelvén. Beállítás után generatív MI-vel készült természetes fordítás is támogatott.
+widget:
+  master: "Engedélyezés"
+  title: Udemy TTS
+  enable: TTS
+  volume: Hangerő
+  speed: Sebesség
+  autoSpeed: Automatikus sebesség
+  translate: Fordítás
+  translateNoKey: A fordítás engedélyezéséhez adjon meg egy API-kulcsot a bővítmény beállításaiban
+  cacheNone: Nincs
+  cacheClear: Fordítási gyorsítótár törlése
+  settings: Beállítások
+  subtitleOverlay: Feliratok
+options:
+  title: Udemy TTS beállítások
+  tabs:
+    general: Általános
+    language: Nyelv
+    speech: Beszéd
+    translation: Fordítás
+    subtitle: Feliratok
+    dictionary: Szótár
+    advanced: Speciális
+  general:
+    heading: Általános
+    enableAll: Összes funkció engedélyezése
+  language:
+    heading: Nyelv
+    target: Célnyelv
+  speech:
+    heading: Beszéd
+    ttsHeading: TTS
+    provider: "Hangszolgáltató"
+    providerStandard: "Normál"
+    voicevoxHint: "A VOICEVOX használatához az editornak vagy az engine-nek futnia kell. A szerver általában automatikusan elindul, és a http://127.0.0.1:50021 címen érhető el. Először kattintson a(z) „Hozzáférés engedélyezése ehhez a gazdagéphez” gombra a kapcsolat engedélyezéséhez."
+    voicevoxUrl: "VOICEVOX URL"
+    enabled: TTS engedélyezése
+    voice: Hang
+    loadVoices: Hangok betöltése
+    loading: Betöltés…
+    loadFailed: Nem sikerült betölteni a hangokat
+    rate: Alapsebesség
+    pitch: Hangmagasság
+    volume: Hangerő
+    autoRate: Automatikus sebességbeállítás
+    autoRateHint: Fokozatosan gyorsítja a lejátszást, hogy a beszéd utolérje a videót
+    autoRateMode: Beállítási mód
+    autoRateNatural: Természetes
+    autoRateStrong: Erős
+    autoRateModeDesc:
+      natural: "Finoman állítja a sebességet természetes korrekcióval."
+      strong: "Gyorsan állítja a sebességet erős korrekcióval. Ajánlott, ha szinkronizálni szeretne a feliratokkal."
+  translation:
+    heading: Fordítás
+    translateEnabled: Fordítás engedélyezése
+    personality: Fordítási stílus
+    personalityStandard: Normál
+    personalityConcise: Tömör
+    personalityFriendly: Barátságos
+    personalityCustom: "Egyéni"
+    personalityDesc:
+      standard: "Hűen az eredetihez, természetes szöveggé fordít."
+      concise: "Eltávolítja a felesleges kifejezéseket, és rövid, tömör szöveggé fordít. Felolvasáshoz ajánlott."
+      friendly: "Kötetlen, barátságos és lágy szöveggé fordít."
+      custom: "Az alábbi saját utasításai szerint fordít."
+    customPersonality: "Egyéni utasítások"
+    customPersonalityPlaceholder: "Példa: Fordíts hivatalos, udvarias nyelvezettel."
+  subtitle:
+    enabled: Feliratok engedélyezése
+    heading: Feliratok
+    fontSize: Betűméret
+    textColor: Szövegszín
+    backgroundColor: Háttérszín
+  provider:
+    labelCompatible: OpenAI-kompatibilis
+    labelDevice: Böngészőbe épített
+    deviceHint: "A böngészőbe épített, eszközön futó fordítást használja. Ingyenes és offline, de nem minden böngészőben érhető el. A nyelvi modell az első használatkor töltődik le, és a fordítások általában szó szerintibbek."
+    heading: Fordítási szolgáltató
+    provider: Szolgáltató
+    apiKey: API-kulcs
+    model: Modell
+    modelPlaceholder: Modell neve (pl. llama-3.3-70b)
+    sort: "Szolgáltató prioritása"
+    sortDesc:
+      none: "Ne adjon meg módszert a szolgáltatók rangsorolására."
+      price: "A legalacsonyabb árú szolgáltatót részesíti előnyben."
+      throughput: "A legnagyobb átviteli sebességű szolgáltatót részesíti előnyben."
+      latency: "A leggyorsabb válaszú szolgáltatót részesíti előnyben."
+    extraBody: További kéréstörzs (JSON)
+    extraBodyHint: Mélyen összeolvasztva az API-kérés törzsébe
+    jsonSchema: "Strukturált kimenet használata"
+    jsonSchemaHint: "Csak akkor kapcsolja be, ha a végpont támogatja a strukturált kimenetet (response_format: json_schema). Kikapcsolva formátumutasítás kerül a prompthoz."
+    baseUrl: Alap-URL
+    baseUrlHint: "OpenAI-kompatibilis végpont, pl. https://api.groq.com/openai/v1"
+    grantPermission: Hozzáférés engedélyezése ehhez a gazdagéphez
+    test: Kapcsolat tesztelése
+    testing: Tesztelés…
+    testOk: Kapcsolat OK
+    errNoKey: Az API-kulcs nincs beállítva
+    errNoModel: A modell nincs beállítva
+    show: Megjelenítés
+    hide: Elrejtés
+  cache:
+    heading: Fordítási gyorsítótár
+    hint: A fordítások előadásonként a böngészőjében kerülnek gyorsítótárba
+    refresh: Frissítés
+    clearAll: Összes törlése
+    confirmClearAll: Töröljük az ÖSSZES gyorsítótárazott fordítást?
+    confirmDeleteCourse: Töröljük a kurzus összes gyorsítótárazott előadását?
+    delete: Törlés
+    empty: Nincsenek gyorsítótárazott fordítások
+    total: Összesen
+  dictionary:
+    heading: Kiejtések
+    hint: Szavak cseréje beszédszintézis előtt (pl. a TTS által rosszul kiejtett szakkifejezések)
+    word: Szó
+    reading: Kiejtés
+    add: Hozzáadás
+    remove: Eltávolítás
+    empty: Még nincsenek bejegyzések
+  advanced:
+    heading: Speciális
+    logLevel: Naplózási szint
+guide:
+  title: "A fordítási szolgáltatók használata"
+  intro: "A fordítás generatív MI-t használ. Válasszon egyet az alábbi szolgáltatók közül, szerezzen egy API-kulcsot, és adja meg a bővítmény beállításaiban — mindössze néhány percet vesz igénybe."
+  privacy: "Az API-kulcs csak az Ön böngészőjében tárolódik, és kizárólag a kiválasztott szolgáltatónak kerül elküldésre."
+  disclaimer: "A szolgáltató használata és a fizetés saját felelősségre történik. Minden esetre javasoljuk költési korlát beállítását."
+  commonStep: "Illessze be a kimásolt kulcsot a bővítmény beállításainak „API-kulcs” mezőjébe, válasszon egy modellt, majd kattintson a „Kapcsolat tesztelése” gombra."
+  openSettings: "Beállítások megnyitása"
+  optionsLink: "A fordítási szolgáltatók használata"
+  modelsHeading: "Elérhető modellek"
+  modelsHint: "A bővítmény az alábbi modelleket kínálja előbeállításként. A fordítás sok rövid feliratot dolgoz fel, ezért egy olcsó, gyors modell bőven elegendő. Az egyes modellek minőség, sebesség és költség szerinti összehasonlítása a következő."
+  keyHeading: "API-kulcs beszerzése"
+  billingHeading: "Árazás és fizetés"
+  limitHeading: "A költések korlátozása"
+  models:
+    gemini31FlashLite: "Sebesség: Magas | Pontosság: Közepes | Költség: Alacsony | A pontosság bőven elég a fordításhoz. Ajánlott, ha bizonytalan."
+    gemini35FlashLite: "Sebesség: Magas | Pontosság: Magas | Költség: Közepes | A 3.1-es sorozat utódja, jelentősen magasabb pontossággal, de valamivel magasabb áron."
+    gemma431bIt: "Sebesség: Alacsony | Pontosság: Alacsony | Költség: Ingyenes | Használható az ingyenes szinten. A választás, ha főként a költségeket szeretné alacsonyan tartani."
+    gpt54Mini: "Sebesség: Közepes | Pontosság: Magas | Költség: Magas | A költség magas, ezért akkor illik, ha a minőséget helyezi előtérbe."
+    gpt54Nano: "Sebesség: Közepes | Pontosság: Közepes | Költség: Alacsony | Olcsóbb, mint a mini, de a fordításhoz praktikus."
+    deepseekV4Flash: "Sebesség: Közepes | Pontosság: Magas | Költség: Alacsony | Elég olcsó, mégis magas pontosságú. A legjobb választás, ha a költség számít."
+    qwen36Flash: "Sebesség: Magas | Pontosság: Közepes | Költség: Alacsony | Olcsó, és a pontossága is tisztességes."
+  gemini:
+    tagline: "A Gemini elérhető, plusz az ingyenes Gemma. Ajánlott, ha bizonytalan a választásban."
+    step1: "Nyissa meg a Google AI Studiót, és jelentkezzen be Google-fiókjával."
+    step2: "Kattintson az „API-kulcs létrehozása” gombra, adjon nevet a kulcsnak, válasszon egy projektet (vagy használja a „Projekt létrehozása” lehetőséget), majd kattintson a „Kulcs létrehozása” gombra."
+    step3: "Másolja ki a megjelenített API-kulcsot."
+    note: "Az ingyenes szintnek vannak sebességkorlátai, de az előadások megtekintéséhez általában elegendő."
+    billing: "Az ingyenes szinten nincs szükség fizetési adatokra. A számlázás engedélyezése az ingyenes modellek esetén is enyhíti a sebességkorlátokat, de vegye figyelembe: a számlázás előre fizetett, és az API-kulcs addig nem működik, amíg nem vásárol kreditet. A számlázás engedélyezéséhez használja a „Számlázás beállítása” lehetőséget a Számlázás oldalon a fizetési adatok megadásához, majd vásároljon kreditet a „Kredit vásárlása” gombbal (a minimális összeg a képernyőn látható)."
+    limit: "A Költés oldalon a „Havi költési felső korlát” állítja be a havi használati korlátot. Az összeget a „Költési felső korlát szerkesztése” lehetőséggel adhatja meg."
+  openai:
+    tagline: "A ChatGPT-modellek elérhetők. Előre kell krediteket vásárolnia."
+    step1: "Jelentkezzen be az OpenAI Platformra, és nyissa meg az API keys oldalt."
+    step2: "Kattintson a „Create new secret key” gombra, és adjon meg tetszőleges nevet."
+    step3: "Másolja ki a kulcsot. Csak egyszer jelenik meg, ezért azonnal másolja ki."
+    note: "Ez független a fizetős ChatGPT-előfizetéstől."
+    billing: "Előre kell krediteket vásárolnia. A Billing oldalon regisztráljon egy fizetési módot az „Add payment details” gombbal, majd vásároljon kreditet az „Add to credit balance” gombbal."
+    limit: "A Limits oldalon az „Edit spend limit” gombbal állíthat be havi használati korlátot."
+  openrouter:
+    tagline: "Számos modell elérhető. Előre kell krediteket vásárolnia."
+    step1: "Jelentkezzen be az OpenRouterre, és nyissa meg az API keys oldalt."
+    step2: "Kattintson a „New Key” gombra, adjon meg tetszőleges nevet, és kattintson a „Create” gombra. Az alább leírt költési korlátot is itt kell megadni."
+    step3: "Másolja ki a kulcsot. Csak egyszer jelenik meg, ezért azonnal másolja ki."
+    note: "A szolgáltatók prioritása a bővítmény beállításaiban módosítható."
+    billing: "Előre kell krediteket vásárolnia. A Credits oldalon kattintson az „Add Credits” gombra, adjon meg egy összeget, majd erősítse meg a „Purchase” gombbal."
+    limit: "Kulcs létrehozásakor adjon meg egy összeget a „Credit limit” mezőben, és válasszon egy időszakot a „Reset limit every...” mezőben az időszakonkénti használati korlát beállításához."

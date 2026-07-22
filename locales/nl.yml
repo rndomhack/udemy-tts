@@ -1,0 +1,170 @@
+extName: Udemy TTS - Ondertitels vertalen & voorlezen
+extDescription: Leest Udemy-ondertitels voor in jouw taal. Na configuratie is ook natuurlijke vertaling met generatieve AI mogelijk.
+widget:
+  master: "Inschakelen"
+  title: Udemy TTS
+  enable: Voorlezen
+  volume: Volume
+  speed: Snelheid
+  autoSpeed: Automatische snelheid
+  translate: Vertalen
+  translateNoKey: Stel een API-sleutel in bij de extensie-instellingen om vertaling in te schakelen
+  cacheNone: Geen
+  cacheClear: Vertaalcache wissen
+  settings: Instellingen
+  subtitleOverlay: Ondertitels
+options:
+  title: Udemy TTS-instellingen
+  tabs:
+    general: Algemeen
+    language: Taal
+    speech: Spraak
+    translation: Vertaling
+    subtitle: Ondertitels
+    dictionary: Woordenboek
+    advanced: Geavanceerd
+  general:
+    heading: Algemeen
+    enableAll: Alle functies inschakelen
+  language:
+    heading: Taal
+    target: Doeltaal
+  speech:
+    heading: Spraak
+    ttsHeading: Voorlezen
+    provider: "Stemprovider"
+    providerStandard: "Standaard"
+    voicevoxHint: "Om VOICEVOX te gebruiken, moet de editor of engine actief zijn. Normaal start de server automatisch en is deze bereikbaar op http://127.0.0.1:50021. Klik eerst op \"Toegang tot deze host verlenen\" om de verbinding toe te staan."
+    voicevoxUrl: "VOICEVOX URL"
+    enabled: Voorlezen inschakelen
+    voice: Stem
+    loadVoices: Stemmen laden
+    loading: Laden…
+    loadFailed: Stemmen laden mislukt
+    rate: Basissnelheid
+    pitch: Toonhoogte
+    volume: Volume
+    autoRate: Automatische snelheidsaanpassing
+    autoRateHint: Past de snelheid geleidelijk aan zodat de spraak de video bijhoudt
+    autoRateMode: Aanpassingsmethode
+    autoRateNatural: Natuurlijk
+    autoRateStrong: Sterk
+    autoRateModeDesc:
+      natural: "Past de snelheid zacht aan met natuurlijke correctie."
+      strong: "Past de snelheid snel aan met sterke correctie. Aanbevolen wanneer je wilt synchroniseren met de ondertiteling."
+  translation:
+    heading: Vertaling
+    translateEnabled: Vertaling inschakelen
+    personality: Vertaalstijl
+    personalityStandard: Standaard
+    personalityConcise: Beknopt
+    personalityFriendly: Vriendelijk
+    personalityCustom: "Aangepast"
+    personalityDesc:
+      standard: "Vertaalt getrouw aan het origineel naar natuurlijke tekst."
+      concise: "Verwijdert overbodige uitdrukkingen en vertaalt naar korte, beknopte tekst. Aanbevolen voor voorlezen."
+      friendly: "Vertaalt naar informele, vriendelijke en zachte tekst."
+      custom: "Vertaalt volgens uw eigen instructies hieronder."
+    customPersonality: "Aangepaste instructies"
+    customPersonalityPlaceholder: "Voorbeeld: Vertaal in formele, beleefde taal."
+  subtitle:
+    enabled: Ondertitels inschakelen
+    heading: Ondertitels
+    fontSize: Lettergrootte
+    textColor: Tekstkleur
+    backgroundColor: Achtergrondkleur
+  provider:
+    labelCompatible: OpenAI-compatibel
+    labelDevice: Ingebouwd in browser
+    deviceHint: "Gebruikt de in de browser ingebouwde vertaling op het apparaat. Gratis en offline, al is het niet in elke browser beschikbaar. Het taalmodel wordt bij het eerste gebruik gedownload en vertalingen zijn doorgaans letterlijker."
+    heading: Vertaalprovider
+    provider: Provider
+    apiKey: API-sleutel
+    model: Model
+    modelPlaceholder: Modelnaam (bijv. llama-3.3-70b)
+    sort: "Providerprioriteit"
+    sortDesc:
+      none: "Geen methode opgeven om providers te prioriteren."
+      price: "Geeft prioriteit aan de provider met de laagste prijs."
+      throughput: "Geeft prioriteit aan de provider met de hoogste doorvoer."
+      latency: "Geeft prioriteit aan de provider met de snelste respons."
+    extraBody: Extra request-body (JSON)
+    extraBodyHint: Wordt diep samengevoegd met de API-request-body
+    jsonSchema: "Gestructureerde uitvoer gebruiken"
+    jsonSchemaHint: "Alleen inschakelen als het endpoint gestructureerde uitvoer (response_format: json_schema) ondersteunt. Indien uit, wordt een formaatinstructie aan de prompt toegevoegd."
+    baseUrl: Base URL
+    baseUrlHint: "OpenAI-compatibel endpoint, bijv. https://api.groq.com/openai/v1"
+    grantPermission: Toegang tot deze host verlenen
+    test: Verbinding testen
+    testing: Testen…
+    testOk: Verbinding OK
+    errNoKey: API-sleutel is niet ingesteld
+    errNoModel: Model is niet ingesteld
+    show: Tonen
+    hide: Verbergen
+  cache:
+    heading: Vertaalcache
+    hint: Vertalingen worden per les in je browser opgeslagen
+    refresh: Vernieuwen
+    clearAll: Alles verwijderen
+    confirmClearAll: ALLE gecachte vertalingen verwijderen?
+    confirmDeleteCourse: Cache van alle lessen van deze cursus verwijderen?
+    delete: Verwijderen
+    empty: Geen vertalingen in cache
+    total: Totaal
+  dictionary:
+    heading: Uitspraken
+    hint: Vervangt woorden vóór de spraaksynthese (bijv. verkeerd uitgesproken vaktermen)
+    word: Woord
+    reading: Uitspraak
+    add: Toevoegen
+    remove: Verwijderen
+    empty: Geen items
+  advanced:
+    heading: Geavanceerd
+    logLevel: Logniveau
+guide:
+  title: "Vertaalproviders gebruiken"
+  intro: "Vertaling maakt gebruik van generatieve AI. Kies een van de onderstaande providers, haal een API-sleutel op en stel deze in bij de instellingen van de extensie — dit duurt maar een paar minuten."
+  privacy: "Uw API-sleutel wordt alleen in uw browser opgeslagen en alleen naar de door u geselecteerde provider verzonden."
+  disclaimer: "U gebruikt en betaalt de provider op eigen risico. We raden aan om voor de zekerheid een uitgavenlimiet in te stellen."
+  commonStep: "Plak de gekopieerde sleutel in het veld \"API-sleutel\" in de instellingen van de extensie, kies een model en klik op \"Verbinding testen\"."
+  openSettings: "Instellingen openen"
+  optionsLink: "Vertaalproviders gebruiken"
+  modelsHeading: "Beschikbare modellen"
+  modelsHint: "De extensie biedt de volgende modellen als presets. Vertaling verwerkt veel korte ondertitels, dus een goedkoop en snel model is ruim voldoende. Zo verhouden de modellen zich qua kwaliteit, snelheid en kosten."
+  keyHeading: "Een API-sleutel verkrijgen"
+  billingHeading: "Prijzen en betaling"
+  limitHeading: "Uw uitgaven beheren"
+  models:
+    gemini31FlashLite: "Snelheid: Hoog | Nauwkeurigheid: Gemiddeld | Kosten: Laag | De nauwkeurigheid is ruim voldoende voor vertaling. Aanbevolen als u twijfelt."
+    gemini35FlashLite: "Snelheid: Hoog | Nauwkeurigheid: Hoog | Kosten: Gemiddeld | De opvolger van de 3.1-serie, met aanzienlijk hogere nauwkeurigheid, maar iets hogere kosten."
+    gemma431bIt: "Snelheid: Laag | Nauwkeurigheid: Laag | Kosten: Gratis | Bruikbaar op het gratis niveau. De keuze wanneer u vooral de kosten laag wilt houden."
+    gpt54Mini: "Snelheid: Gemiddeld | Nauwkeurigheid: Hoog | Kosten: Hoog | De kosten zijn hoog, dus geschikt wanneer u kwaliteit vooropstelt."
+    gpt54Nano: "Snelheid: Gemiddeld | Nauwkeurigheid: Gemiddeld | Kosten: Laag | Goedkoper dan mini, maar praktisch voor vertaling."
+    deepseekV4Flash: "Snelheid: Gemiddeld | Nauwkeurigheid: Hoog | Kosten: Laag | Vrij goedkoop, met toch een hoge nauwkeurigheid. De beste keuze wanneer kosten belangrijk zijn."
+    qwen36Flash: "Snelheid: Hoog | Nauwkeurigheid: Gemiddeld | Kosten: Laag | Goedkoop, en de nauwkeurigheid is ook redelijk."
+  gemini:
+    tagline: "Gemini is beschikbaar, plus het gratis Gemma. Aanbevolen als u twijfelt welke u moet kiezen."
+    step1: "Open Google AI Studio en meld u aan met uw Google-account."
+    step2: "Klik op \"API-sleutel maken\", geef de sleutel een naam, kies een project (of gebruik \"Project maken\") en klik vervolgens op \"Sleutel maken\"."
+    step3: "Kopieer de weergegeven API-sleutel."
+    note: "Het gratis niveau heeft snelheidslimieten, maar is meestal voldoende om colleges te volgen."
+    billing: "Op het gratis niveau is geen betalingsinformatie nodig. Door facturering in te schakelen worden de snelheidslimieten versoepeld, zelfs voor gratis modellen, maar let op: de facturering is vooruitbetaald en uw API-sleutel werkt pas weer nadat u tegoed hebt gekocht. Om facturering in te schakelen, registreert u via \"Facturering instellen\" op de pagina Facturering uw betalingsgegevens en koopt u daarna tegoed met \"Tegoed kopen\" (het minimumbedrag wordt op het scherm getoond)."
+    limit: "Op de pagina Uitgaven stelt \"Maandelijkse uitgavenlimiet\" een maandelijkse gebruikslimiet in. Gebruik \"Uitgavenlimiet bewerken\" om het bedrag in te stellen."
+  openai:
+    tagline: "ChatGPT-modellen zijn beschikbaar. U moet vooraf tegoed kopen."
+    step1: "Meld u aan bij het OpenAI Platform en open de pagina \"API keys\"."
+    step2: "Klik op \"Create new secret key\" en geef een willekeurige naam op."
+    step3: "Kopieer de sleutel. Deze wordt maar één keer getoond, kopieer hem dus meteen."
+    note: "Dit staat los van een betaald ChatGPT-abonnement."
+    billing: "U moet vooraf tegoed kopen. Registreer op de pagina \"Billing\" een betaalmethode via \"Add payment details\" en koop vervolgens tegoed via \"Add to credit balance\"."
+    limit: "Gebruik op de pagina \"Limits\" de optie \"Edit spend limit\" om een maandelijkse gebruikslimiet in te stellen."
+  openrouter:
+    tagline: "Er zijn veel modellen beschikbaar. U moet vooraf tegoed kopen."
+    step1: "Meld u aan bij OpenRouter en open de pagina \"API keys\"."
+    step2: "Klik op \"New Key\", geef een willekeurige naam op en klik op \"Create\". De hieronder beschreven uitgavenlimiet voert u hier ook in."
+    step3: "Kopieer de sleutel. Deze wordt maar één keer getoond, kopieer hem dus meteen."
+    note: "De providerprioriteit kunt u aanpassen in de instellingen van de extensie."
+    billing: "U moet vooraf tegoed kopen. Klik op de pagina \"Credits\" op \"Add Credits\", voer een bedrag in en bevestig met \"Purchase\"."
+    limit: "Voer bij het aanmaken van een sleutel een bedrag in bij \"Credit limit\" en kies een periode bij \"Reset limit every...\" om een gebruikslimiet per periode in te stellen."

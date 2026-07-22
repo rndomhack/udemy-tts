@@ -1,0 +1,170 @@
+extName: Udemy TTS - Altyazı çevirisi ve sesli okuma
+extDescription: Udemy altyazılarını kendi dilinizde sesli okur. Ayarladıktan sonra üretken yapay zeka ile doğal çeviri de desteklenir.
+widget:
+  master: "Etkinleştir"
+  title: Udemy TTS
+  enable: Sesli okuma
+  volume: Ses düzeyi
+  speed: Hız
+  autoSpeed: Otomatik hız
+  translate: Çeviri
+  translateNoKey: Çeviriyi etkinleştirmek için uzantı ayarlarında bir API anahtarı belirleyin
+  cacheNone: Yok
+  cacheClear: Çeviri önbelleğini temizle
+  settings: Ayarlar
+  subtitleOverlay: Altyazılar
+options:
+  title: Udemy TTS Ayarları
+  tabs:
+    general: Genel
+    language: Dil
+    speech: Konuşma
+    translation: Çeviri
+    subtitle: Altyazılar
+    dictionary: Sözlük
+    advanced: Gelişmiş
+  general:
+    heading: Genel
+    enableAll: Tüm özellikleri etkinleştir
+  language:
+    heading: Dil
+    target: Hedef dil
+  speech:
+    heading: Konuşma
+    ttsHeading: Sesli okuma
+    provider: "Ses sağlayıcı"
+    providerStandard: "Standart"
+    voicevoxHint: "VOICEVOX'u kullanmak için editör veya motorun çalışıyor olması gerekir. Genellikle sunucu otomatik başlar ve http://127.0.0.1:50021 adresinden erişilebilir olur. Önce bağlantıya izin vermek için \"Bu ana makineye erişim ver\" düğmesine tıklayın."
+    voicevoxUrl: "VOICEVOX URL"
+    enabled: Sesli okumayı etkinleştir
+    voice: Ses
+    loadVoices: Sesleri yükle
+    loading: Yükleniyor…
+    loadFailed: Sesler yüklenemedi
+    rate: Temel hız
+    pitch: Perde
+    volume: Ses düzeyi
+    autoRate: Otomatik hız ayarı
+    autoRateHint: Konuşmanın videoya yetişmesi için hızı kademeli olarak ayarlar
+    autoRateMode: Ayarlama yöntemi
+    autoRateNatural: Doğal
+    autoRateStrong: Güçlü
+    autoRateModeDesc:
+      natural: "Hızı doğal bir düzeltmeyle yumuşak şekilde ayarlar."
+      strong: "Hızı güçlü bir düzeltmeyle hızlıca ayarlar. Altyazılarla senkronize etmek istediğinizde önerilir."
+  translation:
+    heading: Çeviri
+    translateEnabled: Çeviriyi etkinleştir
+    personality: Çeviri stili
+    personalityStandard: Standart
+    personalityConcise: Kısa ve öz
+    personalityFriendly: Samimi
+    personalityCustom: "Özel"
+    personalityDesc:
+      standard: "Orijinaline sadık kalarak doğal bir metne çevirir."
+      concise: "Gereksiz ifadeleri kaldırır ve kısa, öz bir metne çevirir. Sesli okuma için önerilir."
+      friendly: "Konuşma diline yakın, samimi ve yumuşak bir metne çevirir."
+      custom: "Aşağıdaki kendi talimatlarınıza göre çevirir."
+    customPersonality: "Özel talimatlar"
+    customPersonalityPlaceholder: "Örnek: Resmî ve kibar bir dille çevir."
+  subtitle:
+    enabled: Altyazıları etkinleştir
+    heading: Altyazılar
+    fontSize: Yazı tipi boyutu
+    textColor: Metin rengi
+    backgroundColor: Arka plan rengi
+  provider:
+    labelCompatible: OpenAI uyumlu
+    labelDevice: Tarayıcıya yerleşik
+    deviceHint: "Tarayıcıya yerleşik, cihaz üzerinde çalışan çeviriyi kullanır. Ücretsiz ve çevrimdışıdır, ancak her tarayıcıda bulunmaz. Dil modeli ilk kullanımda indirilir ve çeviriler daha birebir olma eğilimindedir."
+    heading: Çeviri sağlayıcısı
+    provider: Sağlayıcı
+    apiKey: API anahtarı
+    model: Model
+    modelPlaceholder: Model adı (örn. llama-3.3-70b)
+    sort: "Sağlayıcı önceliği"
+    sortDesc:
+      none: "Sağlayıcıları önceliklendirme yöntemi belirtmeyin."
+      price: "En düşük fiyatlı sağlayıcıya öncelik verir."
+      throughput: "En yüksek işlem hızına sahip sağlayıcıya öncelik verir."
+      latency: "En hızlı yanıt veren sağlayıcıya öncelik verir."
+    extraBody: Ek istek gövdesi (JSON)
+    extraBodyHint: API istek gövdesiyle derinlemesine birleştirilir
+    jsonSchema: "Yapılandırılmış çıktı kullan"
+    jsonSchemaHint: "Yalnızca uç nokta yapılandırılmış çıktıyı (response_format: json_schema) destekliyorsa açın. Kapalıyken prompta bir biçim talimatı eklenir."
+    baseUrl: Base URL
+    baseUrlHint: "OpenAI uyumlu endpoint, örn. https://api.groq.com/openai/v1"
+    grantPermission: Bu ana makineye erişim ver
+    test: Bağlantıyı test et
+    testing: Test ediliyor…
+    testOk: Bağlantı OK
+    errNoKey: API anahtarı ayarlanmamış
+    errNoModel: Model ayarlanmamış
+    show: Göster
+    hide: Gizle
+  cache:
+    heading: Çeviri önbelleği
+    hint: Çeviriler her ders için tarayıcınızda saklanır
+    refresh: Yenile
+    clearAll: Tümünü sil
+    confirmClearAll: Önbellekteki TÜM çeviriler silinsin mi?
+    confirmDeleteCourse: Bu kursun tüm derslerinin önbelleği silinsin mi?
+    delete: Sil
+    empty: Önbellekte çeviri yok
+    total: Toplam
+  dictionary:
+    heading: Telaffuzlar
+    hint: Ses sentezinden önce sözcükleri değiştirir (örn. yanlış okunan teknik terimler)
+    word: Sözcük
+    reading: Telaffuz
+    add: Ekle
+    remove: Kaldır
+    empty: Kayıt yok
+  advanced:
+    heading: Gelişmiş
+    logLevel: Günlük düzeyi
+guide:
+  title: "Çeviri sağlayıcıları nasıl kullanılır"
+  intro: "Çeviri, üretken yapay zeka kullanır. Aşağıdaki sağlayıcılardan birini seçin, bir API anahtarı alın ve eklenti ayarlarına girin — yalnızca birkaç dakika sürer."
+  privacy: "API anahtarınız yalnızca tarayıcınızda saklanır ve yalnızca seçtiğiniz sağlayıcıya gönderilir."
+  disclaimer: "Sağlayıcıyı kendi sorumluluğunuzda kullanır ve ödersiniz. Her ihtimale karşı bir harcama limiti belirlemenizi öneririz."
+  commonStep: "Kopyaladığınız anahtarı eklenti ayarlarındaki \"API anahtarı\" alanına yapıştırın, bir model seçin ve \"Bağlantıyı test et\"e tıklayın."
+  openSettings: "Ayarları aç"
+  optionsLink: "Çeviri sağlayıcıları nasıl kullanılır"
+  modelsHeading: "Kullanılabilir modeller"
+  modelsHint: "Eklenti aşağıdaki modelleri hazır ayar olarak sunar. Çeviri, çok sayıda kısa altyazıyı işler, bu yüzden ucuz ve hızlı bir model fazlasıyla yeterlidir. İşte her modelin kalite, hız ve maliyet açısından karşılaştırması."
+  keyHeading: "API anahtarı alma"
+  billingHeading: "Fiyatlandırma ve ödeme"
+  limitHeading: "Harcamanızı kontrol etme"
+  models:
+    gemini31FlashLite: "Hız: Yüksek | Doğruluk: Orta | Maliyet: Düşük | Doğruluk çeviri için fazlasıyla yeterli. Kararsızsanız önerilir."
+    gemini35FlashLite: "Hız: Yüksek | Doğruluk: Yüksek | Maliyet: Orta | 3.1 serisinin halefi, belirgin şekilde daha yüksek doğrulukla, ancak biraz daha yüksek maliyetle."
+    gemma431bIt: "Hız: Düşük | Doğruluk: Düşük | Maliyet: Ücretsiz | Ücretsiz katmanda kullanılabilir. Özellikle maliyetleri düşük tutmak istediğinizde tercih edilir."
+    gpt54Mini: "Hız: Orta | Doğruluk: Yüksek | Maliyet: Yüksek | Maliyet yüksek, bu yüzden kaliteyi önceliklendirdiğinizde uygundur."
+    gpt54Nano: "Hız: Orta | Doğruluk: Orta | Maliyet: Düşük | mini'den daha ucuz, ancak çeviri için pratiktir."
+    deepseekV4Flash: "Hız: Orta | Doğruluk: Yüksek | Maliyet: Düşük | Oldukça ucuz, yine de doğruluğu yüksek. Maliyet önemliyken en iyi tercih."
+    qwen36Flash: "Hız: Yüksek | Doğruluk: Orta | Maliyet: Düşük | Ucuz, ve doğruluğu da fena değil."
+  gemini:
+    tagline: "Gemini mevcut, ayrıca ücretsiz Gemma var. Hangisini seçeceğinizden emin değilseniz önerilir."
+    step1: "Google AI Studio'yu açın ve Google hesabınızla oturum açın."
+    step2: "\"API anahtarı oluştur\"a tıklayın, anahtara bir ad verin, bir proje seçin (veya \"Proje oluştur\"u kullanın) ve ardından \"Anahtar oluştur\"a tıklayın."
+    step3: "Gösterilen API anahtarını kopyalayın."
+    note: "Ücretsiz katmanın hız sınırları vardır, ancak dersleri izlemek için genellikle yeterlidir."
+    billing: "Ücretsiz katmanda ödeme bilgisi gerekmez. Faturalandırmayı etkinleştirmek ücretsiz modeller için bile hız sınırlarını gevşetir, ancak dikkat: faturalandırma ön ödemelidir ve kredi satın alana kadar API anahtarınız çalışmaz. Faturalandırmayı etkinleştirmek için Faturalandırma sayfasındaki \"Faturalandırmayı ayarla\" ile ödeme bilgilerinizi kaydedin, ardından \"Kredi satın al\" ile kredi satın alın (asgari tutar ekranda gösterilir)."
+    limit: "Harcama sayfasında \"Aylık harcama üst sınırı\" aylık bir kullanım limiti belirler. Tutarı ayarlamak için \"Harcama üst sınırını düzenle\"yi kullanın."
+  openai:
+    tagline: "ChatGPT modelleri mevcut. Önceden kredi satın almanız gerekir."
+    step1: "OpenAI Platform'a oturum açın ve API keys sayfasını açın."
+    step2: "\"Create new secret key\"e tıklayın ve herhangi bir ad verin."
+    step3: "Anahtarı kopyalayın. Yalnızca bir kez gösterilir, bu yüzden hemen kopyalayın."
+    note: "Bu, ücretli bir ChatGPT planından ayrıdır."
+    billing: "Önceden kredi satın almanız gerekir. Billing sayfasında \"Add payment details\" ile bir ödeme yöntemi kaydedin, ardından \"Add to credit balance\" ile kredi satın alın."
+    limit: "Limits sayfasında aylık bir kullanım limiti belirlemek için \"Edit spend limit\"i kullanın."
+  openrouter:
+    tagline: "Birçok model mevcut. Önceden kredi satın almanız gerekir."
+    step1: "OpenRouter'a oturum açın ve API keys sayfasını açın."
+    step2: "\"New Key\"e tıklayın, herhangi bir ad verin ve \"Create\"e tıklayın. Aşağıda açıklanan harcama limiti de burada girilir."
+    step3: "Anahtarı kopyalayın. Yalnızca bir kez gösterilir, bu yüzden hemen kopyalayın."
+    note: "Sağlayıcı önceliği eklenti ayarlarından ince ayarlanabilir."
+    billing: "Önceden kredi satın almanız gerekir. Credits sayfasında \"Add Credits\"e tıklayın, bir tutar girin ve \"Purchase\" ile onaylayın."
+    limit: "Bir anahtar oluştururken \"Credit limit\" alanına bir tutar girin ve \"Reset limit every...\" içinden bir dönem seçerek dönem başına bir kullanım sınırı belirleyin."

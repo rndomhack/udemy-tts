@@ -1,0 +1,170 @@
+extName: Udemy TTS - Subtitru tulkošana un nolasīšana
+extDescription: Nolasa Udemy subtitrus tavā valodā. Pēc konfigurēšanas tiek atbalstīts arī dabisks tulkojums ar ģeneratīvo MI.
+widget:
+  master: "Iespējot"
+  title: Udemy TTS
+  enable: TTS
+  volume: Skaļums
+  speed: Ātrums
+  autoSpeed: Autom. ātrums
+  translate: Tulkot
+  translateNoKey: Lai iespējotu tulkošanu, paplašinājuma iestatījumos norādiet API atslēgu
+  cacheNone: Nav
+  cacheClear: Notīrīt tulkojumu kešatmiņu
+  settings: Iestatījumi
+  subtitleOverlay: Subtitri
+options:
+  title: Udemy TTS iestatījumi
+  tabs:
+    general: Vispārīgi
+    language: Valoda
+    speech: Runa
+    translation: Tulkošana
+    subtitle: Subtitri
+    dictionary: Vārdnīca
+    advanced: Papildu
+  general:
+    heading: Vispārīgi
+    enableAll: Iespējot visas funkcijas
+  language:
+    heading: Valoda
+    target: Mērķa valoda
+  speech:
+    heading: Runa
+    ttsHeading: TTS
+    provider: "Balss nodrošinātājs"
+    providerStandard: "Standarta"
+    voicevoxHint: "Lai izmantotu VOICEVOX, jādarbojas redaktoram vai dzinējam. Parasti serveris startē automātiski un ir pieejams adresē http://127.0.0.1:50021. Vispirms noklikšķiniet uz \"Piešķirt piekļuvi šim resursdatoram\", lai atļautu savienojumu."
+    voicevoxUrl: "VOICEVOX URL"
+    enabled: Iespējot TTS
+    voice: Balss
+    loadVoices: Ielādēt balsis
+    loading: Notiek ielāde…
+    loadFailed: Neizdevās ielādēt balsis
+    rate: Bāzes ātrums
+    pitch: Toņa augstums
+    volume: Skaļums
+    autoRate: Automātiska ātruma pielāgošana
+    autoRateHint: Pakāpeniski paātrina atskaņošanu, lai runa panāktu video
+    autoRateMode: Pielāgošanas metode
+    autoRateNatural: Dabisks
+    autoRateStrong: Spēcīgs
+    autoRateModeDesc:
+      natural: "Maigi pielāgo ātrumu ar dabisku korekciju."
+      strong: "Ātri pielāgo ātrumu ar spēcīgu korekciju. Ieteicams, ja vēlaties sinhronizēt ar subtitriem."
+  translation:
+    heading: Tulkošana
+    translateEnabled: Iespējot tulkošanu
+    personality: Tulkošanas stils
+    personalityStandard: Standarta
+    personalityConcise: Kodolīgs
+    personalityFriendly: Draudzīgs
+    personalityCustom: "Pielāgots"
+    personalityDesc:
+      standard: "Tulko uzticīgi oriģinālam dabiskā tekstā."
+      concise: "Noņem liekās izteiksmes un tulko īsā un kodolīgā tekstā. Ieteicams priekšlasīšanai."
+      friendly: "Tulko sarunvalodas, draudzīgā un maigā tekstā."
+      custom: "Tulko pēc jūsu norādījumiem zemāk."
+    customPersonality: "Pielāgoti norādījumi"
+    customPersonalityPlaceholder: "Piemērs: Tulko formālā, pieklājīgā valodā."
+  subtitle:
+    enabled: Iespējot subtitrus
+    heading: Subtitri
+    fontSize: Fonta izmērs
+    textColor: Teksta krāsa
+    backgroundColor: Fona krāsa
+  provider:
+    labelCompatible: Saderīgs ar OpenAI
+    labelDevice: Iebūvēts pārlūkā
+    deviceHint: "Izmanto pārlūkā iebūvēto tulkošanu ierīcē. Bezmaksas un darbojas bezsaistē, taču nav pieejams visos pārlūkos. Valodas modelis tiek lejupielādēts pirmajā lietošanas reizē, un tulkojumi mēdz būt burtiskāki."
+    heading: Tulkošanas pakalpojumu sniedzējs
+    provider: Sniedzējs
+    apiKey: API atslēga
+    model: Modelis
+    modelPlaceholder: Modeļa nosaukums (piem., llama-3.3-70b)
+    sort: "Nodrošinātāja prioritāte"
+    sortDesc:
+      none: "Nenorādīt nodrošinātāju prioritātes noteikšanas metodi."
+      price: "Dod priekšroku nodrošinātājam ar zemāko cenu."
+      throughput: "Dod priekšroku nodrošinātājam ar augstāko caurlaidspēju."
+      latency: "Dod priekšroku nodrošinātājam ar ātrāko atbildi."
+    extraBody: Papildu pieprasījuma pamatteksts (JSON)
+    extraBodyHint: Tiek dziļi apvienots API pieprasījuma pamattekstā
+    jsonSchema: "Izmantot strukturētu izvadi"
+    jsonSchemaHint: "Ieslēdziet tikai tad, ja galapunkts atbalsta strukturētu izvadi (response_format: json_schema). Ja izslēgts, uzvednei tiek pievienota formāta instrukcija."
+    baseUrl: Bāzes URL
+    baseUrlHint: "Ar OpenAI saderīgs galapunkts, piem., https://api.groq.com/openai/v1"
+    grantPermission: Piešķirt piekļuvi šim resursdatoram
+    test: Pārbaudīt savienojumu
+    testing: Notiek pārbaude…
+    testOk: Savienojums OK
+    errNoKey: API atslēga nav iestatīta
+    errNoModel: Modelis nav iestatīts
+    show: Rādīt
+    hide: Slēpt
+  cache:
+    heading: Tulkojumu kešatmiņa
+    hint: Tulkojumi tiek saglabāti kešatmiņā katrai lekcijai jūsu pārlūkā
+    refresh: Atsvaidzināt
+    clearAll: Dzēst visu
+    confirmClearAll: Dzēst VISUS saglabātos tulkojumus?
+    confirmDeleteCourse: Dzēst visas šī kursa saglabātās lekcijas?
+    delete: Dzēst
+    empty: Nav saglabātu tulkojumu
+    total: Kopā
+  dictionary:
+    heading: Izrunas
+    hint: Aizstājiet vārdus pirms runas sintēzes (piem., termini, ko TTS izrunā nepareizi)
+    word: Vārds
+    reading: Izruna
+    add: Pievienot
+    remove: Noņemt
+    empty: Vēl nav ierakstu
+  advanced:
+    heading: Papildu
+    logLevel: Žurnāla līmenis
+guide:
+  title: "Kā izmantot tulkošanas pakalpojumu sniedzējus"
+  intro: "Tulkošanā tiek izmantots ģeneratīvais MI. Izvēlieties vienu no tālāk norādītajiem pakalpojumu sniedzējiem, iegūstiet API atslēgu un iestatiet to paplašinājuma iestatījumos — tas aizņem tikai dažas minūtes."
+  privacy: "Jūsu API atslēga tiek glabāta tikai jūsu pārlūkprogrammā un tiek nosūtīta tikai jūsu izvēlētajam pakalpojumu sniedzējam."
+  disclaimer: "Jūs izmantojat pakalpojumu sniedzēju un maksājat par to uz savu risku. Katram gadījumam iesakām iestatīt tēriņu limitu."
+  commonStep: "Ielīmējiet nokopēto atslēgu paplašinājuma iestatījumu laukā \"API atslēga\", izvēlieties modeli un noklikšķiniet uz \"Pārbaudīt savienojumu\"."
+  openSettings: "Atvērt iestatījumus"
+  optionsLink: "Kā izmantot tulkošanas pakalpojumu sniedzējus"
+  modelsHeading: "Pieejamie modeļi"
+  modelsHint: "Paplašinājums piedāvā šādus modeļus kā sagataves. Tulkošana apstrādā daudz īsu subtitru, tāpēc lēts un ātrs modelis ir pilnīgi pietiekams. Lūk, kā katrs modelis salīdzinās pēc kvalitātes, ātruma un izmaksām."
+  keyHeading: "API atslēgas iegūšana"
+  billingHeading: "Cenas un maksājumi"
+  limitHeading: "Tēriņu kontrole"
+  models:
+    gemini31FlashLite: "Ātrums: augsts | Precizitāte: vidēja | Izmaksas: zemas | Precizitāte tulkošanai ir pilnīgi pietiekama. Ieteicams, ja neesat pārliecināts."
+    gemini35FlashLite: "Ātrums: augsts | Precizitāte: augsts | Izmaksas: vidēja | 3.1 sērijas pēctecis ar ievērojami augstāku precizitāti, taču nedaudz augstāku cenu."
+    gemma431bIt: "Ātrums: zemas | Precizitāte: zemas | Izmaksas: bezmaksas | Izmantojams bezmaksas līmenī. Izvēle, kad galvenokārt vēlaties samazināt izmaksas."
+    gpt54Mini: "Ātrums: vidēja | Precizitāte: augsts | Izmaksas: augsts | Izmaksas ir augstas, tāpēc piemērots, ja par prioritāti izvirzāt kvalitāti."
+    gpt54Nano: "Ātrums: vidēja | Precizitāte: vidēja | Izmaksas: zemas | Lētāks par mini, taču praktisks tulkošanai."
+    deepseekV4Flash: "Ātrums: vidēja | Precizitāte: augsts | Izmaksas: zemas | Diezgan lēts, bet ar augstu precizitāti. Labākā izvēle, kad svarīgas izmaksas."
+    qwen36Flash: "Ātrums: augsts | Precizitāte: vidēja | Izmaksas: zemas | Lēts, un precizitāte arī ir pieņemama."
+  gemini:
+    tagline: "Pieejams Gemini, kā arī bezmaksas Gemma. Ieteicams, ja neesat pārliecināts, ko izvēlēties."
+    step1: "Atveriet Google AI Studio un pierakstieties ar savu Google kontu."
+    step2: "Noklikšķiniet uz \"Izveidot API atslēgu\", piešķiriet atslēgai nosaukumu, izvēlieties projektu (vai izmantojiet \"Izveidot projektu\") un pēc tam noklikšķiniet uz \"Izveidot atslēgu\"."
+    step3: "Nokopējiet parādīto API atslēgu."
+    note: "Bezmaksas līmenim ir pieprasījumu ātruma ierobežojumi, taču lekciju skatīšanai ar to parasti pietiek."
+    billing: "Bezmaksas līmenī maksājumu informācija nav nepieciešama. Norēķinu iespējošana mīkstina ātruma ierobežojumus pat bezmaksas modeļiem, taču ņemiet vērā: norēķini ir priekšapmaksas, un API atslēga pārstāj darboties, līdz iegādājaties kredītus. Lai iespējotu norēķinus, lapā \"Norēķini\" izmantojiet \"Iestatīt norēķinus\", lai reģistrētu maksājumu informāciju, un pēc tam iegādājieties kredītus ar \"Pirkt kredītus\" (minimālā summa tiek parādīta ekrānā)."
+    limit: "Lapā \"Tēriņi\" iestatījums \"Mēneša tēriņu limits\" nosaka ikmēneša lietošanas limitu. Izmantojiet \"Rediģēt tēriņu limitu\", lai iestatītu summu."
+  openai:
+    tagline: "Pieejami ChatGPT modeļi. Kredīts jāiegādājas iepriekš."
+    step1: "Pierakstieties OpenAI Platform un atveriet lapu \"API keys\"."
+    step2: "Noklikšķiniet uz \"Create new secret key\" un piešķiriet jebkādu nosaukumu."
+    step3: "Nokopējiet atslēgu. Tā tiek parādīta tikai vienu reizi, tāpēc nokopējiet to uzreiz."
+    note: "Tas ir atsevišķi no maksas ChatGPT plāna."
+    billing: "Kredīts jāiegādājas iepriekš. Lapā \"Billing\" reģistrējiet maksājuma metodi, izmantojot \"Add payment details\", pēc tam iegādājieties kredītu, izmantojot \"Add to credit balance\"."
+    limit: "Lapā \"Limits\" izmantojiet \"Edit spend limit\", lai iestatītu ikmēneša lietošanas limitu."
+  openrouter:
+    tagline: "Pieejami daudzi modeļi. Kredīti jāiegādājas iepriekš."
+    step1: "Pierakstieties OpenRouter un atveriet lapu \"API keys\"."
+    step2: "Noklikšķiniet uz \"New Key\", piešķiriet jebkādu nosaukumu un noklikšķiniet uz \"Create\". Tālāk aprakstītais tēriņu limits arī tiek ievadīts šeit."
+    step3: "Nokopējiet atslēgu. Tā tiek parādīta tikai vienu reizi, tāpēc nokopējiet to uzreiz."
+    note: "Pakalpojumu sniedzēju prioritāti var pielāgot paplašinājuma iestatījumos."
+    billing: "Kredīti jāiegādājas iepriekš. Lapā \"Credits\" noklikšķiniet uz \"Add Credits\", ievadiet summu un apstipriniet ar \"Purchase\"."
+    limit: "Veidojot atslēgu, ievadiet summu laukā \"Credit limit\" un izvēlieties periodu \"Reset limit every...\", lai iestatītu lietošanas limitu katram periodam."

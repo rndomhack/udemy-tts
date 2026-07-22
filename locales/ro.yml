@@ -1,0 +1,170 @@
+extName: Udemy TTS - Traducere și citire a subtitrărilor
+extDescription: Citește cu voce tare subtitrările Udemy în limba ta. După configurare, este acceptată și traducerea naturală cu IA generativă.
+widget:
+  master: "Activează"
+  title: Udemy TTS
+  enable: TTS
+  volume: Volum
+  speed: Viteză
+  autoSpeed: Viteză automată
+  translate: Traducere
+  translateNoKey: Setează o cheie API în setările extensiei pentru a activa traducerea
+  cacheNone: Niciunul
+  cacheClear: Șterge cache-ul de traducere
+  settings: Setări
+  subtitleOverlay: Subtitrări
+options:
+  title: Setări Udemy TTS
+  tabs:
+    general: General
+    language: Limbă
+    speech: Voce
+    translation: Traducere
+    subtitle: Subtitrări
+    dictionary: Dicționar
+    advanced: Avansat
+  general:
+    heading: General
+    enableAll: Activează toate funcțiile
+  language:
+    heading: Limbă
+    target: Limba țintă
+  speech:
+    heading: Voce
+    ttsHeading: TTS
+    provider: "Furnizor de voce"
+    providerStandard: "Standard"
+    voicevoxHint: "Pentru a folosi VOICEVOX, editorul sau motorul trebuie să ruleze. De obicei serverul pornește automat și devine disponibil la http://127.0.0.1:50021. Mai întâi, faceți clic pe „Permite accesul la acest host” pentru a permite conexiunea."
+    voicevoxUrl: "VOICEVOX URL"
+    enabled: Activează TTS
+    voice: Voce
+    loadVoices: Încarcă vocile
+    loading: Se încarcă…
+    loadFailed: Nu s-au putut încărca vocile
+    rate: Viteză de bază
+    pitch: Ton
+    volume: Volum
+    autoRate: Ajustare automată a vitezei
+    autoRateHint: Ajustează treptat viteza pentru ca vocea să țină pasul cu videoclipul
+    autoRateMode: Metodă de ajustare
+    autoRateNatural: Natural
+    autoRateStrong: Puternic
+    autoRateModeDesc:
+      natural: "Ajustează viteza ușor cu o corecție naturală."
+      strong: "Ajustează viteza rapid cu o corecție puternică. Recomandat când doriți sincronizarea cu subtitrările."
+  translation:
+    heading: Traducere
+    translateEnabled: Activează traducerea
+    personality: Stil de traducere
+    personalityStandard: Standard
+    personalityConcise: Concis
+    personalityFriendly: Prietenos
+    personalityCustom: "Personalizat"
+    personalityDesc:
+      standard: "Traduce fidel originalului într-un text natural."
+      concise: "Elimină expresiile redundante și traduce într-un text scurt și concis. Recomandat pentru citire cu voce tare."
+      friendly: "Traduce într-un text colocvial, prietenos și blând."
+      custom: "Traduce conform instrucțiunilor dvs. de mai jos."
+    customPersonality: "Instrucțiuni personalizate"
+    customPersonalityPlaceholder: "Exemplu: Tradu într-un limbaj formal și politicos."
+  subtitle:
+    enabled: Activează subtitrările
+    heading: Subtitrări
+    fontSize: Dimensiune font
+    textColor: Culoare text
+    backgroundColor: Culoare fundal
+  provider:
+    labelCompatible: Compatibil cu OpenAI
+    labelDevice: Integrat în browser
+    deviceHint: "Folosește traducerea pe dispozitiv integrată în browser. Gratuită și offline, deși nu este disponibilă în toate browserele. Modelul lingvistic se descarcă la prima utilizare, iar traducerile tind să fie mai literale."
+    heading: Furnizor de traducere
+    provider: Furnizor
+    apiKey: Cheie API
+    model: Model
+    modelPlaceholder: Numele modelului (ex. llama-3.3-70b)
+    sort: "Prioritatea furnizorului"
+    sortDesc:
+      none: "Nu specificați o metodă de prioritizare a furnizorilor."
+      price: "Acordă prioritate furnizorului cu cel mai mic preț."
+      throughput: "Acordă prioritate furnizorului cu cel mai mare debit."
+      latency: "Acordă prioritate furnizorului cu cel mai rapid răspuns."
+    extraBody: Corp suplimentar al cererii (JSON)
+    extraBodyHint: Îmbinat în profunzime cu corpul cererii API
+    jsonSchema: "Folosește ieșire structurată"
+    jsonSchemaHint: "Activați doar dacă endpointul acceptă ieșire structurată (response_format: json_schema). Când este dezactivat, la prompt se adaugă o instrucțiune de format."
+    baseUrl: Base URL
+    baseUrlHint: "Endpoint compatibil OpenAI, ex. https://api.groq.com/openai/v1"
+    grantPermission: Permite accesul la acest host
+    test: Testează conexiunea
+    testing: Se testează…
+    testOk: Conexiune OK
+    errNoKey: Cheia API nu este setată
+    errNoModel: Modelul nu este setat
+    show: Afișează
+    hide: Ascunde
+  cache:
+    heading: Cache de traducere
+    hint: Traducerile sunt salvate în browser pentru fiecare lecție
+    refresh: Reîmprospătează
+    clearAll: Șterge tot
+    confirmClearAll: Ștergeți TOATE traducerile din cache?
+    confirmDeleteCourse: Ștergeți cache-ul tuturor lecțiilor acestui curs?
+    delete: Șterge
+    empty: Nicio traducere în cache
+    total: Total
+  dictionary:
+    heading: Pronunții
+    hint: Înlocuiește cuvinte înainte de sinteza vocală (ex. termeni tehnici pronunțați greșit)
+    word: Cuvânt
+    reading: Pronunție
+    add: Adaugă
+    remove: Elimină
+    empty: Nicio intrare
+  advanced:
+    heading: Avansat
+    logLevel: Nivel de logare
+guide:
+  title: "Cum să folosiți furnizorii de traducere"
+  intro: "Traducerea folosește IA generativă. Alegeți unul dintre furnizorii de mai jos, obțineți o cheie API și setați-o în setările extensiei — durează doar câteva minute."
+  privacy: "Cheia API este stocată doar în browserul dvs. și este trimisă doar furnizorului selectat."
+  disclaimer: "Folosiți și plătiți furnizorul pe propriul risc. Vă recomandăm să setați o limită de cheltuieli pentru orice eventualitate."
+  commonStep: "Lipiți cheia copiată în câmpul „Cheie API” din setările extensiei, alegeți un model și apăsați „Testează conexiunea”."
+  openSettings: "Deschide setările"
+  optionsLink: "Cum să folosiți furnizorii de traducere"
+  modelsHeading: "Modele disponibile"
+  modelsHint: "Extensia oferă următoarele modele ca presetări. Traducerea procesează multe subtitrări scurte, așa că un model ieftin și rapid este suficient. Iată cum se compară fiecare model în privința calității, vitezei și costului."
+  keyHeading: "Obținerea unei chei API"
+  billingHeading: "Prețuri și plată"
+  limitHeading: "Controlul cheltuielilor"
+  models:
+    gemini31FlashLite: "Viteză: Mare | Acuratețe: Medie | Cost: Scăzut | Acuratețea este suficientă pentru traducere. Recomandat dacă nu sunteți sigur."
+    gemini35FlashLite: "Viteză: Mare | Acuratețe: Mare | Cost: Medie | Succesorul seriei 3.1, cu o acuratețe semnificativ mai mare, dar un cost puțin mai ridicat."
+    gemma431bIt: "Viteză: Scăzut | Acuratețe: Scăzut | Cost: Gratuit | Utilizabil în nivelul gratuit. Alegerea când doriți în principal să mențineți costurile scăzute."
+    gpt54Mini: "Viteză: Medie | Acuratețe: Mare | Cost: Mare | Costul este ridicat, deci potrivit când prioritizați calitatea."
+    gpt54Nano: "Viteză: Medie | Acuratețe: Medie | Cost: Scăzut | Mai ieftin decât mini, dar practic pentru traducere."
+    deepseekV4Flash: "Viteză: Medie | Acuratețe: Mare | Cost: Scăzut | Destul de ieftin, totuși cu acuratețe mare. Cea mai bună alegere când contează costul."
+    qwen36Flash: "Viteză: Mare | Acuratețe: Medie | Cost: Scăzut | Ieftin, iar acuratețea este de asemenea decentă."
+  gemini:
+    tagline: "Gemini este disponibil, plus Gemma gratuită. Recomandat dacă nu sunteți sigur ce să alegeți."
+    step1: "Deschideți Google AI Studio și conectați-vă cu contul Google."
+    step2: "Apăsați „Creare cheie API”, denumiți cheia, alegeți un proiect (sau folosiți „Creare proiect”), apoi apăsați „Creare cheie”."
+    step3: "Copiați cheia API afișată."
+    note: "Nivelul gratuit are limite de rată, dar de obicei este suficient pentru vizionarea cursurilor."
+    billing: "În nivelul gratuit nu sunt necesare date de plată. Activarea facturării relaxează limitele de rată chiar și pentru modelele gratuite, dar rețineți: facturarea este preplătită, iar cheia API nu mai funcționează până când cumpărați credite. Pentru a activa facturarea, folosiți „Configurare facturare” pe pagina „Facturare” pentru a înregistra datele de plată, apoi cumpărați credite cu „Cumpărați credite” (suma minimă este afișată pe ecran)."
+    limit: "Pe pagina „Cheltuieli”, „Plafon lunar de cheltuieli” setează o limită lunară de utilizare. Folosiți „Editare plafon de cheltuieli” pentru a stabili suma."
+  openai:
+    tagline: "Modelele ChatGPT sunt disponibile. Trebuie să cumpărați credit în avans."
+    step1: "Conectați-vă la OpenAI Platform și deschideți pagina API keys."
+    step2: "Apăsați „Create new secret key” și dați-i orice nume."
+    step3: "Copiați cheia. Este afișată o singură dată, așa că copiați-o pe loc."
+    note: "Aceasta este separată de un plan ChatGPT cu plată."
+    billing: "Trebuie să cumpărați credit în avans. Pe pagina Billing, înregistrați o metodă de plată prin „Add payment details”, apoi cumpărați credit prin „Add to credit balance”."
+    limit: "Pe pagina Limits, folosiți „Edit spend limit” pentru a seta o limită lunară de utilizare."
+  openrouter:
+    tagline: "Sunt disponibile multe modele. Trebuie să cumpărați credite în avans."
+    step1: "Conectați-vă la OpenRouter și deschideți pagina API keys."
+    step2: "Apăsați „New Key”, dați-i orice nume și apăsați „Create”. Limita de cheltuieli descrisă mai jos se introduce tot aici."
+    step3: "Copiați cheia. Este afișată o singură dată, așa că copiați-o pe loc."
+    note: "Prioritatea furnizorilor poate fi ajustată în setările extensiei."
+    billing: "Trebuie să cumpărați credite în avans. Pe pagina Credits, apăsați „Add Credits”, introduceți o sumă și confirmați cu „Purchase”."
+    limit: "La crearea unei chei, introduceți o sumă în „Credit limit” și alegeți o perioadă în „Reset limit every...” pentru a seta o limită de utilizare per perioadă."

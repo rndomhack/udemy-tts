@@ -1,0 +1,170 @@
+extName: Udemy TTS - Preklad a čítanie titulkov nahlas
+extDescription: Číta titulky Udemy nahlas vo vašom jazyku. Po nastavení je podporovaný aj prirodzený preklad pomocou generatívnej AI.
+widget:
+  master: "Povoliť"
+  title: Udemy TTS
+  enable: TTS
+  volume: Hlasitosť
+  speed: Rýchlosť
+  autoSpeed: Autom. rýchlosť
+  translate: Preložiť
+  translateNoKey: Preklad povolíte zadaním kľúča API v nastaveniach rozšírenia
+  cacheNone: Žiadne
+  cacheClear: Vymazať vyrovnávaciu pamäť prekladov
+  settings: Nastavenia
+  subtitleOverlay: Titulky
+options:
+  title: Nastavenia Udemy TTS
+  tabs:
+    general: Všeobecné
+    language: Jazyk
+    speech: Reč
+    translation: Preklad
+    subtitle: Titulky
+    dictionary: Slovník
+    advanced: Rozšírené
+  general:
+    heading: Všeobecné
+    enableAll: Zapnúť všetky funkcie
+  language:
+    heading: Jazyk
+    target: Cieľový jazyk
+  speech:
+    heading: Reč
+    ttsHeading: TTS
+    provider: "Poskytovateľ hlasu"
+    providerStandard: "Štandardný"
+    voicevoxHint: "Na použitie VOICEVOX musí byť spustený editor alebo engine. Server sa zvyčajne spustí automaticky a je dostupný na http://127.0.0.1:50021. Najprv kliknite na \"Udeliť prístup k tomuto hostiteľovi\" a povoľte pripojenie."
+    voicevoxUrl: "VOICEVOX URL"
+    enabled: Povoliť TTS
+    voice: Hlas
+    loadVoices: Načítať hlasy
+    loading: Načítava sa…
+    loadFailed: Nepodarilo sa načítať hlasy
+    rate: Základná rýchlosť
+    pitch: Výška tónu
+    volume: Hlasitosť
+    autoRate: Automatická úprava rýchlosti
+    autoRateHint: Postupne zrýchľuje prehrávanie, aby reč dobehla video
+    autoRateMode: Spôsob úpravy
+    autoRateNatural: Prirodzené
+    autoRateStrong: Silné
+    autoRateModeDesc:
+      natural: "Jemne upravuje rýchlosť pomocou prirodzenej korekcie."
+      strong: "Rýchlo upravuje rýchlosť pomocou silnej korekcie. Odporúča sa, keď chcete synchronizáciu s titulkami."
+  translation:
+    heading: Preklad
+    translateEnabled: Povoliť preklad
+    personality: Štýl prekladu
+    personalityStandard: Štandardný
+    personalityConcise: Stručný
+    personalityFriendly: Priateľský
+    personalityCustom: "Vlastný"
+    personalityDesc:
+      standard: "Prekladá verne originálu do prirodzeného textu."
+      concise: "Odstraňuje nadbytočné výrazy a prekladá do krátkeho a stručného textu. Odporúča sa na čítanie nahlas."
+      friendly: "Prekladá do hovorového, priateľského a jemného textu."
+      custom: "Prekladá podľa vašich pokynov nižšie."
+    customPersonality: "Vlastné pokyny"
+    customPersonalityPlaceholder: "Príklad: Prekladaj formálnym, zdvorilým jazykom."
+  subtitle:
+    enabled: Zapnúť titulky
+    heading: Titulky
+    fontSize: Veľkosť písma
+    textColor: Farba textu
+    backgroundColor: Farba pozadia
+  provider:
+    labelCompatible: Kompatibilné s OpenAI
+    labelDevice: Zabudované v prehliadači
+    deviceHint: "Používa preklad zabudovaný v prehliadači priamo v zariadení. Zadarmo a offline, no nie je dostupné v každom prehliadači. Jazykový model sa stiahne pri prvom použití a preklady bývajú skôr doslovné."
+    heading: Poskytovateľ prekladu
+    provider: Poskytovateľ
+    apiKey: Kľúč API
+    model: Model
+    modelPlaceholder: Názov modelu (napr. llama-3.3-70b)
+    sort: "Priorita poskytovateľa"
+    sortDesc:
+      none: "Neurčovať spôsob uprednostňovania poskytovateľov."
+      price: "Uprednostní poskytovateľa s najnižšou cenou."
+      throughput: "Uprednostní poskytovateľa s najvyššou priepustnosťou."
+      latency: "Uprednostní poskytovateľa s najrýchlejšou odozvou."
+    extraBody: Ďalšie telo požiadavky (JSON)
+    extraBodyHint: Hĺbkovo zlúčené do tela požiadavky API
+    jsonSchema: "Použiť štruktúrovaný výstup"
+    jsonSchemaHint: "Zapnite len ak endpoint podporuje štruktúrovaný výstup (response_format: json_schema). Pri vypnutí sa k promptu pridá inštrukcia formátu."
+    baseUrl: Základná URL
+    baseUrlHint: "Koncový bod kompatibilný s OpenAI, napr. https://api.groq.com/openai/v1"
+    grantPermission: Udeliť prístup k tomuto hostiteľovi
+    test: Otestovať pripojenie
+    testing: Testuje sa…
+    testOk: Pripojenie OK
+    errNoKey: Kľúč API nie je nastavený
+    errNoModel: Model nie je nastavený
+    show: Zobraziť
+    hide: Skryť
+  cache:
+    heading: Vyrovnávacia pamäť prekladov
+    hint: Preklady sa ukladajú do vyrovnávacej pamäte pre každú prednášku vo vašom prehliadači
+    refresh: Obnoviť
+    clearAll: Odstrániť všetko
+    confirmClearAll: Odstrániť VŠETKY uložené preklady?
+    confirmDeleteCourse: Odstrániť všetky uložené prednášky tohto kurzu?
+    delete: Odstrániť
+    empty: Žiadne uložené preklady
+    total: Celkovo
+  dictionary:
+    heading: Výslovnosť
+    hint: Nahraďte slová pred syntézou reči (napr. odborné termíny, ktoré TTS vyslovuje nesprávne)
+    word: Slovo
+    reading: Výslovnosť
+    add: Pridať
+    remove: Odstrániť
+    empty: Zatiaľ žiadne položky
+  advanced:
+    heading: Rozšírené
+    logLevel: Úroveň denníka
+guide:
+  title: "Ako používať poskytovateľov prekladu"
+  intro: "Preklad využíva generatívnu AI. Vyberte si jedného z nižšie uvedených poskytovateľov, získajte kľúč API a zadajte ho v nastaveniach rozšírenia — zaberie to len pár minút."
+  privacy: "Váš kľúč API je uložený iba vo vašom prehliadači a odosiela sa iba poskytovateľovi, ktorého ste vybrali."
+  disclaimer: "Poskytovateľa používate a platíte na vlastné riziko. Pre istotu odporúčame nastaviť limit výdavkov."
+  commonStep: "Vložte skopírovaný kľúč do poľa \"Kľúč API\" v nastaveniach rozšírenia, vyberte model a kliknite na \"Otestovať pripojenie\"."
+  openSettings: "Otvoriť nastavenia"
+  optionsLink: "Ako používať poskytovateľov prekladu"
+  modelsHeading: "Dostupné modely"
+  modelsHint: "Rozšírenie ponúka nasledujúce modely ako predvoľby. Preklad spracúva množstvo krátkych titulkov, takže lacný a rýchly model úplne postačuje. Tu je porovnanie jednotlivých modelov z hľadiska kvality, rýchlosti a ceny."
+  keyHeading: "Získanie kľúča API"
+  billingHeading: "Ceny a platba"
+  limitHeading: "Kontrola výdavkov"
+  models:
+    gemini31FlashLite: "Rýchlosť: Vysoká | Presnosť: Stredná | Cena: Nízka | Presnosť na preklad úplne postačuje. Odporúčané, ak si nie ste istí."
+    gemini35FlashLite: "Rýchlosť: Vysoká | Presnosť: Vysoká | Cena: Stredná | Nástupca radu 3.1 s výrazne vyššou presnosťou, no o niečo vyššou cenou."
+    gemma431bIt: "Rýchlosť: Nízka | Presnosť: Nízka | Cena: Zadarmo | Použiteľný v bezplatnej úrovni. Voľba, keď chcete najmä udržať náklady nízko."
+    gpt54Mini: "Rýchlosť: Stredná | Presnosť: Vysoká | Cena: Vysoká | Cena je vysoká, preto sa hodí, keď uprednostňujete kvalitu."
+    gpt54Nano: "Rýchlosť: Stredná | Presnosť: Stredná | Cena: Nízka | Lacnejší ako mini, no na preklad praktický."
+    deepseekV4Flash: "Rýchlosť: Stredná | Presnosť: Vysoká | Cena: Nízka | Dosť lacný, no s vysokou presnosťou. Najlepšia voľba, keď záleží na cene."
+    qwen36Flash: "Rýchlosť: Vysoká | Presnosť: Stredná | Cena: Nízka | Lacný a presnosť je tiež slušná."
+  gemini:
+    tagline: "K dispozícii je Gemini, plus bezplatná Gemma. Odporúčané, ak si nie ste istí, čo vybrať."
+    step1: "Otvorte Google AI Studio a prihláste sa účtom Google."
+    step2: "Kliknite na \"Vytvoriť kľúč API\", pomenujte kľúč, vyberte projekt (alebo použite \"Vytvoriť projekt\") a potom kliknite na \"Vytvoriť kľúč\"."
+    step3: "Skopírujte zobrazený kľúč API."
+    note: "Bezplatná úroveň má limity rýchlosti, ale na sledovanie prednášok zvyčajne stačí."
+    billing: "V bezplatnej úrovni nie sú potrebné platobné údaje. Zapnutie fakturácie uvoľní limity rýchlosti aj pre bezplatné modely, ale pozor: fakturácia je predplatená a kľúč API prestane fungovať, kým si nekúpite kredity. Fakturáciu zapnete cez \"Nastaviť fakturáciu\" na stránke Fakturácia, kde zaregistrujete platobné údaje, a potom kúpite kredity cez \"Kúpiť kredity\" (minimálna suma sa zobrazí na obrazovke)."
+    limit: "Na stránke Výdavky nastavíte mesačný limit používania cez \"Mesačný strop výdavkov\". Sumu určíte cez \"Upraviť strop výdavkov\"."
+  openai:
+    tagline: "K dispozícii sú modely ChatGPT. Kredit je potrebné kúpiť vopred."
+    step1: "Prihláste sa do OpenAI Platform a otvorte stránku API keys."
+    step2: "Kliknite na \"Create new secret key\" a zadajte ľubovoľný názov."
+    step3: "Skopírujte kľúč. Zobrazí sa iba raz, preto ho ihneď skopírujte."
+    note: "Toto je oddelené od plateného plánu ChatGPT."
+    billing: "Kredit je potrebné kúpiť vopred. Na stránke Billing zaregistrujte platobnú metódu cez \"Add payment details\" a potom kúpte kredit cez \"Add to credit balance\"."
+    limit: "Na stránke Limits nastavte mesačný limit používania cez \"Edit spend limit\"."
+  openrouter:
+    tagline: "K dispozícii je množstvo modelov. Kredity je potrebné kúpiť vopred."
+    step1: "Prihláste sa do OpenRouter a otvorte stránku API keys."
+    step2: "Kliknite na \"New Key\", zadajte ľubovoľný názov a kliknite na \"Create\". Nižšie opísaný limit výdavkov sa zadáva tiež tu."
+    step3: "Skopírujte kľúč. Zobrazí sa iba raz, preto ho ihneď skopírujte."
+    note: "Prioritu poskytovateľov možno doladiť v nastaveniach rozšírenia."
+    billing: "Kredity je potrebné kúpiť vopred. Na stránke Credits kliknite na \"Add Credits\", zadajte sumu a potvrďte cez \"Purchase\"."
+    limit: "Pri vytváraní kľúča zadajte sumu do poľa \"Credit limit\" a v \"Reset limit every...\" vyberte obdobie, čím nastavíte limit používania na dané obdobie."

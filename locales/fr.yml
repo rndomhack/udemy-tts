@@ -1,0 +1,170 @@
+extName: Udemy TTS - Traduire et lire les sous-titres à voix haute
+extDescription: Lit les sous-titres Udemy à voix haute dans votre langue. Après configuration, traduction naturelle par IA générative en option.
+widget:
+  master: "Activer"
+  title: Udemy TTS
+  enable: TTS
+  volume: Volume
+  speed: Vitesse
+  autoSpeed: Vitesse auto
+  translate: Traduire
+  translateNoKey: Configurez une clé API dans les paramètres de l'extension pour activer la traduction
+  cacheNone: Aucune
+  cacheClear: Effacer le cache de traduction
+  settings: Paramètres
+  subtitleOverlay: Sous-titres
+options:
+  title: Paramètres Udemy TTS
+  tabs:
+    general: Général
+    language: Langue
+    speech: Voix
+    translation: Traduction
+    subtitle: Sous-titres
+    dictionary: Dictionnaire
+    advanced: Avancé
+  general:
+    heading: Général
+    enableAll: Activer toutes les fonctions
+  language:
+    heading: Langue
+    target: Langue cible
+  speech:
+    heading: Voix
+    ttsHeading: TTS
+    provider: "Fournisseur de voix"
+    providerStandard: "Standard"
+    voicevoxHint: "Pour utiliser VOICEVOX, l'éditeur ou le moteur doit être en cours d'exécution. Normalement, le serveur démarre automatiquement et devient accessible à l'adresse http://127.0.0.1:50021. Cliquez d'abord sur \"Autoriser l'accès à cet hôte\" pour autoriser la connexion."
+    voicevoxUrl: "VOICEVOX URL"
+    enabled: Activer le TTS
+    voice: Voix
+    loadVoices: Charger les voix
+    loading: Chargement…
+    loadFailed: Échec du chargement des voix
+    rate: Vitesse de base
+    pitch: Hauteur
+    volume: Volume
+    autoRate: Ajustement automatique de la vitesse
+    autoRateHint: Ajuste progressivement la vitesse pour que la voix rattrape la vidéo
+    autoRateMode: Méthode d’ajustement
+    autoRateNatural: Naturel
+    autoRateStrong: Puissant
+    autoRateModeDesc:
+      natural: "Ajuste la vitesse en douceur avec une correction naturelle."
+      strong: "Ajuste la vitesse rapidement avec une correction forte. Recommandé si vous souhaitez une synchronisation avec les sous-titres."
+  translation:
+    heading: Traduction
+    translateEnabled: Activer la traduction
+    personality: Style de traduction
+    personalityStandard: Standard
+    personalityConcise: Concis
+    personalityFriendly: Convivial
+    personalityCustom: "Personnalisé"
+    personalityDesc:
+      standard: "Traduit fidèlement à l'original en un texte naturel."
+      concise: "Supprime les expressions redondantes et traduit en un texte court et concis. Recommandé pour la lecture à voix haute."
+      friendly: "Traduit en un texte familier, convivial et doux."
+      custom: "Traduit selon vos propres instructions ci-dessous."
+    customPersonality: "Instructions personnalisées"
+    customPersonalityPlaceholder: "Exemple : Traduire dans un langage formel et poli."
+  subtitle:
+    enabled: Activer les sous-titres
+    heading: Sous-titres
+    fontSize: Taille de police
+    textColor: Couleur du texte
+    backgroundColor: Couleur de fond
+  provider:
+    labelCompatible: Compatible OpenAI
+    labelDevice: Intégré au navigateur
+    deviceHint: "Utilise la traduction sur l'appareil intégrée au navigateur. Gratuite et hors ligne, mais pas disponible dans tous les navigateurs. Le modèle de langue se télécharge à la première utilisation, et les traductions ont tendance à être plus littérales."
+    heading: Fournisseur de traduction
+    provider: Fournisseur
+    apiKey: Clé API
+    model: Modèle
+    modelPlaceholder: Nom du modèle (ex. llama-3.3-70b)
+    sort: "Priorité du fournisseur"
+    sortDesc:
+      none: "Ne pas spécifier de méthode pour prioriser les fournisseurs."
+      price: "Privilégie le fournisseur au prix le plus bas."
+      throughput: "Privilégie le fournisseur au débit le plus élevé."
+      latency: "Privilégie le fournisseur à la réponse la plus rapide."
+    extraBody: Corps supplémentaire (JSON)
+    extraBodyHint: Fusionné en profondeur avec le corps de la requête
+    jsonSchema: "Utiliser la sortie structurée"
+    jsonSchemaHint: "À activer uniquement si le point de terminaison prend en charge la sortie structurée (response_format: json_schema). Sinon, une instruction de format est ajoutée au prompt."
+    baseUrl: Base URL
+    baseUrlHint: "Endpoint compatible OpenAI, ex. https://api.groq.com/openai/v1"
+    grantPermission: Autoriser l'accès à cet hôte
+    test: Tester la connexion
+    testing: Test en cours…
+    testOk: Connexion OK
+    errNoKey: La clé API n'est pas configurée
+    errNoModel: Le modèle n'est pas configuré
+    show: Afficher
+    hide: Masquer
+  cache:
+    heading: Cache de traduction
+    hint: Les traductions sont mises en cache par leçon dans votre navigateur
+    refresh: Actualiser
+    clearAll: Tout supprimer
+    confirmClearAll: Supprimer TOUTES les traductions en cache ?
+    confirmDeleteCourse: Supprimer le cache de toutes les leçons de ce cours ?
+    delete: Supprimer
+    empty: Aucune traduction en cache
+    total: Total
+  dictionary:
+    heading: Prononciations
+    hint: Remplace des mots avant la synthèse vocale (ex. termes techniques mal prononcés)
+    word: Mot
+    reading: Prononciation
+    add: Ajouter
+    remove: Supprimer
+    empty: Aucune entrée
+  advanced:
+    heading: Avancé
+    logLevel: Niveau de journalisation
+guide:
+  title: "Comment utiliser les fournisseurs de traduction"
+  intro: "La traduction utilise une IA générative. Choisissez l'un des fournisseurs ci-dessous, obtenez une clé API et enregistrez-la dans les paramètres de l'extension — cela ne prend que quelques minutes."
+  privacy: "Votre clé API est stockée uniquement dans votre navigateur et n'est envoyée qu'au fournisseur que vous avez sélectionné."
+  disclaimer: "Vous utilisez et payez le fournisseur à vos propres risques. Nous recommandons de définir une limite de dépenses par précaution."
+  commonStep: "Collez la clé copiée dans le champ \"Clé API\" des paramètres de l'extension, choisissez un modèle puis cliquez sur \"Tester la connexion\"."
+  openSettings: "Ouvrir les paramètres"
+  optionsLink: "Comment utiliser les fournisseurs de traduction"
+  modelsHeading: "Modèles disponibles"
+  modelsHint: "L'extension propose les modèles suivants en préréglages. La traduction traite de nombreux sous-titres courts, donc un modèle rapide et bon marché suffit amplement. Voici comment chaque modèle se compare en qualité, vitesse et coût."
+  keyHeading: "Obtenir une clé API"
+  billingHeading: "Tarifs et paiement"
+  limitHeading: "Limiter vos dépenses"
+  models:
+    gemini31FlashLite: "Vitesse: Élevée | Précision: Moyenne | Coût: Faible | La précision suffit largement pour la traduction. Recommandé en cas de doute."
+    gemini35FlashLite: "Vitesse: Élevée | Précision: Élevée | Coût: Moyenne | Le successeur de la série 3.1, avec une précision nettement supérieure mais un coût un peu plus élevé."
+    gemma431bIt: "Vitesse: Faible | Précision: Faible | Coût: Gratuit | Utilisable avec l'offre gratuite. Le choix idéal quand on veut avant tout limiter les coûts."
+    gpt54Mini: "Vitesse: Moyenne | Précision: Élevée | Coût: Élevée | Le coût est élevé, ce qui convient quand vous privilégiez la qualité."
+    gpt54Nano: "Vitesse: Moyenne | Précision: Moyenne | Coût: Faible | Moins cher que mini, mais pratique pour la traduction."
+    deepseekV4Flash: "Vitesse: Moyenne | Précision: Élevée | Coût: Faible | Assez bon marché, avec une précision élevée malgré tout. Le meilleur choix quand le coût compte."
+    qwen36Flash: "Vitesse: Élevée | Précision: Moyenne | Coût: Faible | Peu coûteux, avec une précision également correcte."
+  gemini:
+    tagline: "Gemini est disponible, ainsi que Gemma gratuit. Recommandé si vous ne savez pas lequel choisir."
+    step1: "Ouvrez Google AI Studio et connectez-vous avec votre compte Google."
+    step2: "Cliquez sur \"Créer une clé API\", nommez la clé, choisissez un projet (ou utilisez \"Créer un projet\"), puis cliquez sur \"Créer une clé\"."
+    step3: "Copiez la clé API affichée."
+    note: "L'offre gratuite est soumise à des limites de débit, mais elle suffit généralement pour suivre des cours."
+    billing: "Aucune information de paiement n'est nécessaire avec l'offre gratuite. L'activation de la facturation assouplit les limites de débit, même pour les modèles gratuits, mais attention : la facturation est prépayée et votre clé API cesse de fonctionner tant que vous n'avez pas acheté de crédits. Pour activer la facturation, utilisez \"Configurer la facturation\" sur la page Facturation pour enregistrer vos informations de paiement, puis achetez des crédits avec \"Acheter des crédits\" (le montant minimum est indiqué à l'écran)."
+    limit: "Sur la page Dépenses, le \"Plafond de dépenses mensuel\" définit une limite d'utilisation mensuelle. Utilisez \"Modifier le plafond de dépenses\" pour définir le montant."
+  openai:
+    tagline: "Les modèles ChatGPT sont disponibles. Vous devez acheter du crédit à l'avance."
+    step1: "Connectez-vous à la plateforme OpenAI et ouvrez la page API keys."
+    step2: "Cliquez sur \"Create new secret key\" et donnez-lui un nom quelconque."
+    step3: "Copiez la clé. Elle ne s'affiche qu'une seule fois, copiez-la immédiatement."
+    note: "C'est distinct d'un abonnement payant à ChatGPT."
+    billing: "Vous devez acheter du crédit à l'avance. Sur la page Billing, enregistrez un moyen de paiement via \"Add payment details\", puis achetez du crédit via \"Add to credit balance\"."
+    limit: "Sur la page Limits, utilisez \"Edit spend limit\" pour définir une limite d'utilisation mensuelle."
+  openrouter:
+    tagline: "De nombreux modèles sont disponibles. Vous devez acheter des crédits à l'avance."
+    step1: "Connectez-vous à OpenRouter et ouvrez la page API keys."
+    step2: "Cliquez sur \"New Key\", donnez-lui un nom quelconque et cliquez sur \"Create\". La limite de dépenses décrite ci-dessous se saisit également ici."
+    step3: "Copiez la clé. Elle ne s'affiche qu'une seule fois, copiez-la immédiatement."
+    note: "La priorité des fournisseurs peut être ajustée dans les paramètres de l'extension."
+    billing: "Vous devez acheter des crédits à l'avance. Sur la page Credits, cliquez sur \"Add Credits\", saisissez un montant et confirmez avec \"Purchase\"."
+    limit: "Lors de la création d'une clé, saisissez un montant dans \"Credit limit\" et choisissez une période dans \"Reset limit every...\" pour définir un plafond d'utilisation par période."

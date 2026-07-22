@@ -1,0 +1,170 @@
+extName: Udemy TTS - Käännä ja lue tekstitykset ääneen
+extDescription: Lukee Udemyn tekstitykset ääneen omalla kielelläsi. Määrityksen jälkeen tuetaan myös luonnollista käännöstä generatiivisella tekoälyllä.
+widget:
+  master: "Ota käyttöön"
+  title: Udemy TTS
+  enable: TTS
+  volume: Äänenvoimakkuus
+  speed: Nopeus
+  autoSpeed: Autom. nopeus
+  translate: Käännä
+  translateNoKey: Ota käännös käyttöön asettamalla API-avain laajennuksen asetuksissa
+  cacheNone: Ei mitään
+  cacheClear: Tyhjennä käännösvälimuisti
+  settings: Asetukset
+  subtitleOverlay: Tekstitys
+options:
+  title: Udemy TTS -asetukset
+  tabs:
+    general: Yleiset
+    language: Kieli
+    speech: Puhe
+    translation: Käännös
+    subtitle: Tekstitys
+    dictionary: Sanasto
+    advanced: Lisäasetukset
+  general:
+    heading: Yleiset
+    enableAll: Ota kaikki ominaisuudet käyttöön
+  language:
+    heading: Kieli
+    target: Kohdekieli
+  speech:
+    heading: Puhe
+    ttsHeading: TTS
+    provider: "Äänipalvelu"
+    providerStandard: "Vakio"
+    voicevoxHint: "VOICEVOXin käyttö edellyttää, että editori tai moottori on käynnissä. Yleensä palvelin käynnistyy automaattisesti ja on käytettävissä osoitteessa http://127.0.0.1:50021. Salli yhteys napsauttamalla ensin \"Myönnä käyttöoikeus tähän isäntään\"."
+    voicevoxUrl: "VOICEVOX URL"
+    enabled: Ota TTS käyttöön
+    voice: Ääni
+    loadVoices: Lataa äänet
+    loading: Ladataan…
+    loadFailed: Äänien lataus epäonnistui
+    rate: Perusnopeus
+    pitch: Sävelkorkeus
+    volume: Äänenvoimakkuus
+    autoRate: Automaattinen nopeuden säätö
+    autoRateHint: Nopeuttaa toistoa vähitellen, jotta puhe saa videon kiinni
+    autoRateMode: Säätötapa
+    autoRateNatural: Luonnollinen
+    autoRateStrong: Voimakas
+    autoRateModeDesc:
+      natural: "Säätää nopeutta lempeästi luonnollisella korjauksella."
+      strong: "Säätää nopeutta nopeasti voimakkaalla korjauksella. Suositellaan, kun haluat synkronoida tekstityksen kanssa."
+  translation:
+    heading: Käännös
+    translateEnabled: Ota käännös käyttöön
+    personality: Käännöstyyli
+    personalityStandard: Vakio
+    personalityConcise: Tiivis
+    personalityFriendly: Ystävällinen
+    personalityCustom: "Mukautettu"
+    personalityDesc:
+      standard: "Kääntää uskollisesti alkuperäiselle luonnolliseksi tekstiksi."
+      concise: "Poistaa turhat ilmaisut ja kääntää lyhyeksi ja ytimekkääksi tekstiksi. Suositellaan ääneen lukemiseen."
+      friendly: "Kääntää puhekieliseksi, ystävälliseksi ja pehmeäksi tekstiksi."
+      custom: "Kääntää alla antamiesi ohjeiden mukaan."
+    customPersonality: "Mukautetut ohjeet"
+    customPersonalityPlaceholder: "Esimerkki: Käännä muodollisella, kohteliaalla kielellä."
+  subtitle:
+    enabled: Ota tekstitys käyttöön
+    heading: Tekstitys
+    fontSize: Fonttikoko
+    textColor: Tekstin väri
+    backgroundColor: Taustan väri
+  provider:
+    labelCompatible: OpenAI-yhteensopiva
+    labelDevice: Selaimeen sisäänrakennettu
+    deviceHint: "Käyttää selaimeen sisäänrakennettua laitteessa tapahtuvaa käännöstä. Ilmainen ja offline-tilassa toimiva, mutta ei saatavilla kaikissa selaimissa. Kielimalli ladataan ensimmäisellä käyttökerralla, ja käännökset ovat yleensä kirjaimellisempia."
+    heading: Käännöspalvelu
+    provider: Palvelu
+    apiKey: API-avain
+    model: Malli
+    modelPlaceholder: Mallin nimi (esim. llama-3.3-70b)
+    sort: "Palveluntarjoajan prioriteetti"
+    sortDesc:
+      none: "Älä määritä palveluntarjoajien priorisointitapaa."
+      price: "Priorisoi palveluntarjoajan, jolla on alhaisin hinta."
+      throughput: "Priorisoi palveluntarjoajan, jolla on suurin suorituskyky."
+      latency: "Priorisoi palveluntarjoajan, jolla on nopein vaste."
+    extraBody: Lisäpyyntörunko (JSON)
+    extraBodyHint: Yhdistetään syvästi API-pyynnön runkoon
+    jsonSchema: "Käytä jäsenneltyä tulostetta"
+    jsonSchemaHint: "Ota käyttöön vain jos päätepiste tukee jäsenneltyä tulostetta (response_format: json_schema). Pois päältä ollessa promptiin lisätään muotoiluohje."
+    baseUrl: Perus-URL
+    baseUrlHint: "OpenAI-yhteensopiva päätepiste, esim. https://api.groq.com/openai/v1"
+    grantPermission: Myönnä käyttöoikeus tähän isäntään
+    test: Testaa yhteys
+    testing: Testataan…
+    testOk: Yhteys OK
+    errNoKey: API-avainta ei ole asetettu
+    errNoModel: Mallia ei ole asetettu
+    show: Näytä
+    hide: Piilota
+  cache:
+    heading: Käännösvälimuisti
+    hint: Käännökset tallennetaan välimuistiin luentokohtaisesti selaimessasi
+    refresh: Päivitä
+    clearAll: Poista kaikki
+    confirmClearAll: Poistetaanko KAIKKI välimuistiin tallennetut käännökset?
+    confirmDeleteCourse: Poistetaanko kaikki tämän kurssin välimuistiin tallennetut luennot?
+    delete: Poista
+    empty: Ei välimuistiin tallennettuja käännöksiä
+    total: Yhteensä
+  dictionary:
+    heading: Ääntämiset
+    hint: Korvaa sanat ennen puhesynteesiä (esim. termit, jotka TTS ääntää väärin)
+    word: Sana
+    reading: Ääntämys
+    add: Lisää
+    remove: Poista
+    empty: Ei vielä merkintöjä
+  advanced:
+    heading: Lisäasetukset
+    logLevel: Lokitaso
+guide:
+  title: "Näin käytät käännöspalveluita"
+  intro: "Käännös käyttää generatiivista tekoälyä. Valitse jokin alla olevista palveluntarjoajista, hanki API-avain ja aseta se laajennuksen asetuksiin — se vie vain muutaman minuutin."
+  privacy: "API-avaimesi tallennetaan vain selaimeesi ja lähetetään vain valitsemallesi palveluntarjoajalle."
+  disclaimer: "Käytät palveluntarjoajaa ja maksat siitä omalla vastuullasi. Suosittelemme asettamaan kulurajan varmuuden vuoksi."
+  commonStep: "Liitä kopioitu avain laajennuksen asetusten \"API-avain\"-kenttään, valitse malli ja napsauta \"Testaa yhteys\"."
+  openSettings: "Avaa asetukset"
+  optionsLink: "Näin käytät käännöspalveluita"
+  modelsHeading: "Käytettävissä olevat mallit"
+  modelsHint: "Laajennus tarjoaa seuraavat mallit esiasetuksina. Käännös käsittelee monia lyhyitä tekstityksiä, joten halpa ja nopea malli riittää hyvin. Näin kukin malli vertautuu laadun, nopeuden ja hinnan suhteen."
+  keyHeading: "API-avaimen hankkiminen"
+  billingHeading: "Hinnoittelu ja maksaminen"
+  limitHeading: "Kulujen hallinta"
+  models:
+    gemini31FlashLite: "Nopeus: Korkea | Tarkkuus: Keskitaso | Hinta: Matala | Tarkkuus riittää hyvin käännökseen. Suositeltu, jos et ole varma."
+    gemini35FlashLite: "Nopeus: Korkea | Tarkkuus: Korkea | Hinta: Keskitaso | 3.1-sarjan seuraaja huomattavasti korkeammalla tarkkuudella, mutta hieman korkeammalla hinnalla."
+    gemma431bIt: "Nopeus: Matala | Tarkkuus: Matala | Hinta: Ilmainen | Käytettävissä ilmaisella tasolla. Valinta silloin, kun haluat ennen kaikkea pitää kustannukset kurissa."
+    gpt54Mini: "Nopeus: Keskitaso | Tarkkuus: Korkea | Hinta: Korkea | Hinta on korkea, joten sopii, kun priorisoit laatua."
+    gpt54Nano: "Nopeus: Keskitaso | Tarkkuus: Keskitaso | Hinta: Matala | Halvempi kuin mini, mutta käytännöllinen käännökseen."
+    deepseekV4Flash: "Nopeus: Keskitaso | Tarkkuus: Korkea | Hinta: Matala | Melko halpa, silti tarkkuus on korkea. Paras valinta, kun hinnalla on merkitystä."
+    qwen36Flash: "Nopeus: Korkea | Tarkkuus: Keskitaso | Hinta: Matala | Edullinen, ja tarkkuuskin on kohtuullinen."
+  gemini:
+    tagline: "Gemini on käytettävissä, samoin ilmainen Gemma. Suositeltu, jos et ole varma, minkä valitsisit."
+    step1: "Avaa Google AI Studio ja kirjaudu sisään Google-tililläsi."
+    step2: "Napsauta \"Luo API-avain\", nimeä avain, valitse projekti (tai käytä \"Luo projekti\") ja napsauta sitten \"Luo avain\"."
+    step3: "Kopioi näytetty API-avain."
+    note: "Ilmaisella tasolla on käyttörajoituksia, mutta se riittää yleensä luentojen katseluun."
+    billing: "Ilmaisella tasolla ei tarvita maksutietoja. Laskutuksen käyttöönotto lieventää käyttörajoituksia myös ilmaisille malleille, mutta huomaa: laskutus on ennakkomaksullinen, ja API-avain lakkaa toimimasta, kunnes ostat krediittejä. Ota laskutus käyttöön valitsemalla \"Määritä laskutus\" Laskutus-sivulla ja rekisteröi maksutietosi, ja osta sitten krediittejä valinnalla \"Osta krediittejä\" (vähimmäissumma näkyy näytöllä)."
+    limit: "Kulut-sivulla \"Kuukausittainen kuluraja\" asettaa kuukausittaisen käyttörajan. Aseta summa kohdasta \"Muokkaa kulurajaa\"."
+  openai:
+    tagline: "ChatGPT-mallit ovat käytettävissä. Sinun on ostettava saldoa etukäteen."
+    step1: "Kirjaudu OpenAI Platformiin ja avaa API keys -sivu."
+    step2: "Napsauta \"Create new secret key\" ja anna sille mikä tahansa nimi."
+    step3: "Kopioi avain. Se näytetään vain kerran, joten kopioi se heti."
+    note: "Tämä on erillinen maksullisesta ChatGPT-tilauksesta."
+    billing: "Sinun on ostettava saldoa etukäteen. Rekisteröi maksutapa Billing-sivulla kohdasta \"Add payment details\" ja osta sitten saldoa kohdasta \"Add to credit balance\"."
+    limit: "Aseta kuukausittainen käyttöraja Limits-sivulla kohdasta \"Edit spend limit\"."
+  openrouter:
+    tagline: "Monia malleja on käytettävissä. Sinun on ostettava krediittejä etukäteen."
+    step1: "Kirjaudu OpenRouteriin ja avaa API keys -sivu."
+    step2: "Napsauta \"New Key\", anna sille mikä tahansa nimi ja napsauta \"Create\". Alla kuvattu kuluraja syötetään myös tässä."
+    step3: "Kopioi avain. Se näytetään vain kerran, joten kopioi se heti."
+    note: "Palveluntarjoajien prioriteettia voi säätää laajennuksen asetuksissa."
+    billing: "Sinun on ostettava krediittejä etukäteen. Napsauta Credits-sivulla \"Add Credits\", syötä summa ja vahvista kohdasta \"Purchase\"."
+    limit: "Avainta luodessasi syötä summa kohtaan \"Credit limit\" ja valitse jakso kohdasta \"Reset limit every...\" asettaaksesi käyttörajan jaksoa kohden."

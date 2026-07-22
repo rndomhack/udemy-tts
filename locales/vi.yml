@@ -1,0 +1,170 @@
+extName: Udemy TTS - Dịch và đọc phụ đề thành tiếng
+extDescription: Đọc to phụ đề Udemy bằng ngôn ngữ của bạn. Sau khi thiết lập, còn hỗ trợ dịch tự nhiên bằng AI tạo sinh.
+widget:
+  master: "Bật"
+  title: Udemy TTS
+  enable: TTS
+  volume: Âm lượng
+  speed: Tốc độ
+  autoSpeed: Tốc độ tự động
+  translate: Dịch
+  translateNoKey: Đặt khóa API trong cài đặt tiện ích để bật tính năng dịch
+  cacheNone: Không có
+  cacheClear: Xóa bộ nhớ đệm bản dịch
+  settings: Cài đặt
+  subtitleOverlay: Phụ đề
+options:
+  title: Cài đặt Udemy TTS
+  tabs:
+    general: Chung
+    language: Ngôn ngữ
+    speech: Giọng nói
+    translation: Dịch
+    subtitle: Phụ đề
+    dictionary: Từ điển
+    advanced: Nâng cao
+  general:
+    heading: Chung
+    enableAll: Bật tất cả tính năng
+  language:
+    heading: Ngôn ngữ
+    target: Ngôn ngữ đích
+  speech:
+    heading: Giọng nói
+    ttsHeading: TTS
+    provider: "Nhà cung cấp giọng nói"
+    providerStandard: "Tiêu chuẩn"
+    voicevoxHint: "Để dùng VOICEVOX, trình soạn thảo hoặc engine phải đang chạy. Thông thường máy chủ tự khởi động và có thể truy cập tại http://127.0.0.1:50021. Trước tiên, hãy nhấp \"Cấp quyền truy cập host này\" để cho phép kết nối."
+    voicevoxUrl: "VOICEVOX URL"
+    enabled: Bật TTS
+    voice: Giọng đọc
+    loadVoices: Tải danh sách giọng
+    loading: Đang tải…
+    loadFailed: Không tải được danh sách giọng
+    rate: Tốc độ cơ bản
+    pitch: Cao độ
+    volume: Âm lượng
+    autoRate: Tự động điều chỉnh tốc độ
+    autoRateHint: Điều chỉnh tốc độ dần dần để giọng đọc bắt kịp video
+    autoRateMode: Phương thức điều chỉnh
+    autoRateNatural: Tự nhiên
+    autoRateStrong: Mạnh
+    autoRateModeDesc:
+      natural: "Điều chỉnh tốc độ nhẹ nhàng bằng hiệu chỉnh tự nhiên."
+      strong: "Điều chỉnh tốc độ nhanh chóng bằng hiệu chỉnh mạnh. Khuyến nghị khi bạn muốn đồng bộ với phụ đề."
+  translation:
+    heading: Dịch
+    translateEnabled: Bật dịch
+    personality: Phong cách dịch
+    personalityStandard: Tiêu chuẩn
+    personalityConcise: Ngắn gọn
+    personalityFriendly: Thân thiện
+    personalityCustom: "Tùy chỉnh"
+    personalityDesc:
+      standard: "Dịch trung thành với bản gốc thành văn bản tự nhiên."
+      concise: "Loại bỏ các diễn đạt dư thừa và dịch thành văn bản ngắn gọn, súc tích. Khuyến nghị cho việc đọc."
+      friendly: "Dịch thành văn bản thân mật, gần gũi và nhẹ nhàng."
+      custom: "Dịch theo hướng dẫn của bạn bên dưới."
+    customPersonality: "Hướng dẫn tùy chỉnh"
+    customPersonalityPlaceholder: "Ví dụ: Dịch bằng ngôn ngữ trang trọng, lịch sự."
+  subtitle:
+    enabled: Bật phụ đề
+    heading: Phụ đề
+    fontSize: Cỡ chữ
+    textColor: Màu chữ
+    backgroundColor: Màu nền
+  provider:
+    labelCompatible: Tương thích với OpenAI
+    labelDevice: Tích hợp trong trình duyệt
+    deviceHint: "Sử dụng bản dịch trên thiết bị được tích hợp trong trình duyệt. Miễn phí và ngoại tuyến, dù không có trên mọi trình duyệt. Mô hình ngôn ngữ được tải xuống trong lần dùng đầu tiên, và bản dịch thường sát nghĩa đen hơn."
+    heading: Nhà cung cấp dịch
+    provider: Nhà cung cấp
+    apiKey: Khóa API
+    model: Mô hình
+    modelPlaceholder: Tên mô hình (vd. llama-3.3-70b)
+    sort: "Ưu tiên nhà cung cấp"
+    sortDesc:
+      none: "Không chỉ định phương thức ưu tiên nhà cung cấp."
+      price: "Ưu tiên nhà cung cấp có giá thấp nhất."
+      throughput: "Ưu tiên nhà cung cấp có thông lượng cao nhất."
+      latency: "Ưu tiên nhà cung cấp có phản hồi nhanh nhất."
+    extraBody: Body yêu cầu bổ sung (JSON)
+    extraBodyHint: Được hợp nhất sâu vào body yêu cầu API
+    jsonSchema: "Dùng đầu ra có cấu trúc"
+    jsonSchemaHint: "Chỉ bật nếu endpoint hỗ trợ đầu ra có cấu trúc (response_format: json_schema). Khi tắt, một chỉ dẫn định dạng sẽ được thêm vào prompt."
+    baseUrl: Base URL
+    baseUrlHint: "Endpoint tương thích OpenAI, vd. https://api.groq.com/openai/v1"
+    grantPermission: Cấp quyền truy cập host này
+    test: Kiểm tra kết nối
+    testing: Đang kiểm tra…
+    testOk: Kết nối OK
+    errNoKey: Chưa đặt khóa API
+    errNoModel: Chưa đặt mô hình
+    show: Hiện
+    hide: Ẩn
+  cache:
+    heading: Bộ nhớ đệm bản dịch
+    hint: Bản dịch được lưu trong trình duyệt theo từng bài giảng
+    refresh: Làm mới
+    clearAll: Xóa tất cả
+    confirmClearAll: Xóa TẤT CẢ bản dịch đã lưu?
+    confirmDeleteCourse: Xóa bộ nhớ đệm của tất cả bài giảng khóa học này?
+    delete: Xóa
+    empty: Không có bản dịch nào được lưu
+    total: Tổng
+  dictionary:
+    heading: Cách phát âm
+    hint: Thay thế từ trước khi tổng hợp giọng nói (vd. thuật ngữ kỹ thuật bị đọc sai)
+    word: Từ
+    reading: Cách đọc
+    add: Thêm
+    remove: Xóa
+    empty: Chưa có mục nào
+  advanced:
+    heading: Nâng cao
+    logLevel: Mức ghi log
+guide:
+  title: "Cách sử dụng các nhà cung cấp dịch"
+  intro: "Tính năng dịch sử dụng AI tạo sinh. Hãy chọn một trong các nhà cung cấp dưới đây, lấy khóa API và nhập vào cài đặt của tiện ích — chỉ mất vài phút."
+  privacy: "Khóa API chỉ được lưu trong trình duyệt của bạn và chỉ được gửi tới nhà cung cấp bạn đã chọn."
+  disclaimer: "Bạn tự chịu trách nhiệm khi sử dụng và thanh toán cho nhà cung cấp. Để phòng xa, chúng tôi khuyên bạn nên đặt hạn mức chi tiêu."
+  commonStep: "Dán khóa đã sao chép vào ô \"Khóa API\" trong cài đặt tiện ích, chọn mô hình rồi nhấp \"Kiểm tra kết nối\"."
+  openSettings: "Mở cài đặt"
+  optionsLink: "Cách sử dụng các nhà cung cấp dịch"
+  modelsHeading: "Các mô hình khả dụng"
+  modelsHint: "Tiện ích cung cấp các mô hình sau dưới dạng cài đặt sẵn. Việc dịch xử lý nhiều phụ đề ngắn, nên một mô hình rẻ và nhanh là đủ. Dưới đây là so sánh từng mô hình về chất lượng, tốc độ và chi phí."
+  keyHeading: "Lấy khóa API"
+  billingHeading: "Giá và thanh toán"
+  limitHeading: "Kiểm soát chi tiêu"
+  models:
+    gemini31FlashLite: "Tốc độ: Cao | Độ chính xác: Trung bình | Chi phí: Thấp | Độ chính xác thừa đủ để dịch. Nên chọn nếu bạn chưa chắc."
+    gemini35FlashLite: "Tốc độ: Cao | Độ chính xác: Cao | Chi phí: Trung bình | Phiên bản kế nhiệm của dòng 3.1, với độ chính xác cao hơn rõ rệt nhưng chi phí cao hơn một chút."
+    gemma431bIt: "Tốc độ: Thấp | Độ chính xác: Thấp | Chi phí: Miễn phí | Dùng được ở gói miễn phí. Lựa chọn khi bạn chủ yếu muốn giảm chi phí."
+    gpt54Mini: "Tốc độ: Trung bình | Độ chính xác: Cao | Chi phí: Cao | Chi phí cao, nên phù hợp khi bạn ưu tiên chất lượng."
+    gpt54Nano: "Tốc độ: Trung bình | Độ chính xác: Trung bình | Chi phí: Thấp | Rẻ hơn mini, nhưng thực dụng cho việc dịch."
+    deepseekV4Flash: "Tốc độ: Trung bình | Độ chính xác: Cao | Chi phí: Thấp | Khá rẻ nhưng độ chính xác cao. Lựa chọn hàng đầu khi chi phí quan trọng."
+    qwen36Flash: "Tốc độ: Cao | Độ chính xác: Trung bình | Chi phí: Thấp | Rẻ, và độ chính xác cũng khá tốt."
+  gemini:
+    tagline: "Có sẵn Gemini, cùng với Gemma miễn phí. Nên chọn nếu bạn chưa chắc dùng gì."
+    step1: "Mở Google AI Studio và đăng nhập bằng tài khoản Google của bạn."
+    step2: "Nhấp \"Tạo khóa API\", đặt tên khóa, chọn một dự án (hoặc dùng \"Tạo dự án\"), rồi nhấp \"Tạo khóa\"."
+    step3: "Sao chép khóa API được hiển thị."
+    note: "Gói miễn phí có giới hạn tốc độ, nhưng thường đủ để xem bài giảng."
+    billing: "Ở gói miễn phí không cần thông tin thanh toán. Bật thanh toán sẽ nới lỏng giới hạn tốc độ ngay cả với các mô hình miễn phí, nhưng lưu ý: đây là hình thức trả trước, và khóa API sẽ ngừng hoạt động cho đến khi bạn mua tín dụng. Để bật thanh toán, dùng \"Thiết lập thanh toán\" trên trang \"Thanh toán\" để đăng ký thông tin thanh toán, sau đó mua tín dụng bằng \"Mua tín dụng\" (số tiền tối thiểu hiển thị trên màn hình)."
+    limit: "Trên trang \"Chi tiêu\", \"Hạn mức chi tiêu hàng tháng\" đặt giới hạn sử dụng theo tháng. Dùng \"Chỉnh sửa hạn mức chi tiêu\" để đặt số tiền."
+  openai:
+    tagline: "Có sẵn các mô hình ChatGPT. Bạn cần mua credit trước."
+    step1: "Đăng nhập OpenAI Platform và mở trang API keys."
+    step2: "Nhấp \"Create new secret key\" và đặt tên tùy ý."
+    step3: "Sao chép khóa. Khóa chỉ hiển thị một lần nên hãy sao chép ngay."
+    note: "Đây là khoản riêng, tách biệt với gói ChatGPT trả phí."
+    billing: "Bạn cần mua credit trước. Trên trang Billing, đăng ký phương thức thanh toán qua \"Add payment details\", rồi mua credit qua \"Add to credit balance\"."
+    limit: "Trên trang Limits, dùng \"Edit spend limit\" để đặt giới hạn sử dụng hàng tháng."
+  openrouter:
+    tagline: "Có sẵn nhiều mô hình. Bạn cần mua credit trước."
+    step1: "Đăng nhập OpenRouter và mở trang API keys."
+    step2: "Nhấp \"New Key\", đặt tên tùy ý, rồi nhấp \"Create\". Hạn mức chi tiêu mô tả bên dưới cũng được nhập tại đây."
+    step3: "Sao chép khóa. Khóa chỉ hiển thị một lần nên hãy sao chép ngay."
+    note: "Mức ưu tiên nhà cung cấp có thể điều chỉnh trong cài đặt tiện ích."
+    billing: "Bạn cần mua credit trước. Trên trang Credits, nhấp \"Add Credits\", nhập số tiền, rồi xác nhận bằng \"Purchase\"."
+    limit: "Khi tạo khóa, nhập số tiền vào \"Credit limit\" và chọn chu kỳ trong \"Reset limit every...\" để đặt hạn mức sử dụng cho mỗi chu kỳ."

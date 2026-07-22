@@ -1,0 +1,170 @@
+extName: Udemy TTS - Subtiitrite tõlkimine ja ettelugemine
+extDescription: Loeb Udemy subtiitrid ette sinu keeles. Pärast seadistamist toetatakse ka loomulikku tõlget generatiivse tehisintellektiga.
+widget:
+  master: "Luba"
+  title: Udemy TTS
+  enable: TTS
+  volume: Helitugevus
+  speed: Kiirus
+  autoSpeed: Autom. kiirus
+  translate: Tõlgi
+  translateNoKey: Tõlke lubamiseks määra laienduse seadetes API-võti
+  cacheNone: Puudub
+  cacheClear: Tühjenda tõlgete vahemälu
+  settings: Seaded
+  subtitleOverlay: Subtiitrid
+options:
+  title: Udemy TTS seaded
+  tabs:
+    general: Üldine
+    language: Keel
+    speech: Kõne
+    translation: Tõlkimine
+    subtitle: Subtiitrid
+    dictionary: Sõnastik
+    advanced: Täpsem
+  general:
+    heading: Üldine
+    enableAll: Luba kõik funktsioonid
+  language:
+    heading: Keel
+    target: Sihtkeel
+  speech:
+    heading: Kõne
+    ttsHeading: TTS
+    provider: "Häälepakkuja"
+    providerStandard: "Standardne"
+    voicevoxHint: "VOICEVOX-i kasutamiseks peab redaktor või mootor töötama. Tavaliselt käivitub server automaatselt ja on saadaval aadressil http://127.0.0.1:50021. Kõigepealt klõpsake \"Anna juurdepääs sellele hostile\", et ühendus lubada."
+    voicevoxUrl: "VOICEVOX URL"
+    enabled: Luba TTS
+    voice: Hääl
+    loadVoices: Laadi hääled
+    loading: Laadimine…
+    loadFailed: Häälte laadimine ebaõnnestus
+    rate: Baaskiirus
+    pitch: Helikõrgus
+    volume: Helitugevus
+    autoRate: Automaatne kiiruse reguleerimine
+    autoRateHint: Kiirendab taasesitust järk-järgult, et kõne jõuaks videole järele
+    autoRateMode: Reguleerimisviis
+    autoRateNatural: Loomulik
+    autoRateStrong: Tugev
+    autoRateModeDesc:
+      natural: "Reguleerib kiirust õrnalt loomuliku korrektsiooniga."
+      strong: "Reguleerib kiirust kiiresti tugeva korrektsiooniga. Soovitatav, kui soovid subtiitritega sünkroonida."
+  translation:
+    heading: Tõlkimine
+    translateEnabled: Luba tõlkimine
+    personality: Tõlkestiil
+    personalityStandard: Tavaline
+    personalityConcise: Kokkuvõtlik
+    personalityFriendly: Sõbralik
+    personalityCustom: "Kohandatud"
+    personalityDesc:
+      standard: "Tõlgib originaalitruult loomulikuks tekstiks."
+      concise: "Eemaldab liigsed väljendid ja tõlgib lühikeseks ja kokkuvõtlikuks tekstiks. Soovitatav ettelugemiseks."
+      friendly: "Tõlgib kõnekeelseks, sõbralikuks ja pehmeks tekstiks."
+      custom: "Tõlgib allpool sisestatud juhiste järgi."
+    customPersonality: "Kohandatud juhised"
+    customPersonalityPlaceholder: "Näide: Tõlgi ametlikus, viisakas keeles."
+  subtitle:
+    enabled: Luba subtiitrid
+    heading: Subtiitrid
+    fontSize: Fondi suurus
+    textColor: Teksti värv
+    backgroundColor: Tausta värv
+  provider:
+    labelCompatible: OpenAI-ühilduv
+    labelDevice: Brauserisse sisse ehitatud
+    deviceHint: "Kasutab brauserisse sisseehitatud seadmepõhist tõlget. Tasuta ja võrguühenduseta, kuid pole saadaval igas brauseris. Keelemudel laaditakse alla esmakordsel kasutamisel ja tõlked kipuvad olema pigem sõnasõnalised."
+    heading: Tõlketeenuse pakkuja
+    provider: Pakkuja
+    apiKey: API-võti
+    model: Mudel
+    modelPlaceholder: Mudeli nimi (nt llama-3.3-70b)
+    sort: "Pakkuja prioriteet"
+    sortDesc:
+      none: "Ära määra pakkujate prioriseerimise meetodit."
+      price: "Eelistab madalaima hinnaga pakkujat."
+      throughput: "Eelistab suurima läbilaskevõimega pakkujat."
+      latency: "Eelistab kiireima vastusega pakkujat."
+    extraBody: Lisapäringu keha (JSON)
+    extraBodyHint: Ühendatakse süvitsi API-päringu kehasse
+    jsonSchema: "Kasuta struktureeritud väljundit"
+    jsonSchemaHint: "Lülita sisse ainult siis, kui lõpp-punkt toetab struktureeritud väljundit (response_format: json_schema). Väljalülitatuna lisatakse promptile vorminõue."
+    baseUrl: Baas-URL
+    baseUrlHint: "OpenAI-ga ühilduv lõpp-punkt, nt https://api.groq.com/openai/v1"
+    grantPermission: Anna juurdepääs sellele hostile
+    test: Testi ühendust
+    testing: Testimine…
+    testOk: Ühendus OK
+    errNoKey: API-võti pole määratud
+    errNoModel: Mudel pole määratud
+    show: Näita
+    hide: Peida
+  cache:
+    heading: Tõlgete vahemälu
+    hint: Tõlked salvestatakse vahemällu loengute kaupa sinu brauseris
+    refresh: Värskenda
+    clearAll: Kustuta kõik
+    confirmClearAll: Kustutada KÕIK vahemällu salvestatud tõlked?
+    confirmDeleteCourse: Kustutada selle kursuse kõik vahemällu salvestatud loengud?
+    delete: Kustuta
+    empty: Vahemälus pole tõlkeid
+    total: Kokku
+  dictionary:
+    heading: Hääldused
+    hint: Asenda sõnad enne kõnesünteesi (nt terminid, mida TTS valesti hääldab)
+    word: Sõna
+    reading: Hääldus
+    add: Lisa
+    remove: Eemalda
+    empty: Kirjeid veel pole
+  advanced:
+    heading: Täpsem
+    logLevel: Logi tase
+guide:
+  title: "Kuidas kasutada tõlketeenuse pakkujaid"
+  intro: "Tõlkimine kasutab generatiivset tehisintellekti. Valige üks allolevatest teenusepakkujatest, hankige API-võti ja sisestage see laienduse seadetesse — see võtab vaid mõne minuti."
+  privacy: "API-võtit hoitakse ainult teie brauseris ja see saadetakse ainult valitud teenusepakkujale."
+  disclaimer: "Teenusepakkuja kasutamine ja selle eest tasumine on teie enda vastutusel. Soovitame igaks juhuks määrata kulupiirangu."
+  commonStep: "Kleepige kopeeritud võti laienduse seadete väljale \"API-võti\", valige mudel ja klõpsake \"Testi ühendust\"."
+  openSettings: "Ava seaded"
+  optionsLink: "Kuidas kasutada tõlketeenuse pakkujaid"
+  modelsHeading: "Saadaolevad mudelid"
+  modelsHint: "Laiendus pakub eelseadetena järgmisi mudeleid. Tõlkimisel töödeldakse palju lühikesi subtiitreid, seega piisab odavast ja kiirest mudelist. Vaadake, kuidas mudelid võrreldes kvaliteedi, kiiruse ja hinna poolest paistavad."
+  keyHeading: "API-võtme hankimine"
+  billingHeading: "Hinnad ja tasumine"
+  limitHeading: "Kulude kontrollimine"
+  models:
+    gemini31FlashLite: "Kiirus: Kõrge | Täpsus: Keskmine | Hind: Madal | Täpsus on tõlkimiseks enam kui piisav. Soovitatav, kui te pole kindel."
+    gemini35FlashLite: "Kiirus: Kõrge | Täpsus: Kõrge | Hind: Keskmine | 3.1 seeria järeltulija märgatavalt kõrgema täpsusega, kuid pisut kõrgema hinnaga."
+    gemma431bIt: "Kiirus: Madal | Täpsus: Madal | Hind: Tasuta | Kasutatav tasuta tasemel. Valik, kui soovite peamiselt kulusid madalal hoida."
+    gpt54Mini: "Kiirus: Keskmine | Täpsus: Kõrge | Hind: Kõrge | Hind on kõrge, seega sobib, kui seate esikohale kvaliteedi."
+    gpt54Nano: "Kiirus: Keskmine | Täpsus: Keskmine | Hind: Madal | Odavam kui mini, kuid tõlkimiseks praktiline."
+    deepseekV4Flash: "Kiirus: Keskmine | Täpsus: Kõrge | Hind: Madal | Üsna odav, ent täpsus on kõrge. Parim valik, kui hind on oluline."
+    qwen36Flash: "Kiirus: Kõrge | Täpsus: Keskmine | Hind: Madal | Soodne, ja täpsus on samuti korralik."
+  gemini:
+    tagline: "Saadaval on Gemini ja lisaks tasuta Gemma. Soovitatav, kui te pole kindel, millist valida."
+    step1: "Avage Google AI Studio ja logige sisse oma Google’i kontoga."
+    step2: "Klõpsake \"Loo API-võti\", andke võtmele nimi, valige projekt (või kasutage \"Loo projekt\") ja seejärel klõpsake \"Loo võti\"."
+    step3: "Kopeerige kuvatud API-võti."
+    note: "Tasuta tasemel on kasutuspiirangud, kuid loengute vaatamiseks sellest tavaliselt piisab."
+    billing: "Tasuta tasemel pole makseandmeid vaja. Arvelduse lubamine leevendab kasutuspiiranguid isegi tasuta mudelite puhul, kuid pange tähele: arveldus on ettemakstud ja API võti lakkab töötamast, kuni ostate krediiti. Arvelduse lubamiseks kasutage lehel Arveldus valikut \"Seadista arveldus\" makseandmete registreerimiseks ja ostke seejärel krediiti valikuga \"Osta krediiti\" (miinimumsumma kuvatakse ekraanil)."
+    limit: "Lehel Kulud määrab \"Igakuine kulupiirang\" igakuise kasutuspiirangu. Summa määramiseks kasutage \"Muuda kulupiirangut\"."
+  openai:
+    tagline: "Saadaval on ChatGPT mudelid. Krediit tuleb osta ette."
+    step1: "Logige sisse OpenAI Platformi ja avage leht API keys."
+    step2: "Klõpsake \"Create new secret key\" ja andke suvaline nimi."
+    step3: "Kopeerige võti. Seda näidatakse ainult üks kord, seega kopeerige kohe."
+    note: "See on eraldi tasulisest ChatGPT tellimusest."
+    billing: "Krediit tuleb osta ette. Registreerige lehel Billing makseviis valiku \"Add payment details\" kaudu ja ostke seejärel krediiti valiku \"Add to credit balance\" kaudu."
+    limit: "Lehel Limits kasutage igakuise kasutuspiirangu määramiseks valikut \"Edit spend limit\"."
+  openrouter:
+    tagline: "Saadaval on palju mudeleid. Krediit tuleb osta ette."
+    step1: "Logige sisse OpenRouterisse ja avage leht API keys."
+    step2: "Klõpsake \"New Key\", andke suvaline nimi ja klõpsake \"Create\". Allpool kirjeldatud kulupiirang sisestatakse samuti siin."
+    step3: "Kopeerige võti. Seda näidatakse ainult üks kord, seega kopeerige kohe."
+    note: "Teenusepakkujate prioriteeti saab muuta laienduse seadetes."
+    billing: "Krediit tuleb osta ette. Lehel Credits klõpsake \"Add Credits\", sisestage summa ja kinnitage valikuga \"Purchase\"."
+    limit: "Võtme loomisel sisestage summa väljale \"Credit limit\" ja valige periood valikus \"Reset limit every...\", et määrata kasutuspiirang perioodi kohta."

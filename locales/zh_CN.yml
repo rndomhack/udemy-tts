@@ -1,0 +1,170 @@
+extName: Udemy TTS - 字幕翻译与朗读
+extDescription: 用你的语言朗读 Udemy 字幕。完成设置后，还支持由生成式 AI 提供的自然翻译。
+widget:
+  master: "启用"
+  title: Udemy TTS
+  enable: 朗读
+  volume: 音量
+  speed: 速度
+  autoSpeed: 自动速度
+  translate: 翻译
+  translateNoKey: 请在扩展设置中配置 API 密钥以启用翻译
+  cacheNone: 无
+  cacheClear: 清除翻译缓存
+  settings: 设置
+  subtitleOverlay: 字幕
+options:
+  title: Udemy TTS 设置
+  tabs:
+    general: 常规
+    language: 语言
+    speech: 语音
+    translation: 翻译
+    subtitle: 字幕
+    dictionary: 词典
+    advanced: 高级
+  general:
+    heading: 常规
+    enableAll: 启用所有功能
+  language:
+    heading: 语言
+    target: 目标语言
+  speech:
+    heading: 语音
+    ttsHeading: 朗读
+    provider: "语音提供方"
+    providerStandard: "标准"
+    voicevoxHint: "要使用 VOICEVOX，需要先启动编辑器或引擎。通常服务器会自动启动，并可通过 http://127.0.0.1:50021 访问。请先点击“授权访问此主机”以允许通信。"
+    voicevoxUrl: "VOICEVOX URL"
+    enabled: 启用朗读
+    voice: 语音
+    loadVoices: 加载语音列表
+    loading: 加载中…
+    loadFailed: 语音列表加载失败
+    rate: 基准速度
+    pitch: 音调
+    volume: 音量
+    autoRate: 自动速度调整
+    autoRateHint: 平缓地调整播放速度，使语音跟上视频进度
+    autoRateMode: 调整方式
+    autoRateNatural: 自然
+    autoRateStrong: 强力
+    autoRateModeDesc:
+      natural: "通过自然校正平缓地调整速度。"
+      strong: "通过强力校正快速地调整速度。希望与字幕同步时推荐使用。"
+  translation:
+    heading: 翻译
+    translateEnabled: 启用翻译
+    personality: 翻译风格
+    personalityStandard: 标准
+    personalityConcise: 简洁
+    personalityFriendly: 亲切
+    personalityCustom: "自定义"
+    personalityDesc:
+      standard: "忠实于原文，翻译成自然的文本。"
+      concise: "省略冗长的表达，翻译成简短精炼的文本。适合朗读时推荐使用。"
+      friendly: "翻译成口语化、亲切而柔和的文本。"
+      custom: "按照您在下方输入的指示进行翻译。"
+    customPersonality: "自定义指示"
+    customPersonalityPlaceholder: "示例：请用正式、礼貌的语言翻译。"
+  subtitle:
+    enabled: 启用字幕
+    heading: 字幕
+    fontSize: 字号
+    textColor: 文字颜色
+    backgroundColor: 背景颜色
+  provider:
+    labelCompatible: 兼容 OpenAI
+    labelDevice: 浏览器内置
+    deviceHint: "使用浏览器内置的设备端翻译。免费且可离线使用，但并非所有浏览器都支持。语言模型会在首次使用时下载，翻译往往偏向直译。"
+    heading: 翻译服务商
+    provider: 服务商
+    apiKey: API 密钥
+    model: 模型
+    modelPlaceholder: 模型名称 (例如 llama-3.3-70b)
+    sort: "提供方优先级"
+    sortDesc:
+      none: "不指定提供方的优先级方式。"
+      price: "优先选择价格最低的提供方。"
+      throughput: "优先选择处理速度最高的提供方。"
+      latency: "优先选择响应最快的提供方。"
+    extraBody: 附加请求体 (JSON)
+    extraBodyHint: 深度合并到 API 请求体中
+    jsonSchema: "使用结构化输出"
+    jsonSchemaHint: "仅当端点支持结构化输出 (response_format: json_schema) 时启用。关闭时会在提示词末尾附加格式说明。"
+    baseUrl: Base URL
+    baseUrlHint: "OpenAI 兼容端点，例如 https://api.groq.com/openai/v1"
+    grantPermission: 授权访问此主机
+    test: 测试连接
+    testing: 测试中…
+    testOk: 连接正常
+    errNoKey: 未设置 API 密钥
+    errNoModel: 未设置模型
+    show: 显示
+    hide: 隐藏
+  cache:
+    heading: 翻译缓存
+    hint: 翻译按课程讲座缓存在浏览器中
+    refresh: 刷新
+    clearAll: 全部删除
+    confirmClearAll: 删除所有翻译缓存?
+    confirmDeleteCourse: 删除该课程所有讲座的缓存?
+    delete: 删除
+    empty: 暂无缓存
+    total: 合计
+  dictionary:
+    heading: 读音替换
+    hint: 在语音合成前替换单词 (例如朗读时读错的专业术语)
+    word: 单词
+    reading: 读音
+    add: 添加
+    remove: 删除
+    empty: 暂无条目
+  advanced:
+    heading: 高级
+    logLevel: 日志级别
+guide:
+  title: "如何使用翻译服务商"
+  intro: "翻译功能使用生成式 AI。请从下面的服务商中选择一个，获取 API 密钥并填入扩展设置，只需几分钟即可完成。"
+  privacy: "API 密钥仅保存在您的浏览器中，且只会发送给您所选的服务商。"
+  disclaimer: "使用服务商及相关费用由您自行承担。以防万一，建议设置消费上限。"
+  commonStep: "将复制的密钥粘贴到扩展设置的“API 密钥”栏中，选择模型后点击“测试连接”。"
+  openSettings: "打开设置"
+  optionsLink: "如何使用翻译服务商"
+  modelsHeading: "可用模型"
+  modelsHint: "扩展提供以下模型作为预设。翻译需要处理大量简短字幕，因此便宜又快速的模型就足够了。以下是各模型在质量、速度和费用方面的对比。"
+  keyHeading: "获取 API 密钥"
+  billingHeading: "价格与支付"
+  limitHeading: "控制消费金额"
+  models:
+    gemini31FlashLite: "速度: 高 | 精度: 中 | 费用: 低 | 精度对翻译来说足够。不确定选哪个时推荐使用。"
+    gemini35FlashLite: "速度: 高 | 精度: 高 | 费用: 中 | 3.1 系列的后继模型，精度显著提升，但费用略高。"
+    gemma431bIt: "速度: 低 | 精度: 低 | 费用: 免费 | 可在免费额度下使用。主要想压低成本时的选择。"
+    gpt54Mini: "速度: 中 | 精度: 高 | 费用: 高 | 费用较高，适合优先考虑质量的情况。"
+    gpt54Nano: "速度: 中 | 精度: 中 | 费用: 低 | 比 mini 便宜，但用于翻译很实用。"
+    deepseekV4Flash: "速度: 中 | 精度: 高 | 费用: 低 | 相当便宜，但精度很高。注重成本时的首选。"
+    qwen36Flash: "速度: 高 | 精度: 中 | 费用: 低 | 价格低廉，精度也还不错。"
+  gemini:
+    tagline: "可使用 Gemini，还有免费的 Gemma。不确定选哪个时推荐使用。"
+    step1: "打开 Google AI Studio 并使用 Google 账号登录。"
+    step2: "点击“创建 API 密钥”，为密钥命名，选择一个项目（或使用“创建项目”），然后点击“创建密钥”。"
+    step3: "复制显示出来的 API 密钥。"
+    note: "免费额度有速率限制，但通常足以满足观看课程的需要。"
+    billing: "免费额度无需支付信息。启用结算后即使是免费模型也会放宽速率限制，但请注意：结算采用预付费方式，在购买抵免额之前 API 密钥将无法使用。要启用结算，请在“结算”页面使用“设置结算”登记支付信息，然后通过“购买抵免额”购买（最低金额会显示在界面上）。"
+    limit: "在“支出”页面，“每月支出上限”可设置每月使用上限。使用“修改支出上限”来指定金额。"
+  openai:
+    tagline: "可使用 ChatGPT 模型。需要事先购买额度。"
+    step1: "登录 OpenAI Platform 并打开 API keys 页面。"
+    step2: "点击“Create new secret key”并任意命名。"
+    step3: "复制密钥。密钥只显示一次，请立即复制。"
+    note: "这与付费的 ChatGPT 套餐是分开的。"
+    billing: "需要事先购买额度。在 Billing 页面，通过“Add payment details”登记支付方式，然后通过“Add to credit balance”购买额度。"
+    limit: "在 Limits 页面，使用“Edit spend limit”设置每月使用上限。"
+  openrouter:
+    tagline: "可使用众多模型。需要事先购买额度。"
+    step1: "登录 OpenRouter 并打开 API keys 页面。"
+    step2: "点击“New Key”，任意命名，然后点击“Create”。下述的消费上限也在此处输入。"
+    step3: "复制密钥。密钥只显示一次，请立即复制。"
+    note: "服务商优先级可在扩展设置中调整。"
+    billing: "需要事先购买额度。在 Credits 页面点击“Add Credits”，输入金额，然后通过“Purchase”确认。"
+    limit: "创建密钥时，在“Credit limit”中输入金额，并在“Reset limit every...”中选择周期，即可设置每个周期的使用上限。"

@@ -1,0 +1,170 @@
+extName: Udemy TTS - Tłumaczenie i czytanie napisów
+extDescription: Czyta napisy Udemy na głos w Twoim języku. Po skonfigurowaniu obsługuje też naturalne tłumaczenie z użyciem generatywnej AI.
+widget:
+  master: "Włącz"
+  title: Udemy TTS
+  enable: TTS
+  volume: Głośność
+  speed: Prędkość
+  autoSpeed: Automatyczna prędkość
+  translate: Tłumacz
+  translateNoKey: Ustaw klucz API w ustawieniach rozszerzenia, aby włączyć tłumaczenie
+  cacheNone: Brak
+  cacheClear: Wyczyść pamięć tłumaczeń
+  settings: Ustawienia
+  subtitleOverlay: Napisy
+options:
+  title: Ustawienia Udemy TTS
+  tabs:
+    general: Ogólne
+    language: Język
+    speech: Mowa
+    translation: Tłumaczenie
+    subtitle: Napisy
+    dictionary: Słownik
+    advanced: Zaawansowane
+  general:
+    heading: Ogólne
+    enableAll: Włącz wszystkie funkcje
+  language:
+    heading: Język
+    target: Język docelowy
+  speech:
+    heading: Mowa
+    ttsHeading: TTS
+    provider: "Dostawca głosu"
+    providerStandard: "Standardowy"
+    voicevoxHint: "Aby korzystać z VOICEVOX, edytor lub silnik musi być uruchomiony. Zwykle serwer uruchamia się automatycznie i jest dostępny pod adresem http://127.0.0.1:50021. Najpierw kliknij „Przyznaj dostęp do tego hosta”, aby zezwolić na połączenie."
+    voicevoxUrl: "VOICEVOX URL"
+    enabled: Włącz TTS
+    voice: Głos
+    loadVoices: Wczytaj głosy
+    loading: Wczytywanie…
+    loadFailed: Nie udało się wczytać głosów
+    rate: Prędkość bazowa
+    pitch: Wysokość tonu
+    volume: Głośność
+    autoRate: Automatyczna regulacja prędkości
+    autoRateHint: Stopniowo dostosowuje prędkość, aby mowa nadążała za wideo
+    autoRateMode: Metoda dostosowania
+    autoRateNatural: Naturalny
+    autoRateStrong: Silny
+    autoRateModeDesc:
+      natural: "Delikatnie dostosowuje prędkość za pomocą naturalnej korekty."
+      strong: "Szybko dostosowuje prędkość za pomocą silnej korekty. Zalecane, gdy chcesz zsynchronizować z napisami."
+  translation:
+    heading: Tłumaczenie
+    translateEnabled: Włącz tłumaczenie
+    personality: Styl tłumaczenia
+    personalityStandard: Standardowy
+    personalityConcise: Zwięzły
+    personalityFriendly: Przyjazny
+    personalityCustom: "Niestandardowy"
+    personalityDesc:
+      standard: "Tłumaczy wiernie oryginałowi na naturalny tekst."
+      concise: "Usuwa zbędne wyrażenia i tłumaczy na krótki, zwięzły tekst. Zalecane do czytania na głos."
+      friendly: "Tłumaczy na potoczny, przyjazny i miękki tekst."
+      custom: "Tłumaczy zgodnie z Twoimi instrukcjami poniżej."
+    customPersonality: "Niestandardowe instrukcje"
+    customPersonalityPlaceholder: "Przykład: Tłumacz formalnym, uprzejmym językiem."
+  subtitle:
+    enabled: Włącz napisy
+    heading: Napisy
+    fontSize: Rozmiar czcionki
+    textColor: Kolor tekstu
+    backgroundColor: Kolor tła
+  provider:
+    labelCompatible: Zgodny z OpenAI
+    labelDevice: Wbudowany w przeglądarkę
+    deviceHint: "Korzysta z wbudowanego w przeglądarkę tłumaczenia na urządzeniu. Bezpłatne i offline, choć niedostępne w każdej przeglądarce. Model językowy pobiera się przy pierwszym użyciu, a tłumaczenia bywają bardziej dosłowne."
+    heading: Dostawca tłumaczeń
+    provider: Dostawca
+    apiKey: Klucz API
+    model: Model
+    modelPlaceholder: Nazwa modelu (np. llama-3.3-70b)
+    sort: "Priorytet dostawcy"
+    sortDesc:
+      none: "Nie określaj metody ustalania priorytetów dostawców."
+      price: "Preferuje dostawcę z najniższą ceną."
+      throughput: "Preferuje dostawcę z najwyższą przepustowością."
+      latency: "Preferuje dostawcę z najszybszą odpowiedzią."
+    extraBody: Dodatkowe body żądania (JSON)
+    extraBodyHint: Scalane głęboko z body żądania API
+    jsonSchema: "Użyj ustrukturyzowanego wyjścia"
+    jsonSchemaHint: "Włącz tylko jeśli endpoint obsługuje ustrukturyzowane wyjście (response_format: json_schema). Gdy wyłączone, do promptu dodawana jest instrukcja formatu."
+    baseUrl: Base URL
+    baseUrlHint: "Endpoint zgodny z OpenAI, np. https://api.groq.com/openai/v1"
+    grantPermission: Przyznaj dostęp do tego hosta
+    test: Testuj połączenie
+    testing: Testowanie…
+    testOk: Połączenie OK
+    errNoKey: Klucz API nie jest ustawiony
+    errNoModel: Model nie jest ustawiony
+    show: Pokaż
+    hide: Ukryj
+  cache:
+    heading: Pamięć tłumaczeń
+    hint: Tłumaczenia są zapisywane w przeglądarce dla każdej lekcji
+    refresh: Odśwież
+    clearAll: Usuń wszystko
+    confirmClearAll: Usunąć WSZYSTKIE zapisane tłumaczenia?
+    confirmDeleteCourse: Usunąć pamięć wszystkich lekcji tego kursu?
+    delete: Usuń
+    empty: Brak zapisanych tłumaczeń
+    total: Razem
+  dictionary:
+    heading: Wymowa
+    hint: Zamienia słowa przed syntezą mowy (np. źle wymawiane terminy techniczne)
+    word: Słowo
+    reading: Wymowa
+    add: Dodaj
+    remove: Usuń
+    empty: Brak wpisów
+  advanced:
+    heading: Zaawansowane
+    logLevel: Poziom logów
+guide:
+  title: "Jak korzystać z dostawców tłumaczeń"
+  intro: "Tłumaczenie korzysta z generatywnej AI. Wybierz jednego z poniższych dostawców, uzyskaj klucz API i wprowadź go w ustawieniach rozszerzenia — zajmie to tylko kilka minut."
+  privacy: "Klucz API jest przechowywany wyłącznie w Twojej przeglądarce i wysyłany tylko do wybranego dostawcy."
+  disclaimer: "Z dostawcy korzystasz i płacisz na własne ryzyko. Na wszelki wypadek zalecamy ustawienie limitu wydatków."
+  commonStep: "Wklej skopiowany klucz w polu „Klucz API” w ustawieniach rozszerzenia, wybierz model i kliknij „Testuj połączenie”."
+  openSettings: "Otwórz ustawienia"
+  optionsLink: "Jak korzystać z dostawców tłumaczeń"
+  modelsHeading: "Dostępne modele"
+  modelsHint: "Rozszerzenie oferuje następujące modele jako gotowe ustawienia. Tłumaczenie przetwarza wiele krótkich napisów, więc tani i szybki model w zupełności wystarcza. Oto jak poszczególne modele wypadają pod względem jakości, szybkości i kosztu."
+  keyHeading: "Uzyskiwanie klucza API"
+  billingHeading: "Ceny i płatności"
+  limitHeading: "Kontrola wydatków"
+  models:
+    gemini31FlashLite: "Szybkość: Wysoka | Dokładność: Średnia | Koszt: Niski | Dokładność w zupełności wystarcza do tłumaczenia. Polecany, jeśli nie masz pewności."
+    gemini35FlashLite: "Szybkość: Wysoka | Dokładność: Wysoka | Koszt: Średnia | Następca serii 3.1 o znacznie wyższej dokładności, ale nieco wyższym koszcie."
+    gemma431bIt: "Szybkość: Niski | Dokładność: Niski | Koszt: Bezpłatny | Dostępny w wersji bezpłatnej. Wybór, gdy zależy Ci głównie na ograniczeniu kosztów."
+    gpt54Mini: "Szybkość: Średnia | Dokładność: Wysoka | Koszt: Wysoka | Koszt jest wysoki, więc pasuje, gdy priorytetem jest jakość."
+    gpt54Nano: "Szybkość: Średnia | Dokładność: Średnia | Koszt: Niski | Tańszy od mini, ale praktyczny do tłumaczenia."
+    deepseekV4Flash: "Szybkość: Średnia | Dokładność: Wysoka | Koszt: Niski | Dość tani, a mimo to o wysokiej dokładności. Najlepszy wybór, gdy liczy się koszt."
+    qwen36Flash: "Szybkość: Wysoka | Dokładność: Średnia | Koszt: Niski | Niedrogi, a dokładność też jest niezła."
+  gemini:
+    tagline: "Dostępne jest Gemini oraz darmowa Gemma. Polecane, jeśli nie wiesz, co wybrać."
+    step1: "Otwórz Google AI Studio i zaloguj się kontem Google."
+    step2: "Kliknij „Utwórz klucz API”, nadaj nazwę kluczowi, wybierz projekt (lub użyj „Utwórz projekt”), a następnie kliknij „Utwórz klucz”."
+    step3: "Skopiuj wyświetlony klucz API."
+    note: "Wersja bezpłatna ma limity szybkości, ale zwykle wystarcza do oglądania wykładów."
+    billing: "W wersji bezpłatnej dane płatności nie są wymagane. Włączenie płatności łagodzi limity szybkości nawet dla darmowych modeli, ale uwaga: rozliczenia są przedpłacone i klucz API przestaje działać, dopóki nie kupisz środków. Aby włączyć płatności, użyj opcji „Skonfiguruj płatności” na stronie „Płatności”, aby zarejestrować dane płatności, a następnie kup środki za pomocą „Kup środki” (minimalna kwota jest widoczna na ekranie)."
+    limit: "Na stronie „Wydatki” opcja „Miesięczny limit wydatków” ustawia miesięczny limit użycia. Użyj „Edytuj limit wydatków”, aby ustawić kwotę."
+  openai:
+    tagline: "Dostępne są modele ChatGPT. Musisz wcześniej doładować środki."
+    step1: "Zaloguj się w OpenAI Platform i otwórz stronę API keys."
+    step2: "Kliknij „Create new secret key” i nadaj dowolną nazwę."
+    step3: "Skopiuj klucz. Jest wyświetlany tylko raz, więc skopiuj go od razu."
+    note: "To coś odrębnego od płatnego planu ChatGPT."
+    billing: "Musisz wcześniej doładować środki. Na stronie Billing zarejestruj metodę płatności przez „Add payment details”, a następnie doładuj środki przez „Add to credit balance”."
+    limit: "Na stronie Limits użyj „Edit spend limit”, aby ustawić miesięczny limit użycia."
+  openrouter:
+    tagline: "Dostępnych jest wiele modeli. Musisz wcześniej doładować środki."
+    step1: "Zaloguj się w OpenRouter i otwórz stronę API keys."
+    step2: "Kliknij „New Key”, nadaj dowolną nazwę i kliknij „Create”. Opisany poniżej limit wydatków również wprowadza się tutaj."
+    step3: "Skopiuj klucz. Jest wyświetlany tylko raz, więc skopiuj go od razu."
+    note: "Priorytet dostawców można dostroić w ustawieniach rozszerzenia."
+    billing: "Musisz wcześniej doładować środki. Na stronie Credits kliknij „Add Credits”, wpisz kwotę i potwierdź przez „Purchase”."
+    limit: "Podczas tworzenia klucza wpisz kwotę w polu „Credit limit” i wybierz okres w „Reset limit every...”, aby ustawić limit użycia na okres."

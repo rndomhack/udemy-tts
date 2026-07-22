@@ -1,0 +1,41 @@
+diff --git a/node_modules/edge-tts-universal/dist/browser.js b/node_modules/edge-tts-universal/dist/browser.js
+index 836442a..92294bc 100644
+--- a/node_modules/edge-tts-universal/dist/browser.js
++++ b/node_modules/edge-tts-universal/dist/browser.js
+@@ -216,6 +216,7 @@ var EdgeTTSBrowser = class {
+     const secMsGec = await BrowserDRM.generateSecMsGec();
+     const url = `${WSS_URL}&Sec-MS-GEC=${secMsGec}&Sec-MS-GEC-Version=${SEC_MS_GEC_VERSION}&ConnectionId=${connectionId}`;
+     this.ws = new WebSocket(url);
++    this.ws.binaryType = "arraybuffer";
+     return new Promise((resolve, reject) => {
+       if (!this.ws) {
+         return reject(new Error("WebSocket not initialized"));
+@@ -543,6 +544,7 @@ var BrowserCommunicate = class {
+   async *_stream() {
+     const url = `${WSS_URL}&Sec-MS-GEC=${await BrowserDRM.generateSecMsGec()}&Sec-MS-GEC-Version=${SEC_MS_GEC_VERSION}&ConnectionId=${browserConnectId()}`;
+     const websocket = new WebSocket(url);
++    websocket.binaryType = "arraybuffer";
+     const messageQueue = [];
+     let resolveMessage = null;
+     let timeoutId;
+diff --git a/node_modules/edge-tts-universal/dist/webworker.js b/node_modules/edge-tts-universal/dist/webworker.js
+index 339b07d..d9fc273 100644
+--- a/node_modules/edge-tts-universal/dist/webworker.js
++++ b/node_modules/edge-tts-universal/dist/webworker.js
+@@ -404,10 +404,14 @@ var IsomorphicCommunicate = class {
+         });
+       } catch (error) {
+         console.warn("ws library not available, using native WebSocket without headers");
+-        return new WebSocket(url);
++        const ws1 = new WebSocket(url);
++        ws1.binaryType = "arraybuffer";
++        return ws1;
+       }
+     } else {
+-      return new WebSocket(url);
++      const ws2 = new WebSocket(url);
++      ws2.binaryType = "arraybuffer";
++      return ws2;
+     }
+   }
+   async *_stream() {

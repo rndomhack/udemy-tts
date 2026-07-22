@@ -1,0 +1,170 @@
+extName: Udemy TTS - Terjemahkan & bacakan subtitel
+extDescription: Membacakan subtitel Udemy dalam bahasa Anda. Setelah dikonfigurasi, terjemahan alami dengan AI generatif juga didukung.
+widget:
+  master: "Aktifkan"
+  title: Udemy TTS
+  enable: TTS
+  volume: Volume
+  speed: Kecepatan
+  autoSpeed: Kecepatan otomatis
+  translate: Terjemahkan
+  translateNoKey: Atur kunci API di pengaturan ekstensi untuk mengaktifkan terjemahan
+  cacheNone: Tidak ada
+  cacheClear: Hapus cache terjemahan
+  settings: Pengaturan
+  subtitleOverlay: Subtitel
+options:
+  title: Pengaturan Udemy TTS
+  tabs:
+    general: Umum
+    language: Bahasa
+    speech: Suara
+    translation: Terjemahan
+    subtitle: Subtitel
+    dictionary: Kamus
+    advanced: Lanjutan
+  general:
+    heading: Umum
+    enableAll: Aktifkan semua fitur
+  language:
+    heading: Bahasa
+    target: Bahasa tujuan
+  speech:
+    heading: Suara
+    ttsHeading: TTS
+    provider: "Penyedia suara"
+    providerStandard: "Standar"
+    voicevoxHint: "Untuk menggunakan VOICEVOX, editor atau engine harus berjalan. Biasanya server dimulai otomatis dan dapat diakses di http://127.0.0.1:50021. Pertama, klik \"Beri akses ke host ini\" untuk mengizinkan koneksi."
+    voicevoxUrl: "VOICEVOX URL"
+    enabled: Aktifkan TTS
+    voice: Suara
+    loadVoices: Muat daftar suara
+    loading: Memuat…
+    loadFailed: Gagal memuat daftar suara
+    rate: Kecepatan dasar
+    pitch: Nada
+    volume: Volume
+    autoRate: Penyesuaian kecepatan otomatis
+    autoRateHint: Menyesuaikan kecepatan secara bertahap agar suara mengikuti video
+    autoRateMode: Metode penyesuaian
+    autoRateNatural: Alami
+    autoRateStrong: Kuat
+    autoRateModeDesc:
+      natural: "Menyesuaikan kecepatan secara halus dengan koreksi alami."
+      strong: "Menyesuaikan kecepatan dengan cepat menggunakan koreksi kuat. Disarankan saat Anda ingin sinkron dengan subtitle."
+  translation:
+    heading: Terjemahan
+    translateEnabled: Aktifkan terjemahan
+    personality: Gaya terjemahan
+    personalityStandard: Standar
+    personalityConcise: Ringkas
+    personalityFriendly: Ramah
+    personalityCustom: "Kustom"
+    personalityDesc:
+      standard: "Menerjemahkan dengan setia pada teks asli menjadi teks yang alami."
+      concise: "Menghapus ungkapan yang berlebihan dan menerjemahkan menjadi teks yang singkat dan ringkas. Disarankan untuk pembacaan."
+      friendly: "Menerjemahkan menjadi teks yang santai, ramah, dan lembut."
+      custom: "Menerjemahkan sesuai instruksi Anda di bawah ini."
+    customPersonality: "Instruksi kustom"
+    customPersonalityPlaceholder: "Contoh: Terjemahkan dengan bahasa formal dan sopan."
+  subtitle:
+    enabled: Aktifkan subtitle
+    heading: Subtitel
+    fontSize: Ukuran font
+    textColor: Warna teks
+    backgroundColor: Warna latar
+  provider:
+    labelCompatible: Kompatibel dengan OpenAI
+    labelDevice: Bawaan peramban
+    deviceHint: "Menggunakan terjemahan bawaan peramban di perangkat. Gratis dan offline, meski tidak tersedia di semua peramban. Model bahasa diunduh saat pertama digunakan, dan terjemahannya cenderung lebih harfiah."
+    heading: Penyedia terjemahan
+    provider: Penyedia
+    apiKey: Kunci API
+    model: Model
+    modelPlaceholder: Nama model (mis. llama-3.3-70b)
+    sort: "Prioritas penyedia"
+    sortDesc:
+      none: "Jangan tentukan metode untuk memprioritaskan penyedia."
+      price: "Memprioritaskan penyedia dengan harga terendah."
+      throughput: "Memprioritaskan penyedia dengan throughput tertinggi."
+      latency: "Memprioritaskan penyedia dengan respons tercepat."
+    extraBody: Body permintaan tambahan (JSON)
+    extraBodyHint: Digabungkan secara mendalam ke body permintaan API
+    jsonSchema: "Gunakan output terstruktur"
+    jsonSchemaHint: "Aktifkan hanya jika endpoint mendukung output terstruktur (response_format: json_schema). Saat nonaktif, instruksi format ditambahkan ke prompt."
+    baseUrl: Base URL
+    baseUrlHint: "Endpoint kompatibel OpenAI, mis. https://api.groq.com/openai/v1"
+    grantPermission: Beri akses ke host ini
+    test: Uji koneksi
+    testing: Menguji…
+    testOk: Koneksi OK
+    errNoKey: Kunci API belum diatur
+    errNoModel: Model belum diatur
+    show: Tampilkan
+    hide: Sembunyikan
+  cache:
+    heading: Cache terjemahan
+    hint: Terjemahan disimpan di browser untuk setiap kuliah
+    refresh: Segarkan
+    clearAll: Hapus semua
+    confirmClearAll: Hapus SEMUA terjemahan yang tersimpan?
+    confirmDeleteCourse: Hapus cache semua kuliah kursus ini?
+    delete: Hapus
+    empty: Tidak ada terjemahan tersimpan
+    total: Total
+  dictionary:
+    heading: Pelafalan
+    hint: Mengganti kata sebelum sintesis suara (mis. istilah teknis yang salah dibaca)
+    word: Kata
+    reading: Pelafalan
+    add: Tambah
+    remove: Hapus
+    empty: Belum ada entri
+  advanced:
+    heading: Lanjutan
+    logLevel: Level log
+guide:
+  title: "Cara menggunakan penyedia terjemahan"
+  intro: "Terjemahan menggunakan AI generatif. Pilih salah satu penyedia di bawah, dapatkan kunci API, lalu atur di pengaturan ekstensi — hanya perlu beberapa menit."
+  privacy: "Kunci API Anda hanya disimpan di browser Anda dan hanya dikirim ke penyedia yang Anda pilih."
+  disclaimer: "Anda menggunakan dan membayar penyedia atas risiko Anda sendiri. Kami menyarankan untuk menetapkan batas pengeluaran untuk berjaga-jaga."
+  commonStep: "Tempel kunci yang disalin ke kolom \"Kunci API\" di pengaturan ekstensi, pilih model, lalu klik \"Uji koneksi\"."
+  openSettings: "Buka pengaturan"
+  optionsLink: "Cara menggunakan penyedia terjemahan"
+  modelsHeading: "Model yang tersedia"
+  modelsHint: "Ekstensi menyediakan model-model berikut sebagai preset. Terjemahan memproses banyak subtitel pendek, jadi model yang murah dan cepat sudah lebih dari cukup. Berikut perbandingan setiap model dari sisi kualitas, kecepatan, dan biaya."
+  keyHeading: "Mendapatkan kunci API"
+  billingHeading: "Harga dan pembayaran"
+  limitHeading: "Mengontrol pengeluaran Anda"
+  models:
+    gemini31FlashLite: "Kecepatan: Tinggi | Akurasi: Sedang | Biaya: Rendah | Akurasinya lebih dari cukup untuk terjemahan. Direkomendasikan jika Anda ragu."
+    gemini35FlashLite: "Kecepatan: Tinggi | Akurasi: Tinggi | Biaya: Sedang | Penerus dari seri 3.1, dengan akurasi yang jauh lebih baik, tetapi harga sedikit lebih tinggi."
+    gemma431bIt: "Kecepatan: Rendah | Akurasi: Rendah | Biaya: Gratis | Dapat dipakai di tingkat gratis. Pilihan saat Anda terutama ingin menekan biaya."
+    gpt54Mini: "Kecepatan: Sedang | Akurasi: Tinggi | Biaya: Tinggi | Biayanya tinggi, jadi cocok saat Anda mengutamakan kualitas."
+    gpt54Nano: "Kecepatan: Sedang | Akurasi: Sedang | Biaya: Rendah | Lebih murah dari mini, tetapi praktis untuk terjemahan."
+    deepseekV4Flash: "Kecepatan: Sedang | Akurasi: Tinggi | Biaya: Rendah | Cukup murah, namun akurasinya tinggi. Pilihan utama saat biaya menjadi pertimbangan."
+    qwen36Flash: "Kecepatan: Tinggi | Akurasi: Sedang | Biaya: Rendah | Murah, dan akurasinya juga cukup baik."
+  gemini:
+    tagline: "Gemini tersedia, ditambah Gemma yang gratis. Direkomendasikan jika Anda ragu memilih yang mana."
+    step1: "Buka Google AI Studio dan masuk dengan akun Google Anda."
+    step2: "Klik \"Buat kunci API\", beri nama kunci, pilih proyek (atau gunakan \"Buat proyek\"), lalu klik \"Buat kunci\"."
+    step3: "Salin kunci API yang ditampilkan."
+    note: "Tingkat gratis memiliki batas laju, tetapi biasanya cukup untuk menonton kuliah."
+    billing: "Tidak diperlukan info pembayaran di tingkat gratis. Mengaktifkan penagihan melonggarkan batas laju bahkan untuk model gratis, tetapi perhatikan: penagihan bersifat prabayar, dan kunci API berhenti berfungsi sampai Anda membeli kredit. Untuk mengaktifkan penagihan, gunakan \"Siapkan penagihan\" di halaman Penagihan untuk mendaftarkan info pembayaran, lalu beli kredit dengan \"Beli kredit\" (jumlah minimum ditampilkan di layar)."
+    limit: "Di halaman Pengeluaran, \"Batas pengeluaran bulanan\" menetapkan batas penggunaan bulanan. Gunakan \"Edit batas pengeluaran\" untuk menetapkan jumlahnya."
+  openai:
+    tagline: "Model ChatGPT tersedia. Anda perlu membeli kredit terlebih dahulu."
+    step1: "Masuk ke OpenAI Platform dan buka halaman API keys."
+    step2: "Klik \"Create new secret key\" dan beri nama apa saja."
+    step3: "Salin kuncinya. Kunci hanya ditampilkan sekali, jadi segera salin."
+    note: "Ini terpisah dari langganan berbayar ChatGPT."
+    billing: "Anda perlu membeli kredit terlebih dahulu. Di halaman Billing, daftarkan metode pembayaran melalui \"Add payment details\", lalu beli kredit melalui \"Add to credit balance\"."
+    limit: "Di halaman Limits, gunakan \"Edit spend limit\" untuk menetapkan batas penggunaan bulanan."
+  openrouter:
+    tagline: "Banyak model tersedia. Anda perlu membeli kredit terlebih dahulu."
+    step1: "Masuk ke OpenRouter dan buka halaman API keys."
+    step2: "Klik \"New Key\", beri nama apa saja, lalu klik \"Create\". Batas pengeluaran yang dijelaskan di bawah juga dimasukkan di sini."
+    step3: "Salin kuncinya. Kunci hanya ditampilkan sekali, jadi segera salin."
+    note: "Prioritas penyedia dapat diatur di pengaturan ekstensi."
+    billing: "Anda perlu membeli kredit terlebih dahulu. Di halaman Credits, klik \"Add Credits\", masukkan jumlah, lalu konfirmasi dengan \"Purchase\"."
+    limit: "Saat membuat kunci, masukkan jumlah di \"Credit limit\" dan pilih periode di \"Reset limit every...\" untuk menetapkan batas penggunaan per periode."

@@ -1,0 +1,170 @@
+extName: Udemy TTS - Subtitrų vertimas ir skaitymas balsu
+extDescription: Balsu skaito Udemy subtitrus jūsų kalba. Po konfigūravimo taip pat palaikomas natūralus vertimas su generatyviuoju DI.
+widget:
+  master: "Įjungti"
+  title: Udemy TTS
+  enable: TTS
+  volume: Garsumas
+  speed: Greitis
+  autoSpeed: Autom. greitis
+  translate: Versti
+  translateNoKey: Norėdami įjungti vertimą, plėtinio nustatymuose nurodykite API raktą
+  cacheNone: Nėra
+  cacheClear: Išvalyti vertimų talpyklą
+  settings: Nustatymai
+  subtitleOverlay: Subtitrai
+options:
+  title: Udemy TTS nustatymai
+  tabs:
+    general: Bendra
+    language: Kalba
+    speech: Kalba
+    translation: Vertimas
+    subtitle: Subtitrai
+    dictionary: Žodynas
+    advanced: Išplėstiniai
+  general:
+    heading: Bendra
+    enableAll: Įjungti visas funkcijas
+  language:
+    heading: Kalba
+    target: Tikslinė kalba
+  speech:
+    heading: Kalba
+    ttsHeading: TTS
+    provider: "Balso teikėjas"
+    providerStandard: "Standartinis"
+    voicevoxHint: "Norint naudoti VOICEVOX, turi veikti redaktorius arba variklis. Paprastai serveris paleidžiamas automatiškai ir pasiekiamas adresu http://127.0.0.1:50021. Pirmiausia spustelėkite \"Suteikti prieigą prie šio serverio\", kad leistumėte ryšį."
+    voicevoxUrl: "VOICEVOX URL"
+    enabled: Įjungti TTS
+    voice: Balsas
+    loadVoices: Įkelti balsus
+    loading: Įkeliama…
+    loadFailed: Nepavyko įkelti balsų
+    rate: Bazinis greitis
+    pitch: Tono aukštis
+    volume: Garsumas
+    autoRate: Automatinis greičio reguliavimas
+    autoRateHint: Palaipsniui pagreitina atkūrimą, kad kalba pavytų vaizdo įrašą
+    autoRateMode: Reguliavimo būdas
+    autoRateNatural: Natūralus
+    autoRateStrong: Stiprus
+    autoRateModeDesc:
+      natural: "Švelniai reguliuoja greitį naudodama natūralią korekciją."
+      strong: "Greitai reguliuoja greitį naudodama stiprią korekciją. Rekomenduojama, kai norite sinchronizuoti su subtitrais."
+  translation:
+    heading: Vertimas
+    translateEnabled: Įjungti vertimą
+    personality: Vertimo stilius
+    personalityStandard: Standartinis
+    personalityConcise: Glaustas
+    personalityFriendly: Draugiškas
+    personalityCustom: "Pasirinktinis"
+    personalityDesc:
+      standard: "Verčia ištikimai originalui į natūralų tekstą."
+      concise: "Pašalina perteklines išraiškas ir verčia į trumpą ir glaustą tekstą. Rekomenduojama skaitymui balsu."
+      friendly: "Verčia į šnekamąjį, draugišką ir švelnų tekstą."
+      custom: "Verčia pagal jūsų nurodymus žemiau."
+    customPersonality: "Pasirinktiniai nurodymai"
+    customPersonalityPlaceholder: "Pavyzdys: Versk oficialia, mandagia kalba."
+  subtitle:
+    enabled: Įjungti subtitrus
+    heading: Subtitrai
+    fontSize: Šrifto dydis
+    textColor: Teksto spalva
+    backgroundColor: Fono spalva
+  provider:
+    labelCompatible: Suderinama su OpenAI
+    labelDevice: Integruota naršyklėje
+    deviceHint: "Naudoja naršyklėje integruotą vertimą įrenginyje. Nemokama ir veikia neprisijungus, tačiau prieinama ne visose naršyklėse. Kalbos modelis atsisiunčiamas pirmą kartą naudojant, o vertimai būna labiau pažodiniai."
+    heading: Vertimo teikėjas
+    provider: Teikėjas
+    apiKey: API raktas
+    model: Modelis
+    modelPlaceholder: Modelio pavadinimas (pvz., llama-3.3-70b)
+    sort: "Tiekėjo prioritetas"
+    sortDesc:
+      none: "Nenurodyti tiekėjų prioriteto nustatymo būdo."
+      price: "Teikia pirmenybę tiekėjui su mažiausia kaina."
+      throughput: "Teikia pirmenybę tiekėjui su didžiausiu pralaidumu."
+      latency: "Teikia pirmenybę tiekėjui su greičiausiu atsaku."
+    extraBody: Papildomas užklausos turinys (JSON)
+    extraBodyHint: Giliai sujungiama su API užklausos turiniu
+    jsonSchema: "Naudoti struktūrizuotą išvestį"
+    jsonSchemaHint: "Įjunkite tik jei galinis taškas palaiko struktūrizuotą išvestį (response_format: json_schema). Išjungus prie užklausos pridedama formato instrukcija."
+    baseUrl: Bazinis URL
+    baseUrlHint: "Su OpenAI suderinamas galinis taškas, pvz., https://api.groq.com/openai/v1"
+    grantPermission: Suteikti prieigą prie šio serverio
+    test: Tikrinti ryšį
+    testing: Tikrinama…
+    testOk: Ryšys OK
+    errNoKey: API raktas nenustatytas
+    errNoModel: Modelis nenustatytas
+    show: Rodyti
+    hide: Slėpti
+  cache:
+    heading: Vertimų talpykla
+    hint: Vertimai talpinami kiekvienai paskaitai jūsų naršyklėje
+    refresh: Atnaujinti
+    clearAll: Ištrinti viską
+    confirmClearAll: Ištrinti VISUS talpykloje esančius vertimus?
+    confirmDeleteCourse: Ištrinti visas šio kurso talpykloje esančias paskaitas?
+    delete: Ištrinti
+    empty: Talpykloje nėra vertimų
+    total: Iš viso
+  dictionary:
+    heading: Tarimai
+    hint: Pakeiskite žodžius prieš kalbos sintezę (pvz., terminus, kuriuos TTS taria neteisingai)
+    word: Žodis
+    reading: Tarimas
+    add: Pridėti
+    remove: Pašalinti
+    empty: Kol kas nėra įrašų
+  advanced:
+    heading: Išplėstiniai
+    logLevel: Žurnalo lygis
+guide:
+  title: "Kaip naudotis vertimo teikėjais"
+  intro: "Vertimui naudojamas generatyvusis DI. Pasirinkite vieną iš toliau nurodytų teikėjų, gaukite API raktą ir nurodykite jį plėtinio nustatymuose — tai užtruks vos kelias minutes."
+  privacy: "Jūsų API raktas saugomas tik jūsų naršyklėje ir siunčiamas tik jūsų pasirinktam teikėjui."
+  disclaimer: "Teikėju naudojatės ir už jį mokate savo pačių rizika. Kad būtų saugiau, rekomenduojame nustatyti išlaidų limitą."
+  commonStep: "Įklijuokite nukopijuotą raktą į plėtinio nustatymų lauką \"API raktas\", pasirinkite modelį ir spustelėkite \"Tikrinti ryšį\"."
+  openSettings: "Atidaryti nustatymus"
+  optionsLink: "Kaip naudotis vertimo teikėjais"
+  modelsHeading: "Galimi modeliai"
+  modelsHint: "Plėtinys siūlo šiuos modelius kaip šablonus. Vertimas apdoroja daug trumpų subtitrų, todėl pigaus ir greito modelio visiškai pakanka. Štai kaip kiekvienas modelis atrodo pagal kokybę, greitį ir kainą."
+  keyHeading: "API rakto gavimas"
+  billingHeading: "Kainos ir mokėjimas"
+  limitHeading: "Išlaidų valdymas"
+  models:
+    gemini31FlashLite: "Greitis: aukštas | Tikslumas: vidutinis | Kaina: žema | Tikslumo pakanka vertimui. Rekomenduojama, jei nesate tikri."
+    gemini35FlashLite: "Greitis: aukštas | Tikslumas: aukštas | Kaina: vidutinis | 3.1 serijos įpėdinis su gerokai didesniu tikslumu, tačiau šiek tiek didesne kaina."
+    gemma431bIt: "Greitis: žema | Tikslumas: žema | Kaina: nemokama | Tinka nemokamam lygiui. Pasirinkimas, kai svarbiausia mažinti išlaidas."
+    gpt54Mini: "Greitis: vidutinis | Tikslumas: aukštas | Kaina: aukštas | Kaina aukšta, todėl tinka, kai prioritetas – kokybė."
+    gpt54Nano: "Greitis: vidutinis | Tikslumas: vidutinis | Kaina: žema | Pigesnis nei mini, bet praktiškas vertimui."
+    deepseekV4Flash: "Greitis: vidutinis | Tikslumas: aukštas | Kaina: žema | Gana pigus, tačiau tikslumas aukštas. Geriausias pasirinkimas, kai svarbi kaina."
+    qwen36Flash: "Greitis: aukštas | Tikslumas: vidutinis | Kaina: žema | Nebrangus, o tikslumas taip pat neblogas."
+  gemini:
+    tagline: "Galimas Gemini, taip pat nemokamas Gemma. Rekomenduojama, jei nesate tikri, ką pasirinkti."
+    step1: "Atidarykite Google AI Studio ir prisijunkite su Google paskyra."
+    step2: "Spustelėkite \"Sukurti API raktą\", pavadinkite raktą, pasirinkite projektą (arba naudokite \"Sukurti projektą\") ir spustelėkite \"Sukurti raktą\"."
+    step3: "Nukopijuokite parodytą API raktą."
+    note: "Nemokamas lygis turi užklausų dažnio limitus, bet paskaitoms žiūrėti jo paprastai pakanka."
+    billing: "Nemokamame lygyje mokėjimo informacijos nereikia. Įjungus atsiskaitymą sušvelninami užklausų dažnio limitai net ir nemokamiems modeliams, tačiau atkreipkite dėmesį: atsiskaitymas yra išankstinis ir API raktas neveiks, kol nenusipirksite kreditų. Norėdami įjungti atsiskaitymą, puslapyje \"Atsiskaitymas\" naudokite \"Nustatyti atsiskaitymą\" mokėjimo informacijai įregistruoti, tada nusipirkite kreditų per \"Pirkti kreditų\" (mažiausia suma rodoma ekrane)."
+    limit: "Puslapyje \"Išlaidos\" nustatymas \"Mėnesio išlaidų riba\" nustato mėnesio naudojimo limitą. Sumai nurodyti naudokite \"Redaguoti išlaidų ribą\"."
+  openai:
+    tagline: "Galimi ChatGPT modeliai. Kreditą reikia įsigyti iš anksto."
+    step1: "Prisijunkite prie OpenAI Platform ir atidarykite \"API keys\" puslapį."
+    step2: "Spustelėkite \"Create new secret key\" ir suteikite bet kokį pavadinimą."
+    step3: "Nukopijuokite raktą. Jis rodomas tik vieną kartą, todėl nukopijuokite iš karto."
+    note: "Tai atskira nuo mokamo ChatGPT plano."
+    billing: "Kreditą reikia įsigyti iš anksto. \"Billing\" puslapyje užregistruokite mokėjimo būdą per \"Add payment details\", tada įsigykite kreditą per \"Add to credit balance\"."
+    limit: "\"Limits\" puslapyje naudokite \"Edit spend limit\", kad nustatytumėte mėnesio naudojimo limitą."
+  openrouter:
+    tagline: "Galima naudoti daugybę modelių. Kreditus reikia įsigyti iš anksto."
+    step1: "Prisijunkite prie OpenRouter ir atidarykite \"API keys\" puslapį."
+    step2: "Spustelėkite \"New Key\", suteikite bet kokį pavadinimą ir spustelėkite \"Create\". Toliau aprašytas išlaidų limitas taip pat įvedamas čia."
+    step3: "Nukopijuokite raktą. Jis rodomas tik vieną kartą, todėl nukopijuokite iš karto."
+    note: "Teikėjų prioritetą galima koreguoti plėtinio nustatymuose."
+    billing: "Kreditus reikia įsigyti iš anksto. \"Credits\" puslapyje spustelėkite \"Add Credits\", įveskite sumą ir patvirtinkite su \"Purchase\"."
+    limit: "Kurdami raktą įveskite sumą lauke \"Credit limit\" ir pasirinkite laikotarpį \"Reset limit every...\", kad nustatytumėte naudojimo ribą kiekvienam laikotarpiui."

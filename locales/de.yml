@@ -1,0 +1,170 @@
+extName: Udemy TTS - Untertitel übersetzen & vorlesen
+extDescription: Liest Udemy-Untertitel in deiner Sprache vor. Nach kurzer Einrichtung ist auch natürliche Übersetzung per generativer KI möglich.
+widget:
+  master: "Aktivieren"
+  title: Udemy TTS
+  enable: Vorlesen
+  volume: Lautstärke
+  speed: Geschwindigkeit
+  autoSpeed: Auto-Tempo
+  translate: Übersetzen
+  translateNoKey: Hinterlege einen API-Schlüssel in den Erweiterungseinstellungen, um die Übersetzung zu aktivieren
+  cacheNone: Keine
+  cacheClear: Übersetzungscache löschen
+  settings: Einstellungen
+  subtitleOverlay: Untertitel
+options:
+  title: Udemy TTS Einstellungen
+  tabs:
+    general: Allgemein
+    language: Sprache
+    speech: Sprache
+    translation: Übersetzung
+    subtitle: Untertitel
+    dictionary: Wörterbuch
+    advanced: Erweitert
+  general:
+    heading: Allgemein
+    enableAll: Alle Funktionen aktivieren
+  language:
+    heading: Sprache
+    target: Zielsprache
+  speech:
+    heading: Sprache
+    ttsHeading: Vorlesen
+    provider: "Sprachanbieter"
+    providerStandard: "Standard"
+    voicevoxHint: "Um VOICEVOX zu verwenden, muss der Editor oder die Engine laufen. Normalerweise startet der Server automatisch und ist unter http://127.0.0.1:50021 erreichbar. Klicken Sie zuerst auf \"Zugriff auf diesen Host erlauben\", um die Verbindung zu erlauben."
+    voicevoxUrl: "VOICEVOX URL"
+    enabled: Vorlesen aktivieren
+    voice: Stimme
+    loadVoices: Stimmen laden
+    loading: Lädt…
+    loadFailed: Stimmen konnten nicht geladen werden
+    rate: Grundtempo
+    pitch: Tonhöhe
+    volume: Lautstärke
+    autoRate: Automatische Tempoanpassung
+    autoRateHint: Passt das Tempo sanft an, damit die Sprache mit dem Video Schritt hält
+    autoRateMode: Anpassungsmethode
+    autoRateNatural: Natürlich
+    autoRateStrong: Stark
+    autoRateModeDesc:
+      natural: "Passt die Geschwindigkeit sanft mit natürlicher Korrektur an."
+      strong: "Passt die Geschwindigkeit schnell mit starker Korrektur an. Empfohlen, wenn Sie mit den Untertiteln synchronisieren möchten."
+  translation:
+    heading: Übersetzung
+    translateEnabled: Übersetzung aktivieren
+    personality: Übersetzungsstil
+    personalityStandard: Standard
+    personalityConcise: Knapp
+    personalityFriendly: Freundlich
+    personalityCustom: "Benutzerdefiniert"
+    personalityDesc:
+      standard: "Übersetzt originalgetreu in natürlichen Text."
+      concise: "Entfernt überflüssige Ausdrücke und übersetzt in kurzen, prägnanten Text. Empfohlen für die Sprachausgabe."
+      friendly: "Übersetzt in lockeren, freundlichen und weichen Text."
+      custom: "Übersetzt nach Ihren eigenen Anweisungen unten."
+    customPersonality: "Eigene Anweisungen"
+    customPersonalityPlaceholder: "Beispiel: Übersetze in formeller, höflicher Sprache."
+  subtitle:
+    enabled: Untertitel aktivieren
+    heading: Untertitel
+    fontSize: Schriftgröße
+    textColor: Textfarbe
+    backgroundColor: Hintergrundfarbe
+  provider:
+    labelCompatible: OpenAI-kompatibel
+    labelDevice: Im Browser integriert
+    deviceHint: "Nutzt die im Browser integrierte Übersetzung auf dem Gerät. Kostenlos und offline, aber nicht in jedem Browser verfügbar. Das Sprachmodell wird bei der ersten Nutzung heruntergeladen, und die Übersetzungen sind tendenziell wörtlicher."
+    heading: Übersetzungsanbieter
+    provider: Anbieter
+    apiKey: API-Schlüssel
+    model: Modell
+    modelPlaceholder: Modellname (z. B. llama-3.3-70b)
+    sort: "Anbieterpriorität"
+    sortDesc:
+      none: "Keine Methode zur Priorisierung der Anbieter angeben."
+      price: "Bevorzugt den Anbieter mit dem niedrigsten Preis."
+      throughput: "Bevorzugt den Anbieter mit dem höchsten Durchsatz."
+      latency: "Bevorzugt den Anbieter mit der schnellsten Antwort."
+    extraBody: Zusätzlicher Request-Body (JSON)
+    extraBodyHint: Wird per Deep-Merge in den API-Request übernommen
+    jsonSchema: "Strukturierte Ausgabe verwenden"
+    jsonSchemaHint: "Nur aktivieren, wenn der Endpunkt strukturierte Ausgabe (response_format: json_schema) unterstützt. Andernfalls wird eine Formatanweisung an den Prompt angehängt."
+    baseUrl: Base URL
+    baseUrlHint: "OpenAI-kompatibler Endpunkt, z. B. https://api.groq.com/openai/v1"
+    grantPermission: Zugriff auf diesen Host erlauben
+    test: Verbindung testen
+    testing: Teste…
+    testOk: Verbindung OK
+    errNoKey: API-Schlüssel ist nicht gesetzt
+    errNoModel: Modell ist nicht gesetzt
+    show: Anzeigen
+    hide: Verbergen
+  cache:
+    heading: Übersetzungscache
+    hint: Übersetzungen werden pro Lektion im Browser zwischengespeichert
+    refresh: Aktualisieren
+    clearAll: Alles löschen
+    confirmClearAll: ALLE zwischengespeicherten Übersetzungen löschen?
+    confirmDeleteCourse: Cache aller Lektionen dieses Kurses löschen?
+    delete: Löschen
+    empty: Keine Übersetzungen im Cache
+    total: Gesamt
+  dictionary:
+    heading: Aussprachen
+    hint: Ersetzt Wörter vor der Sprachsynthese (z. B. falsch ausgesprochene Fachbegriffe)
+    word: Wort
+    reading: Aussprache
+    add: Hinzufügen
+    remove: Entfernen
+    empty: Keine Einträge
+  advanced:
+    heading: Erweitert
+    logLevel: Loglevel
+guide:
+  title: "So verwenden Sie Übersetzungsanbieter"
+  intro: "Die Übersetzung nutzt generative KI. Wählen Sie einen der folgenden Anbieter, holen Sie einen API-Schlüssel und tragen Sie ihn in den Einstellungen der Erweiterung ein — das dauert nur wenige Minuten."
+  privacy: "Ihr API-Schlüssel wird nur in Ihrem Browser gespeichert und nur an den ausgewählten Anbieter gesendet."
+  disclaimer: "Die Nutzung und Bezahlung des Anbieters erfolgt auf eigenes Risiko. Wir empfehlen, sicherheitshalber ein Ausgabenlimit festzulegen."
+  commonStep: "Fügen Sie den kopierten Schlüssel in das Feld \"API-Schlüssel\" in den Einstellungen der Erweiterung ein, wählen Sie ein Modell und klicken Sie auf \"Verbindung testen\"."
+  openSettings: "Einstellungen öffnen"
+  optionsLink: "So verwenden Sie Übersetzungsanbieter"
+  modelsHeading: "Verfügbare Modelle"
+  modelsHint: "Die Erweiterung bietet die folgenden Modelle als Voreinstellungen. Beim Übersetzen werden viele kurze Untertitel verarbeitet, daher genügt ein günstiges, schnelles Modell. So schneiden die Modelle bei Qualität, Geschwindigkeit und Kosten ab."
+  keyHeading: "API-Schlüssel holen"
+  billingHeading: "Preise und Zahlung"
+  limitHeading: "Ausgaben begrenzen"
+  models:
+    gemini31FlashLite: "Geschwindigkeit: Hoch | Genauigkeit: Mittel | Kosten: Niedrig | Die Genauigkeit reicht für Übersetzungen. Empfohlen, wenn Sie unsicher sind."
+    gemini35FlashLite: "Geschwindigkeit: Hoch | Genauigkeit: Hoch | Kosten: Mittel | Der Nachfolger der 3.1-Serie mit deutlich höherer Genauigkeit, aber etwas höheren Kosten."
+    gemma431bIt: "Geschwindigkeit: Niedrig | Genauigkeit: Niedrig | Kosten: Kostenlos | Im kostenlosen Kontingent nutzbar. Die Wahl, wenn Sie vor allem die Kosten niedrig halten möchten."
+    gpt54Mini: "Geschwindigkeit: Mittel | Genauigkeit: Hoch | Kosten: Hoch | Die Kosten sind hoch, daher passend, wenn Sie Qualität priorisieren."
+    gpt54Nano: "Geschwindigkeit: Mittel | Genauigkeit: Mittel | Kosten: Niedrig | Günstiger als mini, aber für Übersetzungen praktisch."
+    deepseekV4Flash: "Geschwindigkeit: Mittel | Genauigkeit: Hoch | Kosten: Niedrig | Sehr günstig, dabei mit hoher Genauigkeit. Die erste Wahl, wenn die Kosten zählen."
+    qwen36Flash: "Geschwindigkeit: Hoch | Genauigkeit: Mittel | Kosten: Niedrig | Günstig, und auch die Genauigkeit ist ordentlich."
+  gemini:
+    tagline: "Gemini ist verfügbar, dazu das kostenlose Gemma. Empfohlen, wenn Sie unsicher sind, welches Sie wählen sollen."
+    step1: "Öffnen Sie Google AI Studio und melden Sie sich mit Ihrem Google-Konto an."
+    step2: "Klicken Sie auf \"API-Schlüssel erstellen\", benennen Sie den Schlüssel, wählen Sie ein Projekt (oder nutzen Sie \"Projekt erstellen\") und klicken Sie dann auf \"Schlüssel erstellen\"."
+    step3: "Kopieren Sie den angezeigten API-Schlüssel."
+    note: "Das kostenlose Kontingent hat Ratenlimits, reicht für Vorlesungen aber in der Regel aus."
+    billing: "Im kostenlosen Kontingent sind keine Zahlungsdaten nötig. Das Aktivieren der Abrechnung lockert die Ratenlimits selbst bei kostenlosen Modellen, doch beachten Sie: Die Abrechnung ist vorausbezahlt, und Ihr API-Schlüssel funktioniert erst wieder, wenn Sie Guthaben kaufen. Um die Abrechnung zu aktivieren, hinterlegen Sie über \"Abrechnung einrichten\" auf der Seite Abrechnung Ihre Zahlungsdaten und kaufen anschließend über \"Guthaben kaufen\" Guthaben (der Mindestbetrag wird angezeigt)."
+    limit: "Auf der Seite Ausgaben legt \"Monatliches Ausgabenlimit\" ein monatliches Nutzungslimit fest. Mit \"Ausgabenlimit bearbeiten\" stellen Sie den Betrag ein."
+  openai:
+    tagline: "ChatGPT-Modelle sind verfügbar. Sie müssen im Voraus Guthaben kaufen."
+    step1: "Melden Sie sich bei der OpenAI Platform an und öffnen Sie die Seite API keys."
+    step2: "Klicken Sie auf \"Create new secret key\" und vergeben Sie einen beliebigen Namen."
+    step3: "Kopieren Sie den Schlüssel. Er wird nur einmal angezeigt, kopieren Sie ihn also sofort."
+    note: "Dies ist unabhängig von einem kostenpflichtigen ChatGPT-Abo."
+    billing: "Sie müssen im Voraus Guthaben kaufen. Hinterlegen Sie auf der Seite Billing über \"Add payment details\" eine Zahlungsmethode und kaufen Sie dann über \"Add to credit balance\" Guthaben."
+    limit: "Legen Sie auf der Seite Limits über \"Edit spend limit\" ein monatliches Nutzungslimit fest."
+  openrouter:
+    tagline: "Viele Modelle sind verfügbar. Sie müssen im Voraus Guthaben kaufen."
+    step1: "Melden Sie sich bei OpenRouter an und öffnen Sie die Seite API keys."
+    step2: "Klicken Sie auf \"New Key\", vergeben Sie einen beliebigen Namen und klicken Sie auf \"Create\". Das unten beschriebene Ausgabenlimit wird ebenfalls hier eingegeben."
+    step3: "Kopieren Sie den Schlüssel. Er wird nur einmal angezeigt, kopieren Sie ihn also sofort."
+    note: "Die Anbieter-Priorität lässt sich in den Einstellungen der Erweiterung anpassen."
+    billing: "Sie müssen im Voraus Guthaben kaufen. Klicken Sie auf der Seite Credits auf \"Add Credits\", geben Sie einen Betrag ein und bestätigen Sie mit \"Purchase\"."
+    limit: "Geben Sie beim Erstellen eines Schlüssels im Feld \"Credit limit\" einen Betrag ein und wählen Sie unter \"Reset limit every...\" einen Zeitraum, um ein Nutzungslimit pro Zeitraum festzulegen."
