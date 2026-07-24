@@ -90,8 +90,15 @@ options:
       latency: "Отдаёт приоритет провайдеру с самым быстрым ответом."
     extraBody: Дополнительное тело запроса (JSON)
     extraBodyHint: Глубоко объединяется с телом запроса API
-    jsonSchema: "Использовать структурированный вывод"
-    jsonSchemaHint: "Включайте только если эндпоинт поддерживает структурированный вывод (response_format: json_schema). При выключении к промпту добавляется инструкция о формате."
+    responseFormat: "Формат ответа"
+    responseFormatOption:
+      jsonSchema: "JSON Schema (строгая)"
+      jsonObject: "JSON Object"
+      none: "Нет (только текстовая инструкция)"
+    responseFormatDesc:
+      jsonSchema: "API обеспечивает строгую схему. Включайте только если конечная точка поддерживает структурированный вывод (response_format: json_schema)."
+      jsonObject: "API гарантирует только синтаксически корректный JSON; точная форма запрашивается в промпте. Используйте, если конечная точка поддерживает режим JSON, но не строгую схему."
+      none: "response_format не отправляется; форма запрашивается только в промпте. Самый безопасный вариант по умолчанию для неизвестных конечных точек."
     baseUrl: Base URL
     baseUrlHint: "Совместимый с OpenAI endpoint, например https://api.groq.com/openai/v1"
     grantPermission: Разрешить доступ к этому хосту

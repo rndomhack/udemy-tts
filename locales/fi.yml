@@ -90,8 +90,15 @@ options:
       latency: "Priorisoi palveluntarjoajan, jolla on nopein vaste."
     extraBody: Lisäpyyntörunko (JSON)
     extraBodyHint: Yhdistetään syvästi API-pyynnön runkoon
-    jsonSchema: "Käytä jäsenneltyä tulostetta"
-    jsonSchemaHint: "Ota käyttöön vain jos päätepiste tukee jäsenneltyä tulostetta (response_format: json_schema). Pois päältä ollessa promptiin lisätään muotoiluohje."
+    responseFormat: "Vastauksen muoto"
+    responseFormatOption:
+      jsonSchema: "JSON Schema (tiukka)"
+      jsonObject: "JSON Object"
+      none: "Ei mikään (pelkkä tekstiohje)"
+    responseFormatDesc:
+      jsonSchema: "API pakottaa tiukan skeeman. Ota käyttöön vain, jos päätepiste tukee jäsenneltyä tulostetta (response_format: json_schema)."
+      jsonObject: "API takaa vain syntaktisesti kelvollisen JSON:in; tarkka muoto pyydetään promptissa. Käytä, jos päätepiste tukee JSON-tilaa muttei tiukkaa skeemaa."
+      none: "response_format-kenttää ei lähetetä; muoto pyydetään vain promptissa. Turvallisin oletus tuntemattomille päätepisteille."
     baseUrl: Perus-URL
     baseUrlHint: "OpenAI-yhteensopiva päätepiste, esim. https://api.groq.com/openai/v1"
     grantPermission: Myönnä käyttöoikeus tähän isäntään

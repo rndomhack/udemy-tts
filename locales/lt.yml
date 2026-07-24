@@ -90,8 +90,15 @@ options:
       latency: "Teikia pirmenybę tiekėjui su greičiausiu atsaku."
     extraBody: Papildomas užklausos turinys (JSON)
     extraBodyHint: Giliai sujungiama su API užklausos turiniu
-    jsonSchema: "Naudoti struktūrizuotą išvestį"
-    jsonSchemaHint: "Įjunkite tik jei galinis taškas palaiko struktūrizuotą išvestį (response_format: json_schema). Išjungus prie užklausos pridedama formato instrukcija."
+    responseFormat: "Atsakymo formatas"
+    responseFormatOption:
+      jsonSchema: "JSON Schema (griežtas)"
+      jsonObject: "JSON Object"
+      none: "Joks (tik teksto instrukcija)"
+    responseFormatDesc:
+      jsonSchema: "API priverstinai taiko griežtą schemą. Įjunkite tik jei galutinis taškas palaiko struktūrizuotą išvestį (response_format: json_schema)."
+      jsonObject: "API garantuoja tik sintaksiškai teisingą JSON; tiksli forma prašoma per promptą. Naudokite, jei galutinis taškas palaiko JSON režimą, bet ne griežtą schemą."
+      none: "response_format nesiunčiamas; forma prašoma tik per promptą. Saugiausias numatytasis pasirinkimas nežinomiems galutiniams taškams."
     baseUrl: Bazinis URL
     baseUrlHint: "Su OpenAI suderinamas galinis taškas, pvz., https://api.groq.com/openai/v1"
     grantPermission: Suteikti prieigą prie šio serverio

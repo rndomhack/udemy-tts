@@ -90,8 +90,15 @@ options:
       latency: "Preferuje dostawcę z najszybszą odpowiedzią."
     extraBody: Dodatkowe body żądania (JSON)
     extraBodyHint: Scalane głęboko z body żądania API
-    jsonSchema: "Użyj ustrukturyzowanego wyjścia"
-    jsonSchemaHint: "Włącz tylko jeśli endpoint obsługuje ustrukturyzowane wyjście (response_format: json_schema). Gdy wyłączone, do promptu dodawana jest instrukcja formatu."
+    responseFormat: "Format odpowiedzi"
+    responseFormatOption:
+      jsonSchema: "JSON Schema (ścisły)"
+      jsonObject: "JSON Object"
+      none: "Brak (tylko instrukcja tekstowa)"
+    responseFormatDesc:
+      jsonSchema: "API wymusza ścisły schemat. Włącz tylko, jeśli endpoint obsługuje ustrukturyzowane wyjście (response_format: json_schema)."
+      jsonObject: "API gwarantuje jedynie poprawny składniowo JSON; dokładny kształt jest żądany w promptcie. Użyj, gdy endpoint obsługuje tryb JSON, ale nie ścisły schemat."
+      none: "Nie jest wysyłany response_format; kształt jest żądany wyłącznie w promptcie. Najbezpieczniejsza wartość domyślna dla nieznanych endpointów."
     baseUrl: Base URL
     baseUrlHint: "Endpoint zgodny z OpenAI, np. https://api.groq.com/openai/v1"
     grantPermission: Przyznaj dostęp do tego hosta

@@ -90,8 +90,15 @@ options:
       latency: "A leggyorsabb válaszú szolgáltatót részesíti előnyben."
     extraBody: További kéréstörzs (JSON)
     extraBodyHint: Mélyen összeolvasztva az API-kérés törzsébe
-    jsonSchema: "Strukturált kimenet használata"
-    jsonSchemaHint: "Csak akkor kapcsolja be, ha a végpont támogatja a strukturált kimenetet (response_format: json_schema). Kikapcsolva formátumutasítás kerül a prompthoz."
+    responseFormat: "Válasz formátuma"
+    responseFormatOption:
+      jsonSchema: "JSON Schema (szigorú)"
+      jsonObject: "JSON Object"
+      none: "Nincs (csak szöveges utasítás)"
+    responseFormatDesc:
+      jsonSchema: "Az API szigorú sémát kényszerít ki. Csak akkor engedélyezze, ha a végpont támogatja a strukturált kimenetet (response_format: json_schema)."
+      jsonObject: "Az API csak szintaktikailag érvényes JSON-t garantál; a pontos formát a prompt kéri. Akkor használja, ha a végpont támogatja a JSON módot, de nem a szigorú sémát."
+      none: "Nem kerül elküldésre response_format; a formát kizárólag a prompt kéri. A legbiztonságosabb alapértelmezés ismeretlen végpontokhoz."
     baseUrl: Alap-URL
     baseUrlHint: "OpenAI-kompatibilis végpont, pl. https://api.groq.com/openai/v1"
     grantPermission: Hozzáférés engedélyezése ehhez a gazdagéphez

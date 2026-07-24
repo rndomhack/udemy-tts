@@ -1,6 +1,6 @@
 {
   "name": "udemy-tts",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Reads Udemy lecture subtitles aloud via Edge TTS, with LLM translation",
   "scripts": {
     "dev": "wxt",

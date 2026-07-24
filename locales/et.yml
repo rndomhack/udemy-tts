@@ -90,8 +90,15 @@ options:
       latency: "Eelistab kiireima vastusega pakkujat."
     extraBody: Lisapäringu keha (JSON)
     extraBodyHint: Ühendatakse süvitsi API-päringu kehasse
-    jsonSchema: "Kasuta struktureeritud väljundit"
-    jsonSchemaHint: "Lülita sisse ainult siis, kui lõpp-punkt toetab struktureeritud väljundit (response_format: json_schema). Väljalülitatuna lisatakse promptile vorminõue."
+    responseFormat: "Vastuse formaat"
+    responseFormatOption:
+      jsonSchema: "JSON Schema (range)"
+      jsonObject: "JSON Object"
+      none: "Puudub (ainult tekstijuhis)"
+    responseFormatDesc:
+      jsonSchema: "API nõuab ranget skeemi. Luba ainult siis, kui lõpp-punkt toetab struktureeritud väljundit (response_format: json_schema)."
+      jsonObject: "API tagab ainult süntaktiliselt kehtiva JSON-i; täpne kuju küsitakse promptis. Kasuta, kui lõpp-punkt toetab JSON-režiimi, aga mitte ranget skeemi."
+      none: "response_format'i ei saadeta; kuju küsitakse ainult promptis. Kõige turvalisem vaikeväärtus tundmatute lõpp-punktide jaoks."
     baseUrl: Baas-URL
     baseUrlHint: "OpenAI-ga ühilduv lõpp-punkt, nt https://api.groq.com/openai/v1"
     grantPermission: Anna juurdepääs sellele hostile

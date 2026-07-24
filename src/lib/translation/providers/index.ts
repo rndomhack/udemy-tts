@@ -1,7 +1,6 @@
-import { findModelReasoning } from '../../constants';
+import { findModelReasoning, modelResponseFormat } from '../../constants';
 import { createLogger } from '../../logger';
 import type { ProviderConfig, ProviderId } from '../../types';
-import { NO_SCHEMA_OUTPUT_FORMAT } from '../prompt';
 import { createGeminiProvider } from './gemini';
 import { createChatCompletionsProvider } from './openai';
 import type { LlmProvider } from './types';
@@ -32,7 +31,7 @@ export function createProvider(
         model: config.model,
         baseUrl: 'https://api.openai.com/v1',
         tokenParam: 'max_completion_tokens',
-        useJsonSchema: true,
+        responseFormat: 'jsonSchema',
         reasoningEffort: findModelReasoning('openai', config.model),
       });
     case 'openrouter': {
@@ -43,7 +42,7 @@ export function createProvider(
         model: config.model,
         baseUrl: 'https://openrouter.ai/api/v1',
         tokenParam: 'max_tokens',
-        useJsonSchema: true,
+        responseFormat: modelResponseFormat('openrouter', config.model),
         reasoning:
           reasoning === 'none'
             ? { enabled: false }
@@ -60,9 +59,7 @@ export function createProvider(
         model: config.model,
         baseUrl: config.baseUrl || 'https://api.openai.com/v1',
         tokenParam: 'max_tokens',
-        useJsonSchema: config.useJsonSchema ?? false,
-        // 構造化出力を使わない場合だけ、出力形式の指示を system プロンプトの末尾に足す
-        ...(config.useJsonSchema ? {} : { systemSuffix: NO_SCHEMA_OUTPUT_FORMAT }),
+        responseFormat: config.responseFormat ?? 'none',
         extraBody: parseExtraBody(config.extraBody),
       });
   }

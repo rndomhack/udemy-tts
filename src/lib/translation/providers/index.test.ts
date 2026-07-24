@@ -69,18 +69,54 @@ describe('createProvider request bodies', () => {
     expect(system).toContain('Respond with only this JSON');
   });
 
-  it('openai-compatible with useJsonSchema: sends json_schema and no suffix', async () => {
+  it('openai-compatible with responseFormat "jsonSchema": sends json_schema and no suffix', async () => {
     const fn = mockFetch(chatOk);
     await createProvider('openai-compatible', {
       apiKey: 'k',
       model: 'x',
       baseUrl: 'https://api.groq.com/openai/v1',
-      useJsonSchema: true,
+      responseFormat: 'jsonSchema',
     }).complete(req);
     const body = sentBody(fn);
     expect((body.response_format as { type: string }).type).toBe('json_schema');
     const system = (body.messages as Array<{ role: string; content: string }>)[0].content;
     expect(system).toBe('sys');
+  });
+
+  it('openrouter: qwen preset uses jsonObject response_format and the output-format suffix', async () => {
+    const fn = mockFetch(chatOk);
+    await createProvider('openrouter', {
+      apiKey: 'k',
+      model: 'qwen/qwen3.6-flash',
+    }).complete(req);
+    const body = sentBody(fn);
+    expect(body.response_format).toEqual({ type: 'json_object' });
+    const system = (body.messages as Array<{ role: string; content: string }>)[0].content;
+    expect(system).toContain('Respond with only this JSON');
+  });
+
+  it('openrouter: deepseek preset uses strict json_schema and no suffix', async () => {
+    const fn = mockFetch(chatOk);
+    await createProvider('openrouter', {
+      apiKey: 'k',
+      model: 'deepseek/deepseek-v4-flash',
+    }).complete(req);
+    const body = sentBody(fn);
+    expect((body.response_format as { type: string }).type).toBe('json_schema');
+    const system = (body.messages as Array<{ role: string; content: string }>)[0].content;
+    expect(system).toBe('sys');
+  });
+
+  it('openrouter: unlisted model defaults to "none" (no response_format, gets the suffix)', async () => {
+    const fn = mockFetch(chatOk);
+    await createProvider('openrouter', {
+      apiKey: 'k',
+      model: 'some/unknown-model',
+    }).complete(req);
+    const body = sentBody(fn);
+    expect(body.response_format).toBeUndefined();
+    const system = (body.messages as Array<{ role: string; content: string }>)[0].content;
+    expect(system).toContain('Respond with only this JSON');
   });
 
   it('schema providers do not get the output-format suffix', async () => {

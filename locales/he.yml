@@ -90,8 +90,15 @@ options:
       latency: "מעדיף את הספק עם התגובה המהירה ביותר."
     extraBody: גוף בקשה נוסף (JSON)
     extraBodyHint: ממוזג לעומק לתוך גוף בקשת ה-API
-    jsonSchema: "שימוש בפלט מובנה"
-    jsonSchemaHint: "הפעל רק אם נקודת הקצה תומכת בפלט מובנה (response_format: json_schema). כשכבוי, הוראת פורמט מתווספת לפרומפט."
+    responseFormat: "פורמט תגובה"
+    responseFormatOption:
+      jsonSchema: "JSON Schema (מחמיר)"
+      jsonObject: "JSON Object"
+      none: "ללא (הנחיה טקסטואלית בלבד)"
+    responseFormatDesc:
+      jsonSchema: "ה-API אוכף סכימה מחמירה. הפעל רק אם נקודת הקצה תומכת בפלט מובנה (response_format: json_schema)."
+      jsonObject: "ה-API מבטיח רק JSON תקין תחבירית; הצורה המדויקת מתבקשת ב-prompt. השתמש באפשרות זו אם נקודת הקצה תומכת במצב JSON אך לא בסכימה מחמירה."
+      none: "לא נשלח response_format; הצורה מתבקשת רק דרך ה-prompt. ברירת המחדל הבטוחה ביותר עבור נקודות קצה לא מוכרות."
     baseUrl: כתובת URL בסיסית
     baseUrlHint: "נקודת קצה תואמת OpenAI, למשל https://api.groq.com/openai/v1"
     grantPermission: הענקת גישה למארח זה

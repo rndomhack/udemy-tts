@@ -90,8 +90,15 @@ options:
       latency: "يعطي الأولوية للمزود ذي أسرع استجابة."
     extraBody: نص طلب إضافي (JSON)
     extraBodyHint: يُدمج بعمق في نص طلب API
-    jsonSchema: "استخدام الإخراج المنظم"
-    jsonSchemaHint: "فعّل هذا الخيار فقط إذا كانت نقطة النهاية تدعم الإخراج المنظم (response_format: json_schema). عند إيقافه تُضاف تعليمات التنسيق إلى الموجّه."
+    responseFormat: "صيغة الاستجابة"
+    responseFormatOption:
+      jsonSchema: "JSON Schema (صارم)"
+      jsonObject: "JSON Object"
+      none: "بدون (تعليمات نصية فقط)"
+    responseFormatDesc:
+      jsonSchema: "تفرض الواجهة البرمجية مخططًا صارمًا. فعّل هذا الخيار فقط إذا كانت نقطة النهاية تدعم المخرجات المهيكلة (response_format: json_schema)."
+      jsonObject: "تضمن الواجهة البرمجية فقط صياغة JSON صحيحة، أما الشكل الدقيق فيُطلب عبر التعليمات في الطلب. استخدم هذا إذا كانت نقطة النهاية تدعم وضع JSON دون مخطط صارم."
+      none: "لا يتم إرسال response_format؛ يُطلب الشكل عبر التعليمات في الطلب فقط. الخيار الأكثر أمانًا لنقاط النهاية غير المعروفة."
     baseUrl: Base URL
     baseUrlHint: "نقطة نهاية متوافقة مع OpenAI، مثل https://api.groq.com/openai/v1"
     grantPermission: السماح بالوصول إلى هذا المضيف

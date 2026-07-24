@@ -90,8 +90,15 @@ options:
       latency: "Acordă prioritate furnizorului cu cel mai rapid răspuns."
     extraBody: Corp suplimentar al cererii (JSON)
     extraBodyHint: Îmbinat în profunzime cu corpul cererii API
-    jsonSchema: "Folosește ieșire structurată"
-    jsonSchemaHint: "Activați doar dacă endpointul acceptă ieșire structurată (response_format: json_schema). Când este dezactivat, la prompt se adaugă o instrucțiune de format."
+    responseFormat: "Format răspuns"
+    responseFormatOption:
+      jsonSchema: "JSON Schema (strict)"
+      jsonObject: "JSON Object"
+      none: "Niciunul (doar instrucțiuni text)"
+    responseFormatDesc:
+      jsonSchema: "API-ul impune o schemă strictă. Activați doar dacă endpoint-ul acceptă ieșire structurată (response_format: json_schema)."
+      jsonObject: "API-ul garantează doar JSON sintactic valid; forma exactă este cerută în prompt. Folosiți dacă endpoint-ul acceptă modul JSON, dar nu o schemă strictă."
+      none: "Nu se trimite niciun response_format; forma este cerută doar în prompt. Cea mai sigură opțiune implicită pentru endpoint-uri necunoscute."
     baseUrl: Base URL
     baseUrlHint: "Endpoint compatibil OpenAI, ex. https://api.groq.com/openai/v1"
     grantPermission: Permite accesul la acest host

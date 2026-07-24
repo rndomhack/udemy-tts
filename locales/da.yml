@@ -90,8 +90,15 @@ options:
       latency: "Prioriterer udbyderen med det hurtigste svar."
     extraBody: Ekstra anmodningstekst (JSON)
     extraBodyHint: Flettes dybt ind i API-anmodningens tekst
-    jsonSchema: "Brug struktureret output"
-    jsonSchemaHint: "Slå kun til hvis endpointet understøtter struktureret output (response_format: json_schema). Når det er slået fra, tilføjes en formatinstruktion til prompten."
+    responseFormat: "Svarformat"
+    responseFormatOption:
+      jsonSchema: "JSON Schema (streng)"
+      jsonObject: "JSON Object"
+      none: "Ingen (kun tekstinstruktion)"
+    responseFormatDesc:
+      jsonSchema: "API'et håndhæver et strengt skema. Aktivér kun hvis endpointet understøtter struktureret output (response_format: json_schema)."
+      jsonObject: "API'et garanterer kun syntaktisk gyldig JSON; den præcise form angives i prompten. Brug dette hvis endpointet understøtter JSON-tilstand, men ikke et strengt skema."
+      none: "Der sendes ikke noget response_format; formen angives kun i prompten. Det sikreste standardvalg for ukendte endpoints."
     baseUrl: Basis-URL
     baseUrlHint: "OpenAI-kompatibelt slutpunkt, f.eks. https://api.groq.com/openai/v1"
     grantPermission: Giv adgang til denne vært

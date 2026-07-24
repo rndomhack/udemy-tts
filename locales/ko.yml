@@ -90,8 +90,15 @@ options:
       latency: "응답이 가장 빠른 제공자를 우선합니다."
     extraBody: 추가 요청 본문 (JSON)
     extraBodyHint: API 요청 본문에 딥 머지됩니다
-    jsonSchema: "구조화된 출력 사용"
-    jsonSchemaHint: "엔드포인트가 구조화된 출력 (response_format: json_schema)을 지원하는 경우에만 켜세요. 끄면 프롬프트에 형식 지시가 추가됩니다."
+    responseFormat: "응답 형식"
+    responseFormatOption:
+      jsonSchema: "JSON Schema (엄격)"
+      jsonObject: "JSON Object"
+      none: "없음 (텍스트 지시만)"
+    responseFormatDesc:
+      jsonSchema: "API가 엄격한 스키마를 강제합니다. 엔드포인트가 구조화된 출력(response_format: json_schema)을 지원하는 경우에만 활성화하세요."
+      jsonObject: "API는 구문상 유효한 JSON만 보장하며, 정확한 형태는 프롬프트로 요청합니다. 엔드포인트가 엄격한 스키마 없이 JSON 모드만 지원할 때 사용하세요."
+      none: "response_format을 전송하지 않으며, 형태는 프롬프트로만 요청합니다. 알 수 없는 엔드포인트에 가장 안전한 기본값입니다."
     baseUrl: Base URL
     baseUrlHint: "OpenAI 호환 엔드포인트, 예 https://api.groq.com/openai/v1"
     grantPermission: 이 호스트에 대한 접근 허용

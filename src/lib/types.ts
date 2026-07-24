@@ -1,6 +1,7 @@
 // 拡張全体で共有する型と、コンテキスト間でやり取りするメッセージの定義
 
 export type ProviderId = 'gemini' | 'openai' | 'openrouter' | 'openai-compatible' | 'device';
+export type ResponseFormat = 'jsonSchema' | 'jsonObject' | 'none';
 
 export interface ProviderConfig {
   apiKey: string;
@@ -8,7 +9,7 @@ export interface ProviderConfig {
   baseUrl?: string;
   sort?: string;
   extraBody?: string;
-  useJsonSchema?: boolean;
+  responseFormat?: ResponseFormat;
 }
 
 export type TranslatorPersonality = 'standard' | 'concise' | 'friendly' | 'custom';

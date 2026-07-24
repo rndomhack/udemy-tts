@@ -90,8 +90,15 @@ options:
       latency: "ให้ความสำคัญกับผู้ให้บริการที่มีการตอบสนองเร็วที่สุด"
     extraBody: เนื้อหาคำขอเพิ่มเติม (JSON)
     extraBodyHint: ผสานแบบลึกเข้ากับเนื้อหาคำขอ API
-    jsonSchema: "ใช้เอาต์พุตแบบมีโครงสร้าง"
-    jsonSchemaHint: "เปิดใช้เฉพาะเมื่อ endpoint รองรับเอาต์พุตแบบมีโครงสร้าง (response_format: json_schema) เท่านั้น หากปิด จะเพิ่มคำสั่งกำหนดรูปแบบลงในพรอมต์"
+    responseFormat: "รูปแบบการตอบกลับ"
+    responseFormatOption:
+      jsonSchema: "JSON Schema (เข้มงวด)"
+      jsonObject: "JSON Object"
+      none: "ไม่มี (คำสั่งข้อความล้วน)"
+    responseFormatDesc:
+      jsonSchema: "API บังคับใช้สคีมาที่เข้มงวด เปิดใช้งานเฉพาะเมื่อ endpoint รองรับผลลัพธ์แบบมีโครงสร้าง (response_format: json_schema)"
+      jsonObject: "API รับประกันเพียงว่าเป็น JSON ที่ถูกต้องตามไวยากรณ์เท่านั้น รูปแบบที่แน่นอนจะถูกร้องขอผ่านพรอมป์ ใช้ตัวเลือกนี้หาก endpoint รองรับโหมด JSON แต่ไม่รองรับสคีมาที่เข้มงวด"
+      none: "จะไม่ส่ง response_format รูปแบบจะถูกร้องขอผ่านพรอมป์เท่านั้น เป็นค่าเริ่มต้นที่ปลอดภัยที่สุดสำหรับ endpoint ที่ไม่รู้จัก"
     baseUrl: Base URL
     baseUrlHint: "Endpoint ที่เข้ากันได้กับ OpenAI เช่น https://api.groq.com/openai/v1"
     grantPermission: อนุญาตการเข้าถึงโฮสต์นี้

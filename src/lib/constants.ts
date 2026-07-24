@@ -1,4 +1,4 @@
-import type { ExtensionSettings, ProviderId, SubtitleStyle } from './types';
+import type { ExtensionSettings, ProviderId, ResponseFormat, SubtitleStyle } from './types';
 
 // 拡張全体で使う定数と、それを引く補助関数。
 // モデルの改廃や既定値の変更はこのファイルだけで行う。
@@ -7,6 +7,7 @@ export interface ModelPreset {
   id: string;
   label: string;
   reasoning?: string;
+  responseFormat?: ResponseFormat;
   noteKey: string;
 }
 
@@ -39,9 +40,16 @@ export const MODEL_PRESETS: Record<
       id: 'deepseek/deepseek-v4-flash',
       label: 'DeepSeek V4 Flash',
       reasoning: 'none',
+      responseFormat: 'jsonSchema',
       noteKey: 'deepseekV4Flash',
     },
-    { id: 'qwen/qwen3.6-flash', label: 'Qwen 3.6 Flash', reasoning: 'none', noteKey: 'qwen36Flash' },
+    {
+      id: 'qwen/qwen3.6-flash',
+      label: 'Qwen 3.6 Flash',
+      reasoning: 'none',
+      responseFormat: 'jsonObject',
+      noteKey: 'qwen36Flash',
+    },
   ],
 };
 
@@ -50,6 +58,13 @@ export function findModelReasoning(
   model: string,
 ): string | undefined {
   return MODEL_PRESETS[provider].find((p) => p.id === model)?.reasoning;
+}
+
+export function modelResponseFormat(
+  provider: Exclude<ProviderId, 'openai-compatible' | 'device'>,
+  model: string,
+): ResponseFormat {
+  return MODEL_PRESETS[provider].find((p) => p.id === model)?.responseFormat ?? 'none';
 }
 
 export function isMtProvider(id: ProviderId): id is 'device' {
@@ -212,7 +227,7 @@ export const DEFAULT_SETTINGS: ExtensionSettings = {
       sort: 'throughput',
       extraBody: '',
     },
-    'openai-compatible': { apiKey: '', model: '', baseUrl: '', extraBody: '', useJsonSchema: false },
+    'openai-compatible': { apiKey: '', model: '', baseUrl: '', extraBody: '', responseFormat: 'none' },
     device: { apiKey: '', model: 'device' },
   },
   targetLanguage: 'en',

@@ -90,8 +90,15 @@ options:
       latency: "En hızlı yanıt veren sağlayıcıya öncelik verir."
     extraBody: Ek istek gövdesi (JSON)
     extraBodyHint: API istek gövdesiyle derinlemesine birleştirilir
-    jsonSchema: "Yapılandırılmış çıktı kullan"
-    jsonSchemaHint: "Yalnızca uç nokta yapılandırılmış çıktıyı (response_format: json_schema) destekliyorsa açın. Kapalıyken prompta bir biçim talimatı eklenir."
+    responseFormat: "Yanıt biçimi"
+    responseFormatOption:
+      jsonSchema: "JSON Schema (katı)"
+      jsonObject: "JSON Object"
+      none: "Yok (yalnızca metin talimatı)"
+    responseFormatDesc:
+      jsonSchema: "API katı bir şema uygular. Yalnızca uç nokta yapılandırılmış çıktıyı (response_format: json_schema) destekliyorsa etkinleştirin."
+      jsonObject: "API yalnızca sözdizimsel olarak geçerli JSON garanti eder; tam biçim istemde talep edilir. Uç nokta katı şema olmadan JSON modunu destekliyorsa bunu kullanın."
+      none: "Hiçbir response_format gönderilmez; biçim yalnızca istemde talep edilir. Bilinmeyen uç noktalar için en güvenli varsayılan."
     baseUrl: Base URL
     baseUrlHint: "OpenAI uyumlu endpoint, örn. https://api.groq.com/openai/v1"
     grantPermission: Bu ana makineye erişim ver

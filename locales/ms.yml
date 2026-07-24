@@ -90,8 +90,15 @@ options:
       latency: "Mengutamakan penyedia dengan respons terpantas."
     extraBody: Badan permintaan tambahan (JSON)
     extraBodyHint: Digabungkan secara mendalam ke dalam badan permintaan API
-    jsonSchema: "Guna output berstruktur"
-    jsonSchemaHint: "Hidupkan hanya jika endpoint menyokong output berstruktur (response_format: json_schema). Apabila dimatikan, arahan format ditambah pada prompt."
+    responseFormat: "Format respons"
+    responseFormatOption:
+      jsonSchema: "JSON Schema (ketat)"
+      jsonObject: "JSON Object"
+      none: "Tiada (arahan teks sahaja)"
+    responseFormatDesc:
+      jsonSchema: "API menguatkuasakan skema ketat. Aktifkan hanya jika titik akhir menyokong output berstruktur (response_format: json_schema)."
+      jsonObject: "API hanya menjamin sintaks JSON yang sah; bentuk tepat diminta dalam prompt. Gunakan jika titik akhir menyokong mod JSON tetapi bukan skema ketat."
+      none: "Tiada response_format dihantar; bentuk diminta hanya dalam prompt. Lalai paling selamat untuk titik akhir yang tidak diketahui."
     baseUrl: URL asas
     baseUrlHint: "Titik akhir serasi OpenAI, cth. https://api.groq.com/openai/v1"
     grantPermission: Berikan akses kepada hos ini

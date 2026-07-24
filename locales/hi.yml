@@ -90,8 +90,15 @@ options:
       latency: "सबसे तेज़ प्रतिक्रिया वाले प्रदाता को प्राथमिकता देता है।"
     extraBody: अतिरिक्त अनुरोध बॉडी (JSON)
     extraBodyHint: API अनुरोध बॉडी में गहराई से मर्ज किया जाता है
-    jsonSchema: "संरचित आउटपुट का उपयोग करें"
-    jsonSchemaHint: "केवल तभी चालू करें जब एंडपॉइंट संरचित आउटपुट (response_format: json_schema) का समर्थन करता हो। बंद होने पर प्रॉम्प्ट में फ़ॉर्मैट निर्देश जोड़ा जाता है।"
+    responseFormat: "प्रतिक्रिया प्रारूप"
+    responseFormatOption:
+      jsonSchema: "JSON Schema (सख्त)"
+      jsonObject: "JSON Object"
+      none: "कोई नहीं (केवल टेक्स्ट निर्देश)"
+    responseFormatDesc:
+      jsonSchema: "API एक सख्त स्कीमा लागू करता है। इसे केवल तभी सक्षम करें जब एंडपॉइंट स्ट्रक्चर्ड आउटपुट (response_format: json_schema) का समर्थन करता हो।"
+      jsonObject: "API केवल वाक्य-रचनात्मक रूप से मान्य JSON की गारंटी देता है; सटीक आकार प्रॉम्प्ट में माँगा जाता है। इसका उपयोग करें यदि एंडपॉइंट JSON मोड का समर्थन करता है पर सख्त स्कीमा का नहीं।"
+      none: "कोई response_format नहीं भेजा जाता; आकार केवल प्रॉम्प्ट में माँगा जाता है। अज्ञात एंडपॉइंट के लिए सबसे सुरक्षित डिफ़ॉल्ट।"
     baseUrl: बेस URL
     baseUrlHint: "OpenAI-संगत एंडपॉइंट, जैसे https://api.groq.com/openai/v1"
     grantPermission: इस होस्ट तक पहुँच प्रदान करें

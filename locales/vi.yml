@@ -90,8 +90,15 @@ options:
       latency: "Ưu tiên nhà cung cấp có phản hồi nhanh nhất."
     extraBody: Body yêu cầu bổ sung (JSON)
     extraBodyHint: Được hợp nhất sâu vào body yêu cầu API
-    jsonSchema: "Dùng đầu ra có cấu trúc"
-    jsonSchemaHint: "Chỉ bật nếu endpoint hỗ trợ đầu ra có cấu trúc (response_format: json_schema). Khi tắt, một chỉ dẫn định dạng sẽ được thêm vào prompt."
+    responseFormat: "Định dạng phản hồi"
+    responseFormatOption:
+      jsonSchema: "JSON Schema (nghiêm ngặt)"
+      jsonObject: "JSON Object"
+      none: "Không có (chỉ hướng dẫn văn bản)"
+    responseFormatDesc:
+      jsonSchema: "API bắt buộc áp dụng schema nghiêm ngặt. Chỉ bật nếu endpoint hỗ trợ đầu ra có cấu trúc (response_format: json_schema)."
+      jsonObject: "API chỉ đảm bảo JSON hợp lệ về cú pháp; hình dạng chính xác được yêu cầu trong prompt. Dùng khi endpoint hỗ trợ chế độ JSON nhưng không hỗ trợ schema nghiêm ngặt."
+      none: "Không gửi response_format; hình dạng chỉ được yêu cầu trong prompt. Lựa chọn mặc định an toàn nhất cho các endpoint chưa biết."
     baseUrl: Base URL
     baseUrlHint: "Endpoint tương thích OpenAI, vd. https://api.groq.com/openai/v1"
     grantPermission: Cấp quyền truy cập host này

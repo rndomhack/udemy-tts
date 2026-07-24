@@ -90,8 +90,15 @@ options:
       latency: "优先选择响应最快的提供方。"
     extraBody: 附加请求体 (JSON)
     extraBodyHint: 深度合并到 API 请求体中
-    jsonSchema: "使用结构化输出"
-    jsonSchemaHint: "仅当端点支持结构化输出 (response_format: json_schema) 时启用。关闭时会在提示词末尾附加格式说明。"
+    responseFormat: "响应格式"
+    responseFormatOption:
+      jsonSchema: "JSON Schema（严格）"
+      jsonObject: "JSON Object"
+      none: "无（仅文本指令）"
+    responseFormatDesc:
+      jsonSchema: "API 会强制执行严格的模式。仅当端点支持结构化输出 (response_format: json_schema) 时才启用。"
+      jsonObject: "API 仅保证语法上有效的 JSON，具体形状通过提示词请求。适用于端点支持 JSON 模式但不支持严格模式的情况。"
+      none: "不发送 response_format，格式仅通过提示词请求。对未知端点来说是最安全的默认选项。"
     baseUrl: Base URL
     baseUrlHint: "OpenAI 兼容端点，例如 https://api.groq.com/openai/v1"
     grantPermission: 授权访问此主机

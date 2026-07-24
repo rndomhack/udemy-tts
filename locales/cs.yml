@@ -90,8 +90,15 @@ options:
       latency: "Upřednostní poskytovatele s nejrychlejší odezvou."
     extraBody: Další tělo požadavku (JSON)
     extraBodyHint: Hloubkově sloučeno do těla požadavku API
-    jsonSchema: "Použít strukturovaný výstup"
-    jsonSchemaHint: "Zapněte pouze pokud endpoint podporuje strukturovaný výstup (response_format: json_schema). Při vypnutí se k promptu přidá instrukce formátu."
+    responseFormat: "Formát odpovědi"
+    responseFormatOption:
+      jsonSchema: "JSON Schema (striktní)"
+      jsonObject: "JSON Object"
+      none: "Žádný (pouze textové pokyny)"
+    responseFormatDesc:
+      jsonSchema: "API vynucuje striktní schéma. Povolte pouze pokud koncový bod podporuje strukturovaný výstup (response_format: json_schema)."
+      jsonObject: "API zaručuje pouze syntakticky platný JSON, přesný tvar je vyžádán v promptu. Použijte, pokud koncový bod podporuje JSON režim, ale ne striktní schéma."
+      none: "response_format se neodesílá; tvar je vyžádán pouze v promptu. Nejbezpečnější výchozí volba pro neznámé koncové body."
     baseUrl: Základní URL
     baseUrlHint: "Koncový bod kompatibilní s OpenAI, např. https://api.groq.com/openai/v1"
     grantPermission: Udělit přístup k tomuto hostiteli

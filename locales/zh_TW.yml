@@ -90,8 +90,15 @@ options:
       latency: "優先選擇回應最快的供應商。"
     extraBody: 附加請求內容 (JSON)
     extraBodyHint: 深度合併到 API 請求內容中
-    jsonSchema: "使用結構化輸出"
-    jsonSchemaHint: "僅在端點支援結構化輸出 (response_format: json_schema) 時啟用。關閉時會在提示詞末尾附加格式說明。"
+    responseFormat: "回應格式"
+    responseFormatOption:
+      jsonSchema: "JSON Schema（嚴格）"
+      jsonObject: "JSON Object"
+      none: "無（僅文字指示）"
+    responseFormatDesc:
+      jsonSchema: "API 會強制套用嚴格的結構描述。僅在端點支援結構化輸出 (response_format: json_schema) 時才啟用。"
+      jsonObject: "API 僅保證語法正確的 JSON，實際格式透過提示詞要求。適用於端點支援 JSON 模式但不支援嚴格結構描述的情況。"
+      none: "不會傳送 response_format，格式僅透過提示詞要求。對未知端點而言是最安全的預設值。"
     baseUrl: Base URL
     baseUrlHint: "OpenAI 相容端點，例如 https://api.groq.com/openai/v1"
     grantPermission: 授權存取此主機

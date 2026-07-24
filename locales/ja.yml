@@ -90,8 +90,15 @@ options:
       latency: "応答が最も速いプロバイダを優先します。"
     extraBody: 追加ボディ (JSON)
     extraBodyHint: API リクエストボディに深いマージで合成されます
-    jsonSchema: "構造化出力を使う"
-    jsonSchemaHint: "エンドポイントが構造化出力 (response_format: json_schema) に対応している場合のみ有効にしてください。オフの場合はプロンプトに形式指示を追加します。"
+    responseFormat: "レスポンス形式"
+    responseFormatOption:
+      jsonSchema: "JSON Schema (厳密)"
+      jsonObject: "JSON Object"
+      none: "なし (プレーン指示)"
+    responseFormatDesc:
+      jsonSchema: "APIが厳密なスキーマを保証します。エンドポイントが構造化出力 (response_format: json_schema) に対応している場合のみ有効にしてください。"
+      jsonObject: "APIは構文的に正しいJSONであることのみを保証し、具体的な形はプロンプトの指示で伝えます。厳密なスキーマには対応していないがJSONモードには対応しているエンドポイント向けです。"
+      none: "response_formatを送らず、形式はプロンプトの指示のみで伝えます。未知のエンドポイントに対して最も安全な既定値です。"
     baseUrl: Base URL
     baseUrlHint: "OpenAI 互換エンドポイント (例 https://api.groq.com/openai/v1)"
     grantPermission: このホストへのアクセスを許可

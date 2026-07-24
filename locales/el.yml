@@ -90,8 +90,15 @@ options:
       latency: "Δίνει προτεραιότητα στον πάροχο με την ταχύτερη απόκριση."
     extraBody: Επιπλέον σώμα αιτήματος (JSON)
     extraBodyHint: Συγχωνεύεται βαθιά στο σώμα του αιτήματος API
-    jsonSchema: "Χρήση δομημένης εξόδου"
-    jsonSchemaHint: "Ενεργοποιήστε μόνο αν το endpoint υποστηρίζει δομημένη έξοδο (response_format: json_schema). Όταν είναι ανενεργό, προστίθεται οδηγία μορφής στο prompt."
+    responseFormat: "Μορφή απόκρισης"
+    responseFormatOption:
+      jsonSchema: "JSON Schema (αυστηρό)"
+      jsonObject: "JSON Object"
+      none: "Καμία (μόνο οδηγίες κειμένου)"
+    responseFormatDesc:
+      jsonSchema: "Το API επιβάλλει αυστηρό σχήμα. Ενεργοποιήστε μόνο αν το endpoint υποστηρίζει δομημένη έξοδο (response_format: json_schema)."
+      jsonObject: "Το API εγγυάται μόνο συντακτικά έγκυρο JSON· η ακριβής μορφή ζητείται μέσω του prompt. Χρησιμοποιήστε το αν το endpoint υποστηρίζει λειτουργία JSON χωρίς αυστηρό σχήμα."
+      none: "Δεν αποστέλλεται response_format· η μορφή ζητείται μόνο μέσω του prompt. Η ασφαλέστερη προεπιλογή για άγνωστα endpoints."
     baseUrl: Βασικό URL
     baseUrlHint: "Συμβατό με OpenAI τελικό σημείο, π.χ. https://api.groq.com/openai/v1"
     grantPermission: Παραχώρηση πρόσβασης σε αυτόν τον κεντρικό υπολογιστή

@@ -90,8 +90,15 @@ options:
       latency: "Prioriterar leverantören med snabbast svar."
     extraBody: Extra begärandekropp (JSON)
     extraBodyHint: Sammanfogas djupt i API-begärans kropp
-    jsonSchema: "Använd strukturerad utdata"
-    jsonSchemaHint: "Aktivera endast om endpointen stöder strukturerad utdata (response_format: json_schema). När det är av läggs en formatinstruktion till i prompten."
+    responseFormat: "Svarsformat"
+    responseFormatOption:
+      jsonSchema: "JSON Schema (strikt)"
+      jsonObject: "JSON Object"
+      none: "Inget (endast textinstruktion)"
+    responseFormatDesc:
+      jsonSchema: "API:et framtvingar ett strikt schema. Aktivera endast om slutpunkten stöder strukturerad utdata (response_format: json_schema)."
+      jsonObject: "API:et garanterar endast syntaktiskt giltig JSON; den exakta formen begärs i prompten. Använd om slutpunkten stöder JSON-läge men inte ett strikt schema."
+      none: "Inget response_format skickas; formen begärs endast i prompten. Det säkraste standardvalet för okända slutpunkter."
     baseUrl: Bas-URL
     baseUrlHint: "OpenAI-kompatibel slutpunkt, t.ex. https://api.groq.com/openai/v1"
     grantPermission: Bevilja åtkomst till denna värd

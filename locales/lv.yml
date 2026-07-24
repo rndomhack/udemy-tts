@@ -90,8 +90,15 @@ options:
       latency: "Dod priekšroku nodrošinātājam ar ātrāko atbildi."
     extraBody: Papildu pieprasījuma pamatteksts (JSON)
     extraBodyHint: Tiek dziļi apvienots API pieprasījuma pamattekstā
-    jsonSchema: "Izmantot strukturētu izvadi"
-    jsonSchemaHint: "Ieslēdziet tikai tad, ja galapunkts atbalsta strukturētu izvadi (response_format: json_schema). Ja izslēgts, uzvednei tiek pievienota formāta instrukcija."
+    responseFormat: "Atbildes formāts"
+    responseFormatOption:
+      jsonSchema: "JSON Schema (stingrs)"
+      jsonObject: "JSON Object"
+      none: "Nav (tikai teksta norādījums)"
+    responseFormatDesc:
+      jsonSchema: "API piespiedu kārtā izmanto stingru shēmu. Iespējojiet tikai tad, ja galapunkts atbalsta strukturētu izvadi (response_format: json_schema)."
+      jsonObject: "API garantē tikai sintaktiski derīgu JSON; precīzā forma tiek pieprasīta uzvednē. Izmantojiet, ja galapunkts atbalsta JSON režīmu, bet ne stingru shēmu."
+      none: "response_format netiek nosūtīts; forma tiek pieprasīta tikai uzvednē. Drošākais noklusējums nezināmiem galapunktiem."
     baseUrl: Bāzes URL
     baseUrlHint: "Ar OpenAI saderīgs galapunkts, piem., https://api.groq.com/openai/v1"
     grantPermission: Piešķirt piekļuvi šim resursdatoram

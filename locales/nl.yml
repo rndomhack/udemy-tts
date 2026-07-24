@@ -90,8 +90,15 @@ options:
       latency: "Geeft prioriteit aan de provider met de snelste respons."
     extraBody: Extra request-body (JSON)
     extraBodyHint: Wordt diep samengevoegd met de API-request-body
-    jsonSchema: "Gestructureerde uitvoer gebruiken"
-    jsonSchemaHint: "Alleen inschakelen als het endpoint gestructureerde uitvoer (response_format: json_schema) ondersteunt. Indien uit, wordt een formaatinstructie aan de prompt toegevoegd."
+    responseFormat: "Antwoordformaat"
+    responseFormatOption:
+      jsonSchema: "JSON Schema (strikt)"
+      jsonObject: "JSON Object"
+      none: "Geen (alleen tekstinstructie)"
+    responseFormatDesc:
+      jsonSchema: "De API dwingt een strikt schema af. Alleen inschakelen als het endpoint gestructureerde output ondersteunt (response_format: json_schema)."
+      jsonObject: "De API garandeert alleen syntactisch geldige JSON; de exacte vorm wordt in de prompt gevraagd. Gebruik dit als het endpoint JSON-modus ondersteunt maar geen strikt schema."
+      none: "Er wordt geen response_format verstuurd; de vorm wordt uitsluitend in de prompt gevraagd. De veiligste standaard voor onbekende endpoints."
     baseUrl: Base URL
     baseUrlHint: "OpenAI-compatibel endpoint, bijv. https://api.groq.com/openai/v1"
     grantPermission: Toegang tot deze host verlenen

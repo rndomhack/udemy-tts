@@ -3,7 +3,7 @@
   import { browser } from '#imports';
   import { MODEL_PRESETS } from '../../lib/constants';
   import { originPattern } from '../../lib/host-pattern';
-  import type { ProviderId, TestProviderResponse } from '../../lib/types';
+  import type { ProviderId, ResponseFormat, TestProviderResponse } from '../../lib/types';
   import { sendMessage } from '../../utils/messaging';
   import { settings, updateProvider, updateSettings } from '../stores';
 
@@ -152,15 +152,21 @@
     {/if}
 
     {#if active === 'openai-compatible'}
-      <label class="field checkbox">
-        <input
-          type="checkbox"
-          checked={config.useJsonSchema ?? false}
-          onchange={(e) => updateProvider(active, { useJsonSchema: e.currentTarget.checked })}
-        />
-        <span>{i18n.t('options.provider.jsonSchema')}</span>
+      <label class="field">
+        <span>{i18n.t('options.provider.responseFormat')}</span>
+        <select
+          value={config.responseFormat ?? 'none'}
+          onchange={(e) =>
+            updateProvider(active, { responseFormat: e.currentTarget.value as ResponseFormat })}
+        >
+          <option value="jsonSchema">{i18n.t('options.provider.responseFormatOption.jsonSchema')}</option>
+          <option value="jsonObject">{i18n.t('options.provider.responseFormatOption.jsonObject')}</option>
+          <option value="none">{i18n.t('options.provider.responseFormatOption.none')}</option>
+        </select>
+        <small>
+          {i18n.t(`options.provider.responseFormatDesc.${config.responseFormat || 'none'}` as MsgKey)}
+        </small>
       </label>
-      <small class="json-schema-hint">{i18n.t('options.provider.jsonSchemaHint')}</small>
     {/if}
 
     {#if active === 'openrouter'}
@@ -229,10 +235,6 @@
     margin: 0 0 18px;
     color: var(--muted-2);
     line-height: 1.5;
-  }
-  .json-schema-hint {
-    margin-top: 0;
-    margin-bottom: 24px;
   }
   .test-row {
     display: flex;
