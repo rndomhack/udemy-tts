@@ -34,6 +34,7 @@ export const MODEL_PRESETS: Record<
   openai: [
     { id: 'gpt-5.4-mini', label: 'GPT-5.4 mini', reasoning: 'low', noteKey: 'gpt54Mini' },
     { id: 'gpt-5.4-nano', label: 'GPT-5.4 nano', reasoning: 'low', noteKey: 'gpt54Nano' },
+    { id: 'gpt-5.6-luna', label: 'GPT-5.6 Luna', reasoning: 'low', noteKey: 'gpt56Luna' },
   ],
   openrouter: [
     {

@@ -149,6 +149,7 @@ guide:
     gemma431bIt: "Hastighet: Låg | Noggrannhet: Låg | Kostnad: Gratis | Användbar på gratisnivån. Valet när du främst vill hålla nere kostnaderna."
     gpt54Mini: "Hastighet: Medel | Noggrannhet: Hög | Kostnad: Hög | Kostnaden är hög, så den passar när du prioriterar kvalitet."
     gpt54Nano: "Hastighet: Medel | Noggrannhet: Medel | Kostnad: Låg | Billigare än mini, men praktisk för översättning."
+    gpt56Luna: "Hastighet: Hög | Noggrannhet: Hög | Kostnad: Låg | Lika billig som nano, med hög översättningskvalitet — rekommenderas."
     deepseekV4Flash: "Hastighet: Medel | Noggrannhet: Hög | Kostnad: Låg | Ganska billig, men ändå med hög noggrannhet. Det bästa valet när kostnaden spelar roll."
     qwen36Flash: "Hastighet: Hög | Noggrannhet: Medel | Kostnad: Låg | Billig, och noggrannheten är också hyfsad."
   gemini:

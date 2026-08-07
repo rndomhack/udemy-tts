@@ -149,6 +149,7 @@ guide:
     gemma431bIt: "Hız: Düşük | Doğruluk: Düşük | Maliyet: Ücretsiz | Ücretsiz katmanda kullanılabilir. Özellikle maliyetleri düşük tutmak istediğinizde tercih edilir."
     gpt54Mini: "Hız: Orta | Doğruluk: Yüksek | Maliyet: Yüksek | Maliyet yüksek, bu yüzden kaliteyi önceliklendirdiğinizde uygundur."
     gpt54Nano: "Hız: Orta | Doğruluk: Orta | Maliyet: Düşük | mini'den daha ucuz, ancak çeviri için pratiktir."
+    gpt56Luna: "Hız: Yüksek | Doğruluk: Yüksek | Maliyet: Düşük | nano kadar ucuz, yüksek çeviri kalitesiyle — önerilir."
     deepseekV4Flash: "Hız: Orta | Doğruluk: Yüksek | Maliyet: Düşük | Oldukça ucuz, yine de doğruluğu yüksek. Maliyet önemliyken en iyi tercih."
     qwen36Flash: "Hız: Yüksek | Doğruluk: Orta | Maliyet: Düşük | Ucuz, ve doğruluğu da fena değil."
   gemini:

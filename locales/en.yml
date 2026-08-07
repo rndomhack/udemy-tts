@@ -149,6 +149,7 @@ guide:
     gemma431bIt: "Speed: Low | Accuracy: Low | Cost: Free | Usable on the free tier. The pick when you mainly want to keep costs down."
     gpt54Mini: "Speed: Medium | Accuracy: High | Cost: High | Cost is high, so it fits when you prioritize quality."
     gpt54Nano: "Speed: Medium | Accuracy: Medium | Cost: Low | Cheaper than mini, but practical for translation."
+    gpt56Luna: "Speed: High | Accuracy: High | Cost: Low | As cheap as nano, with high translation quality — recommended."
     deepseekV4Flash: "Speed: Medium | Accuracy: High | Cost: Low | Quite cheap, yet accuracy is high. The top pick when cost matters."
     qwen36Flash: "Speed: High | Accuracy: Medium | Cost: Low | Inexpensive, with decent accuracy too."
   gemini:

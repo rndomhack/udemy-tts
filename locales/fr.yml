@@ -149,6 +149,7 @@ guide:
     gemma431bIt: "Vitesse: Faible | Précision: Faible | Coût: Gratuit | Utilisable avec l'offre gratuite. Le choix idéal quand on veut avant tout limiter les coûts."
     gpt54Mini: "Vitesse: Moyenne | Précision: Élevée | Coût: Élevée | Le coût est élevé, ce qui convient quand vous privilégiez la qualité."
     gpt54Nano: "Vitesse: Moyenne | Précision: Moyenne | Coût: Faible | Moins cher que mini, mais pratique pour la traduction."
+    gpt56Luna: "Vitesse: Élevée | Précision: Élevée | Coût: Faible | Aussi économique que nano, avec une haute qualité de traduction — recommandé."
     deepseekV4Flash: "Vitesse: Moyenne | Précision: Élevée | Coût: Faible | Assez bon marché, avec une précision élevée malgré tout. Le meilleur choix quand le coût compte."
     qwen36Flash: "Vitesse: Élevée | Précision: Moyenne | Coût: Faible | Peu coûteux, avec une précision également correcte."
   gemini:

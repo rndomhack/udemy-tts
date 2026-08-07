@@ -149,6 +149,7 @@ guide:
     gemma431bIt: "Tốc độ: Thấp | Độ chính xác: Thấp | Chi phí: Miễn phí | Dùng được ở gói miễn phí. Lựa chọn khi bạn chủ yếu muốn giảm chi phí."
     gpt54Mini: "Tốc độ: Trung bình | Độ chính xác: Cao | Chi phí: Cao | Chi phí cao, nên phù hợp khi bạn ưu tiên chất lượng."
     gpt54Nano: "Tốc độ: Trung bình | Độ chính xác: Trung bình | Chi phí: Thấp | Rẻ hơn mini, nhưng thực dụng cho việc dịch."
+    gpt56Luna: "Tốc độ: Cao | Độ chính xác: Cao | Chi phí: Thấp | Rẻ như nano, với chất lượng dịch cao — được đề xuất."
     deepseekV4Flash: "Tốc độ: Trung bình | Độ chính xác: Cao | Chi phí: Thấp | Khá rẻ nhưng độ chính xác cao. Lựa chọn hàng đầu khi chi phí quan trọng."
     qwen36Flash: "Tốc độ: Cao | Độ chính xác: Trung bình | Chi phí: Thấp | Rẻ, và độ chính xác cũng khá tốt."
   gemini:

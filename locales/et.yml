@@ -149,6 +149,7 @@ guide:
     gemma431bIt: "Kiirus: Madal | Täpsus: Madal | Hind: Tasuta | Kasutatav tasuta tasemel. Valik, kui soovite peamiselt kulusid madalal hoida."
     gpt54Mini: "Kiirus: Keskmine | Täpsus: Kõrge | Hind: Kõrge | Hind on kõrge, seega sobib, kui seate esikohale kvaliteedi."
     gpt54Nano: "Kiirus: Keskmine | Täpsus: Keskmine | Hind: Madal | Odavam kui mini, kuid tõlkimiseks praktiline."
+    gpt56Luna: "Kiirus: Kõrge | Täpsus: Kõrge | Hind: Madal | Sama odav kui nano, kõrge tõlkekvaliteediga — soovitatav."
     deepseekV4Flash: "Kiirus: Keskmine | Täpsus: Kõrge | Hind: Madal | Üsna odav, ent täpsus on kõrge. Parim valik, kui hind on oluline."
     qwen36Flash: "Kiirus: Kõrge | Täpsus: Keskmine | Hind: Madal | Soodne, ja täpsus on samuti korralik."
   gemini:

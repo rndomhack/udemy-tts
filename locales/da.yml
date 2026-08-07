@@ -149,6 +149,7 @@ guide:
     gemma431bIt: "Hastighed: Lav | Nøjagtighed: Lav | Pris: Gratis | Kan bruges på det gratis niveau. Valget, når du primært vil holde omkostningerne nede."
     gpt54Mini: "Hastighed: Middel | Nøjagtighed: Høj | Pris: Høj | Prisen er høj, så den passer, når du prioriterer kvalitet."
     gpt54Nano: "Hastighed: Middel | Nøjagtighed: Middel | Pris: Lav | Billigere end mini, men praktisk til oversættelse."
+    gpt56Luna: "Hastighed: Høj | Nøjagtighed: Høj | Pris: Lav | Lige så billig som nano, med høj oversættelseskvalitet — anbefales."
     deepseekV4Flash: "Hastighed: Middel | Nøjagtighed: Høj | Pris: Lav | Ret billig, men med høj nøjagtighed. Det bedste valg, når prisen betyder noget."
     qwen36Flash: "Hastighed: Høj | Nøjagtighed: Middel | Pris: Lav | Billig, og nøjagtigheden er også rimelig."
   gemini:

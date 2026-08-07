@@ -149,6 +149,7 @@ guide:
     gemma431bIt: "Viteză: Scăzut | Acuratețe: Scăzut | Cost: Gratuit | Utilizabil în nivelul gratuit. Alegerea când doriți în principal să mențineți costurile scăzute."
     gpt54Mini: "Viteză: Medie | Acuratețe: Mare | Cost: Mare | Costul este ridicat, deci potrivit când prioritizați calitatea."
     gpt54Nano: "Viteză: Medie | Acuratețe: Medie | Cost: Scăzut | Mai ieftin decât mini, dar practic pentru traducere."
+    gpt56Luna: "Viteză: Mare | Acuratețe: Mare | Cost: Scăzut | La fel de ieftin ca nano, cu o calitate ridicată a traducerii — recomandat."
     deepseekV4Flash: "Viteză: Medie | Acuratețe: Mare | Cost: Scăzut | Destul de ieftin, totuși cu acuratețe mare. Cea mai bună alegere când contează costul."
     qwen36Flash: "Viteză: Mare | Acuratețe: Medie | Cost: Scăzut | Ieftin, iar acuratețea este de asemenea decentă."
   gemini:

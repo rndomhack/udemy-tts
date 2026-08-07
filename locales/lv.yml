@@ -149,6 +149,7 @@ guide:
     gemma431bIt: "Ātrums: zemas | Precizitāte: zemas | Izmaksas: bezmaksas | Izmantojams bezmaksas līmenī. Izvēle, kad galvenokārt vēlaties samazināt izmaksas."
     gpt54Mini: "Ātrums: vidēja | Precizitāte: augsts | Izmaksas: augsts | Izmaksas ir augstas, tāpēc piemērots, ja par prioritāti izvirzāt kvalitāti."
     gpt54Nano: "Ātrums: vidēja | Precizitāte: vidēja | Izmaksas: zemas | Lētāks par mini, taču praktisks tulkošanai."
+    gpt56Luna: "Ātrums: augsts | Precizitāte: augsts | Izmaksas: zemas | Tikpat lēts kā nano, ar augstu tulkošanas kvalitāti — ieteicams."
     deepseekV4Flash: "Ātrums: vidēja | Precizitāte: augsts | Izmaksas: zemas | Diezgan lēts, bet ar augstu precizitāti. Labākā izvēle, kad svarīgas izmaksas."
     qwen36Flash: "Ātrums: augsts | Precizitāte: vidēja | Izmaksas: zemas | Lēts, un precizitāte arī ir pieņemama."
   gemini:

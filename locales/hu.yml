@@ -149,6 +149,7 @@ guide:
     gemma431bIt: "Sebesség: Alacsony | Pontosság: Alacsony | Költség: Ingyenes | Használható az ingyenes szinten. A választás, ha főként a költségeket szeretné alacsonyan tartani."
     gpt54Mini: "Sebesség: Közepes | Pontosság: Magas | Költség: Magas | A költség magas, ezért akkor illik, ha a minőséget helyezi előtérbe."
     gpt54Nano: "Sebesség: Közepes | Pontosság: Közepes | Költség: Alacsony | Olcsóbb, mint a mini, de a fordításhoz praktikus."
+    gpt56Luna: "Sebesség: Magas | Pontosság: Magas | Költség: Alacsony | Ugyanolyan olcsó, mint a nano, magas fordítási minőséggel — ajánlott."
     deepseekV4Flash: "Sebesség: Közepes | Pontosság: Magas | Költség: Alacsony | Elég olcsó, mégis magas pontosságú. A legjobb választás, ha a költség számít."
     qwen36Flash: "Sebesség: Magas | Pontosság: Közepes | Költség: Alacsony | Olcsó, és a pontossága is tisztességes."
   gemini:

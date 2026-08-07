@@ -149,6 +149,7 @@ guide:
     gemma431bIt: "Snelheid: Laag | Nauwkeurigheid: Laag | Kosten: Gratis | Bruikbaar op het gratis niveau. De keuze wanneer u vooral de kosten laag wilt houden."
     gpt54Mini: "Snelheid: Gemiddeld | Nauwkeurigheid: Hoog | Kosten: Hoog | De kosten zijn hoog, dus geschikt wanneer u kwaliteit vooropstelt."
     gpt54Nano: "Snelheid: Gemiddeld | Nauwkeurigheid: Gemiddeld | Kosten: Laag | Goedkoper dan mini, maar praktisch voor vertaling."
+    gpt56Luna: "Snelheid: Hoog | Nauwkeurigheid: Hoog | Kosten: Laag | Net zo goedkoop als nano, met hoge vertaalkwaliteit — aanbevolen."
     deepseekV4Flash: "Snelheid: Gemiddeld | Nauwkeurigheid: Hoog | Kosten: Laag | Vrij goedkoop, met toch een hoge nauwkeurigheid. De beste keuze wanneer kosten belangrijk zijn."
     qwen36Flash: "Snelheid: Hoog | Nauwkeurigheid: Gemiddeld | Kosten: Laag | Goedkoop, en de nauwkeurigheid is ook redelijk."
   gemini:

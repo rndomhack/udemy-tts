@@ -149,6 +149,7 @@ guide:
     gemma431bIt: "Nopeus: Matala | Tarkkuus: Matala | Hinta: Ilmainen | Käytettävissä ilmaisella tasolla. Valinta silloin, kun haluat ennen kaikkea pitää kustannukset kurissa."
     gpt54Mini: "Nopeus: Keskitaso | Tarkkuus: Korkea | Hinta: Korkea | Hinta on korkea, joten sopii, kun priorisoit laatua."
     gpt54Nano: "Nopeus: Keskitaso | Tarkkuus: Keskitaso | Hinta: Matala | Halvempi kuin mini, mutta käytännöllinen käännökseen."
+    gpt56Luna: "Nopeus: Korkea | Tarkkuus: Korkea | Hinta: Matala | Yhtä edullinen kuin nano, korkealla käännöslaadulla — suositeltu."
     deepseekV4Flash: "Nopeus: Keskitaso | Tarkkuus: Korkea | Hinta: Matala | Melko halpa, silti tarkkuus on korkea. Paras valinta, kun hinnalla on merkitystä."
     qwen36Flash: "Nopeus: Korkea | Tarkkuus: Keskitaso | Hinta: Matala | Edullinen, ja tarkkuuskin on kohtuullinen."
   gemini:

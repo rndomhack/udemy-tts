@@ -149,6 +149,7 @@ guide:
     gemma431bIt: "Velocità: Basso | Precisione: Basso | Costo: Gratis | Utilizzabile nel piano gratuito. La scelta quando vuoi soprattutto contenere i costi."
     gpt54Mini: "Velocità: Media | Precisione: Alta | Costo: Alta | Il costo è alto, quindi adatto quando dai priorità alla qualità."
     gpt54Nano: "Velocità: Media | Precisione: Media | Costo: Basso | Più economico di mini, ma pratico per la traduzione."
+    gpt56Luna: "Velocità: Alta | Precisione: Alta | Costo: Basso | Economico quanto nano, con alta qualità di traduzione — consigliato."
     deepseekV4Flash: "Velocità: Media | Precisione: Alta | Costo: Basso | Abbastanza economico, eppure con precisione alta. La scelta migliore quando conta il costo."
     qwen36Flash: "Velocità: Alta | Precisione: Media | Costo: Basso | Economico, e anche la precisione è discreta."
   gemini:

@@ -149,6 +149,7 @@ guide:
     gemma431bIt: "Rýchlosť: Nízka | Presnosť: Nízka | Cena: Zadarmo | Použiteľný v bezplatnej úrovni. Voľba, keď chcete najmä udržať náklady nízko."
     gpt54Mini: "Rýchlosť: Stredná | Presnosť: Vysoká | Cena: Vysoká | Cena je vysoká, preto sa hodí, keď uprednostňujete kvalitu."
     gpt54Nano: "Rýchlosť: Stredná | Presnosť: Stredná | Cena: Nízka | Lacnejší ako mini, no na preklad praktický."
+    gpt56Luna: "Rýchlosť: Vysoká | Presnosť: Vysoká | Cena: Nízka | Rovnako lacný ako nano, s vysokou kvalitou prekladu — odporúčané."
     deepseekV4Flash: "Rýchlosť: Stredná | Presnosť: Vysoká | Cena: Nízka | Dosť lacný, no s vysokou presnosťou. Najlepšia voľba, keď záleží na cene."
     qwen36Flash: "Rýchlosť: Vysoká | Presnosť: Stredná | Cena: Nízka | Lacný a presnosť je tiež slušná."
   gemini:

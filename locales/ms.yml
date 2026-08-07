@@ -149,6 +149,7 @@ guide:
     gemma431bIt: "Kelajuan: Rendah | Ketepatan: Rendah | Kos: Percuma | Boleh digunakan pada peringkat percuma. Pilihan apabila anda terutamanya mahu mengurangkan kos."
     gpt54Mini: "Kelajuan: Sederhana | Ketepatan: Tinggi | Kos: Tinggi | Kosnya tinggi, jadi sesuai apabila anda mengutamakan kualiti."
     gpt54Nano: "Kelajuan: Sederhana | Ketepatan: Sederhana | Kos: Rendah | Lebih murah daripada mini, tetapi praktikal untuk terjemahan."
+    gpt56Luna: "Kelajuan: Tinggi | Ketepatan: Tinggi | Kos: Rendah | Semurah nano, dengan kualiti terjemahan yang tinggi — disyorkan."
     deepseekV4Flash: "Kelajuan: Sederhana | Ketepatan: Tinggi | Kos: Rendah | Agak murah, namun ketepatannya tinggi. Pilihan utama apabila kos penting."
     qwen36Flash: "Kelajuan: Tinggi | Ketepatan: Sederhana | Kos: Rendah | Murah, dan ketepatannya juga agak baik."
   gemini:
