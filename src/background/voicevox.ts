@@ -6,10 +6,12 @@ import type {
   VoicevoxConfig,
   VoicevoxSpeakersResponse,
 } from '../lib/types';
-import { flattenSpeakers } from '../lib/voicevox';
+import type { AudioQuery } from '../lib/voicevox';
+import { flattenSpeakers, mergeQueries, splitSentences } from '../lib/voicevox';
 import { arrayBufferToBase64 } from '../utils/audio-codec';
 
-// VOICEVOX Engine の REST API で WAV を合成する。audio_query で合成パラメータを得て synthesis に渡す
+// VOICEVOX Engine の REST API で WAV を合成する。
+// テキストを文単位に分けて audio_query を並列に引き、1 本のクエリへ統合してから synthesis に渡す。
 
 const log = createLogger('voicevox');
 
@@ -41,20 +43,28 @@ async function synthesizeOnce(
   const base = config.baseUrl.trim().replace(/\/+$/, '');
   const speaker = encodeURIComponent(String(config.speaker));
 
-  const queryRes = await fetch(
-    `${base}/audio_query?text=${encodeURIComponent(params.text)}&speaker=${speaker}`,
-    { method: 'POST' },
+  const sentences = splitSentences(params.text);
+  if (sentences.length === 0) throw new Error('no text to synthesize');
+  const queries = await Promise.all(
+    sentences.map((sentence) => audioQuery(base, speaker, sentence)),
   );
-  if (!queryRes.ok) throw new Error(`audio_query failed: HTTP ${queryRes.status}`);
-  const query = (await queryRes.json()) as Record<string, unknown>;
 
   const synthRes = await fetch(`${base}/synthesis?speaker=${speaker}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(query),
+    body: JSON.stringify(mergeQueries(queries, config)),
   });
   if (!synthRes.ok) throw new Error(`synthesis failed: HTTP ${synthRes.status}`);
   return synthRes.arrayBuffer();
+}
+
+async function audioQuery(base: string, speaker: string, text: string): Promise<AudioQuery> {
+  const res = await fetch(
+    `${base}/audio_query?text=${encodeURIComponent(text)}&speaker=${speaker}`,
+    { method: 'POST' },
+  );
+  if (!res.ok) throw new Error(`audio_query failed: HTTP ${res.status}`);
+  return (await res.json()) as AudioQuery;
 }
 
 export async function handleVoicevoxSpeakers(

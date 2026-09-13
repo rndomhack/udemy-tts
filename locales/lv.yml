@@ -36,6 +36,10 @@ options:
     providerStandard: "Standarta"
     voicevoxHint: "Lai izmantotu VOICEVOX, jādarbojas redaktoram vai dzinējam. Parasti serveris startē automātiski un ir pieejams adresē http://127.0.0.1:50021. Vispirms noklikšķiniet uz \"Piešķirt piekļuvi šim resursdatoram\", lai atļautu savienojumu."
     voicevoxUrl: "VOICEVOX URL"
+    voicevoxPrePhoneme: "Klusums sākumā"
+    voicevoxPostPhoneme: "Klusums beigās"
+    voicevoxPauseScale: "Pauze pie komatiem"
+    voicevoxPauseScaleHint: "Mērogo pauzi pie komatiem."
     enabled: Iespējot TTS
     voice: Balss
     loadVoices: Ielādēt balsis

@@ -36,6 +36,10 @@ options:
     providerStandard: "Standartinis"
     voicevoxHint: "Norint naudoti VOICEVOX, turi veikti redaktorius arba variklis. Paprastai serveris paleidžiamas automatiškai ir pasiekiamas adresu http://127.0.0.1:50021. Pirmiausia spustelėkite \"Suteikti prieigą prie šio serverio\", kad leistumėte ryšį."
     voicevoxUrl: "VOICEVOX URL"
+    voicevoxPrePhoneme: "Tyla pradžioje"
+    voicevoxPostPhoneme: "Tyla pabaigoje"
+    voicevoxPauseScale: "Pauzė ties kableliais"
+    voicevoxPauseScaleHint: "Keičia pauzės ties kableliais ilgį."
     enabled: Įjungti TTS
     voice: Balsas
     loadVoices: Įkelti balsus

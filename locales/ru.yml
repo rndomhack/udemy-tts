@@ -36,6 +36,10 @@ options:
     providerStandard: "Стандартный"
     voicevoxHint: "Для использования VOICEVOX редактор или движок должен быть запущен. Обычно сервер запускается автоматически и становится доступен по адресу http://127.0.0.1:50021. Сначала нажмите «Разрешить доступ к этому хосту», чтобы разрешить подключение."
     voicevoxUrl: "VOICEVOX URL"
+    voicevoxPrePhoneme: "Тишина в начале"
+    voicevoxPostPhoneme: "Тишина в конце"
+    voicevoxPauseScale: "Пауза на запятых"
+    voicevoxPauseScaleHint: "Масштабирует паузу на запятых."
     enabled: Включить озвучку
     voice: Голос
     loadVoices: Загрузить голоса

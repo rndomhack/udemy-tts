@@ -36,6 +36,10 @@ options:
     providerStandard: "मानक"
     voicevoxHint: "VOICEVOX का उपयोग करने के लिए, एडिटर या इंजन चालू होना चाहिए। सामान्यतः सर्वर स्वचालित रूप से शुरू होता है और http://127.0.0.1:50021 पर उपलब्ध हो जाता है। सबसे पहले, कनेक्शन की अनुमति देने के लिए \"इस होस्ट तक पहुँच प्रदान करें\" पर क्लिक करें।"
     voicevoxUrl: "VOICEVOX URL"
+    voicevoxPrePhoneme: "शुरुआत में मौन"
+    voicevoxPostPhoneme: "अंत में मौन"
+    voicevoxPauseScale: "अल्पविराम पर ठहराव"
+    voicevoxPauseScaleHint: "अल्पविराम पर ठहराव को घटाता-बढ़ाता है।"
     enabled: TTS सक्षम करें
     voice: आवाज़
     loadVoices: आवाज़ें लोड करें

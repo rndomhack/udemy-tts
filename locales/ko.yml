@@ -36,6 +36,10 @@ options:
     providerStandard: "표준"
     voicevoxHint: "VOICEVOX를 사용하려면 에디터 또는 엔진이 실행 중이어야 합니다. 보통 서버가 자동으로 시작되어 http://127.0.0.1:50021 에서 접근할 수 있게 됩니다. 먼저 \"이 호스트에 대한 접근 허용\"을 클릭해 통신을 허용하세요."
     voicevoxUrl: "VOICEVOX URL"
+    voicevoxPrePhoneme: "음성 앞 무음"
+    voicevoxPostPhoneme: "음성 뒤 무음"
+    voicevoxPauseScale: "쉼표 간격"
+    voicevoxPauseScaleHint: "쉼표에서 넣는 간격을 배율로 조정합니다."
     enabled: 읽어주기 사용
     voice: 음성
     loadVoices: 음성 목록 불러오기

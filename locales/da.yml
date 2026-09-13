@@ -36,6 +36,10 @@ options:
     providerStandard: "Standard"
     voicevoxHint: "For at bruge VOICEVOX skal editoren eller motoren køre. Normalt starter serveren automatisk og bliver tilgængelig på http://127.0.0.1:50021. Klik først på \"Giv adgang til denne vært\" for at tillade forbindelsen."
     voicevoxUrl: "VOICEVOX URL"
+    voicevoxPrePhoneme: "Stilhed i starten"
+    voicevoxPostPhoneme: "Stilhed i slutningen"
+    voicevoxPauseScale: "Pause ved kommaer"
+    voicevoxPauseScaleHint: "Skalerer pausen ved kommaer."
     enabled: Aktivér TTS
     voice: Stemme
     loadVoices: Indlæs stemmer

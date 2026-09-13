@@ -36,6 +36,10 @@ options:
     providerStandard: "Normál"
     voicevoxHint: "A VOICEVOX használatához az editornak vagy az engine-nek futnia kell. A szerver általában automatikusan elindul, és a http://127.0.0.1:50021 címen érhető el. Először kattintson a(z) „Hozzáférés engedélyezése ehhez a gazdagéphez” gombra a kapcsolat engedélyezéséhez."
     voicevoxUrl: "VOICEVOX URL"
+    voicevoxPrePhoneme: "Csend az elején"
+    voicevoxPostPhoneme: "Csend a végén"
+    voicevoxPauseScale: "Szünet a vesszőknél"
+    voicevoxPauseScaleHint: "Módosítja a vesszőknél lévő szünetet."
     enabled: TTS engedélyezése
     voice: Hang
     loadVoices: Hangok betöltése

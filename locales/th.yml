@@ -36,6 +36,10 @@ options:
     providerStandard: "มาตรฐาน"
     voicevoxHint: "หากต้องการใช้ VOICEVOX ต้องเปิดตัวแก้ไขหรือเอนจินไว้ โดยปกติเซิร์ฟเวอร์จะเริ่มทำงานอัตโนมัติและเข้าถึงได้ที่ http://127.0.0.1:50021 ก่อนอื่นให้คลิก \"อนุญาตการเข้าถึงโฮสต์นี้\" เพื่ออนุญาตการเชื่อมต่อ"
     voicevoxUrl: "VOICEVOX URL"
+    voicevoxPrePhoneme: "ความเงียบตอนต้น"
+    voicevoxPostPhoneme: "ความเงียบตอนท้าย"
+    voicevoxPauseScale: "การหยุดที่จุลภาค"
+    voicevoxPauseScaleHint: "ปรับความยาวของการหยุดที่จุลภาค"
     enabled: เปิดใช้การอ่านออกเสียง
     voice: เสียง
     loadVoices: โหลดรายการเสียง

@@ -36,6 +36,10 @@ options:
     providerStandard: "Standard"
     voicevoxHint: "Pentru a folosi VOICEVOX, editorul sau motorul trebuie să ruleze. De obicei serverul pornește automat și devine disponibil la http://127.0.0.1:50021. Mai întâi, faceți clic pe „Permite accesul la acest host” pentru a permite conexiunea."
     voicevoxUrl: "VOICEVOX URL"
+    voicevoxPrePhoneme: "Liniște la început"
+    voicevoxPostPhoneme: "Liniște la sfârșit"
+    voicevoxPauseScale: "Pauză la virgule"
+    voicevoxPauseScaleHint: "Scalează pauza la virgule."
     enabled: Activează TTS
     voice: Voce
     loadVoices: Încarcă vocile

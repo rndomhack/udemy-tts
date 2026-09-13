@@ -36,6 +36,10 @@ options:
     providerStandard: "Piawai"
     voicevoxHint: "Untuk menggunakan VOICEVOX, editor atau enjin mesti sedang berjalan. Biasanya pelayan dimulakan secara automatik dan boleh diakses di http://127.0.0.1:50021. Mula-mula, klik \"Berikan akses kepada hos ini\" untuk membenarkan sambungan."
     voicevoxUrl: "VOICEVOX URL"
+    voicevoxPrePhoneme: "Senyap di awal"
+    voicevoxPostPhoneme: "Senyap di akhir"
+    voicevoxPauseScale: "Jeda pada koma"
+    voicevoxPauseScaleHint: "Melaraskan jeda pada koma."
     enabled: Dayakan TTS
     voice: Suara
     loadVoices: Muatkan suara

@@ -36,6 +36,10 @@ options:
     providerStandard: "Standaard"
     voicevoxHint: "Om VOICEVOX te gebruiken, moet de editor of engine actief zijn. Normaal start de server automatisch en is deze bereikbaar op http://127.0.0.1:50021. Klik eerst op \"Toegang tot deze host verlenen\" om de verbinding toe te staan."
     voicevoxUrl: "VOICEVOX URL"
+    voicevoxPrePhoneme: "Stilte aan het begin"
+    voicevoxPostPhoneme: "Stilte aan het einde"
+    voicevoxPauseScale: "Pauze bij kommas"
+    voicevoxPauseScaleHint: "Schaalt de pauze bij kommas."
     enabled: Voorlezen inschakelen
     voice: Stem
     loadVoices: Stemmen laden

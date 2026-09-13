@@ -36,6 +36,10 @@ options:
     providerStandard: "قياسي"
     voicevoxHint: "لاستخدام VOICEVOX، يجب أن يكون المحرر أو المحرك قيد التشغيل. عادةً يبدأ الخادم تلقائيًا ويصبح متاحًا على http://127.0.0.1:50021. أولًا، انقر \"السماح بالوصول إلى هذا المضيف\" للسماح بالاتصال."
     voicevoxUrl: "VOICEVOX URL"
+    voicevoxPrePhoneme: "صمت في البداية"
+    voicevoxPostPhoneme: "صمت في النهاية"
+    voicevoxPauseScale: "توقف عند الفواصل"
+    voicevoxPauseScaleHint: "يضبط مدة التوقف عند الفواصل."
     enabled: تفعيل القراءة الصوتية
     voice: الصوت
     loadVoices: تحميل الأصوات

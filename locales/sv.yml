@@ -36,6 +36,10 @@ options:
     providerStandard: "Standard"
     voicevoxHint: "För att använda VOICEVOX måste editorn eller motorn vara igång. Normalt startar servern automatiskt och blir tillgänglig på http://127.0.0.1:50021. Klicka först på \"Bevilja åtkomst till denna värd\" för att tillåta anslutningen."
     voicevoxUrl: "VOICEVOX URL"
+    voicevoxPrePhoneme: "Tystnad i början"
+    voicevoxPostPhoneme: "Tystnad i slutet"
+    voicevoxPauseScale: "Paus vid kommatecken"
+    voicevoxPauseScaleHint: "Skalar pausen vid kommatecken."
     enabled: Aktivera TTS
     voice: Röst
     loadVoices: Läs in röster

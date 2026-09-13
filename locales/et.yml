@@ -36,6 +36,10 @@ options:
     providerStandard: "Standardne"
     voicevoxHint: "VOICEVOX-i kasutamiseks peab redaktor või mootor töötama. Tavaliselt käivitub server automaatselt ja on saadaval aadressil http://127.0.0.1:50021. Kõigepealt klõpsake \"Anna juurdepääs sellele hostile\", et ühendus lubada."
     voicevoxUrl: "VOICEVOX URL"
+    voicevoxPrePhoneme: "Vaikus alguses"
+    voicevoxPostPhoneme: "Vaikus lõpus"
+    voicevoxPauseScale: "Paus komadel"
+    voicevoxPauseScaleHint: "Skaleerib pausi komadel."
     enabled: Luba TTS
     voice: Hääl
     loadVoices: Laadi hääled

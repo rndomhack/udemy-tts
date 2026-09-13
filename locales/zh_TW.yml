@@ -36,6 +36,10 @@ options:
     providerStandard: "標準"
     voicevoxHint: "要使用 VOICEVOX，需要先啟動編輯器或引擎。通常伺服器會自動啟動，並可透過 http://127.0.0.1:50021 存取。請先點擊「授權存取此主機」以允許通訊。"
     voicevoxUrl: "VOICEVOX URL"
+    voicevoxPrePhoneme: "語音前靜音"
+    voicevoxPostPhoneme: "語音後靜音"
+    voicevoxPauseScale: "逗號停頓"
+    voicevoxPauseScaleHint: "以倍率調整逗號處的停頓。"
     enabled: 啟用朗讀
     voice: 語音
     loadVoices: 載入語音清單

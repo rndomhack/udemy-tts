@@ -36,6 +36,10 @@ options:
     providerStandard: "Standar"
     voicevoxHint: "Untuk menggunakan VOICEVOX, editor atau engine harus berjalan. Biasanya server dimulai otomatis dan dapat diakses di http://127.0.0.1:50021. Pertama, klik \"Beri akses ke host ini\" untuk mengizinkan koneksi."
     voicevoxUrl: "VOICEVOX URL"
+    voicevoxPrePhoneme: "Hening di awal"
+    voicevoxPostPhoneme: "Hening di akhir"
+    voicevoxPauseScale: "Jeda pada koma"
+    voicevoxPauseScaleHint: "Menyesuaikan jeda pada koma."
     enabled: Aktifkan TTS
     voice: Suara
     loadVoices: Muat daftar suara

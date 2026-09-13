@@ -19,6 +19,9 @@ export type TtsProviderId = 'edge' | 'voicevox';
 export interface VoicevoxConfig {
   baseUrl: string;
   speaker: number;
+  prePhonemeLength: number;
+  postPhonemeLength: number;
+  pauseLengthScale: number;
 }
 
 export type AutoRateMode = 'natural' | 'strong';

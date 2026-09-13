@@ -254,6 +254,57 @@
         oninput={(e) => updateSettings({ ttsVolume: parseFloat(e.currentTarget.value) })}
       />
     </label>
+
+    {#if useVoicevox}
+      <label class="field">
+        <span>
+          {i18n.t('options.speech.voicevoxPrePhoneme')}: {$settings.voicevox.prePhonemeLength.toFixed(
+            2,
+          )}s
+        </span>
+        <input
+          type="range"
+          min="0"
+          max="1"
+          step="0.05"
+          value={$settings.voicevox.prePhonemeLength}
+          oninput={(e) => updateVoicevox({ prePhonemeLength: parseFloat(e.currentTarget.value) })}
+        />
+      </label>
+
+      <label class="field">
+        <span>
+          {i18n.t('options.speech.voicevoxPostPhoneme')}: {$settings.voicevox.postPhonemeLength.toFixed(
+            2,
+          )}s
+        </span>
+        <input
+          type="range"
+          min="0"
+          max="1"
+          step="0.05"
+          value={$settings.voicevox.postPhonemeLength}
+          oninput={(e) => updateVoicevox({ postPhonemeLength: parseFloat(e.currentTarget.value) })}
+        />
+      </label>
+
+      <label class="field">
+        <span>
+          {i18n.t('options.speech.voicevoxPauseScale')}: ×{$settings.voicevox.pauseLengthScale.toFixed(
+            1,
+          )}
+        </span>
+        <input
+          type="range"
+          min="0"
+          max="2"
+          step="0.1"
+          value={$settings.voicevox.pauseLengthScale}
+          oninput={(e) => updateVoicevox({ pauseLengthScale: parseFloat(e.currentTarget.value) })}
+        />
+        <small>{i18n.t('options.speech.voicevoxPauseScaleHint')}</small>
+      </label>
+    {/if}
   </section>
 {/if}
 

@@ -36,6 +36,10 @@ options:
     providerStandard: "Tiêu chuẩn"
     voicevoxHint: "Để dùng VOICEVOX, trình soạn thảo hoặc engine phải đang chạy. Thông thường máy chủ tự khởi động và có thể truy cập tại http://127.0.0.1:50021. Trước tiên, hãy nhấp \"Cấp quyền truy cập host này\" để cho phép kết nối."
     voicevoxUrl: "VOICEVOX URL"
+    voicevoxPrePhoneme: "Khoảng lặng đầu"
+    voicevoxPostPhoneme: "Khoảng lặng cuối"
+    voicevoxPauseScale: "Ngắt ở dấu phẩy"
+    voicevoxPauseScaleHint: "Điều chỉnh khoảng ngắt ở dấu phẩy."
     enabled: Bật TTS
     voice: Giọng đọc
     loadVoices: Tải danh sách giọng

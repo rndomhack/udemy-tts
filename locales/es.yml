@@ -36,6 +36,10 @@ options:
     providerStandard: "Estándar"
     voicevoxHint: "Para usar VOICEVOX, el editor o el motor deben estar en ejecución. Normalmente el servidor se inicia automáticamente y queda disponible en http://127.0.0.1:50021. Primero, haga clic en \"Conceder acceso a este host\" para permitir la conexión."
     voicevoxUrl: "VOICEVOX URL"
+    voicevoxPrePhoneme: "Silencio inicial"
+    voicevoxPostPhoneme: "Silencio final"
+    voicevoxPauseScale: "Pausa en las comas"
+    voicevoxPauseScaleHint: "Escala la pausa en las comas."
     enabled: Habilitar TTS
     voice: Voz
     loadVoices: Cargar voces

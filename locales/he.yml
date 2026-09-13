@@ -36,6 +36,10 @@ options:
     providerStandard: "רגיל"
     voicevoxHint: "כדי להשתמש ב-VOICEVOX, העורך או המנוע חייבים לפעול. בדרך כלל השרת מופעל אוטומטית וזמין בכתובת http://127.0.0.1:50021. תחילה לחצו על \"הענקת גישה למארח זה\" כדי לאשר את החיבור."
     voicevoxUrl: "VOICEVOX URL"
+    voicevoxPrePhoneme: "שקט בהתחלה"
+    voicevoxPostPhoneme: "שקט בסוף"
+    voicevoxPauseScale: "השהיה בפסיקים"
+    voicevoxPauseScaleHint: "מכוונן את ההשהיה בפסיקים."
     enabled: הפעלת TTS
     voice: קול
     loadVoices: טעינת קולות

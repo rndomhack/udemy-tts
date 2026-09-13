@@ -36,6 +36,10 @@ options:
     providerStandard: "Standardní"
     voicevoxHint: "Pro použití VOICEVOX musí být spuštěn editor nebo engine. Server se obvykle spustí automaticky a je dostupný na http://127.0.0.1:50021. Nejprve klikněte na „Udělit přístup k tomuto hostiteli“ a povolte připojení."
     voicevoxUrl: "VOICEVOX URL"
+    voicevoxPrePhoneme: "Ticho na začátku"
+    voicevoxPostPhoneme: "Ticho na konci"
+    voicevoxPauseScale: "Pauza u čárek"
+    voicevoxPauseScaleHint: "Škáluje pauzu u čárek."
     enabled: Povolit TTS
     voice: Hlas
     loadVoices: Načíst hlasy

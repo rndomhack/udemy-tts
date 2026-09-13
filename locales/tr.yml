@@ -36,6 +36,10 @@ options:
     providerStandard: "Standart"
     voicevoxHint: "VOICEVOX'u kullanmak için editör veya motorun çalışıyor olması gerekir. Genellikle sunucu otomatik başlar ve http://127.0.0.1:50021 adresinden erişilebilir olur. Önce bağlantıya izin vermek için \"Bu ana makineye erişim ver\" düğmesine tıklayın."
     voicevoxUrl: "VOICEVOX URL"
+    voicevoxPrePhoneme: "Baştaki sessizlik"
+    voicevoxPostPhoneme: "Sondaki sessizlik"
+    voicevoxPauseScale: "Virgül duraklaması"
+    voicevoxPauseScaleHint: "Virgüllerdeki duraklamayı ölçekler."
     enabled: Sesli okumayı etkinleştir
     voice: Ses
     loadVoices: Sesleri yükle

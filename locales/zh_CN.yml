@@ -36,6 +36,10 @@ options:
     providerStandard: "标准"
     voicevoxHint: "要使用 VOICEVOX，需要先启动编辑器或引擎。通常服务器会自动启动，并可通过 http://127.0.0.1:50021 访问。请先点击“授权访问此主机”以允许通信。"
     voicevoxUrl: "VOICEVOX URL"
+    voicevoxPrePhoneme: "语音前静音"
+    voicevoxPostPhoneme: "语音后静音"
+    voicevoxPauseScale: "逗号停顿"
+    voicevoxPauseScaleHint: "按倍率调整逗号处的停顿。"
     enabled: 启用朗读
     voice: 语音
     loadVoices: 加载语音列表

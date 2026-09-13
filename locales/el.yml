@@ -36,6 +36,10 @@ options:
     providerStandard: "Τυπικός"
     voicevoxHint: "Για να χρησιμοποιήσετε το VOICEVOX, πρέπει να εκτελείται ο επεξεργαστής ή η μηχανή. Συνήθως ο διακομιστής ξεκινά αυτόματα και γίνεται διαθέσιμος στο http://127.0.0.1:50021. Πρώτα, κάντε κλικ στο «Παραχώρηση πρόσβασης σε αυτόν τον κεντρικό υπολογιστή» για να επιτρέψετε τη σύνδεση."
     voicevoxUrl: "VOICEVOX URL"
+    voicevoxPrePhoneme: "Σιωπή στην αρχή"
+    voicevoxPostPhoneme: "Σιωπή στο τέλος"
+    voicevoxPauseScale: "Παύση στα κόμματα"
+    voicevoxPauseScaleHint: "Κλιμακώνει την παύση στα κόμματα."
     enabled: Ενεργοποίηση TTS
     voice: Φωνή
     loadVoices: Φόρτωση φωνών

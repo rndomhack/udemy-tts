@@ -36,6 +36,10 @@ options:
     providerStandard: "Vakio"
     voicevoxHint: "VOICEVOXin käyttö edellyttää, että editori tai moottori on käynnissä. Yleensä palvelin käynnistyy automaattisesti ja on käytettävissä osoitteessa http://127.0.0.1:50021. Salli yhteys napsauttamalla ensin \"Myönnä käyttöoikeus tähän isäntään\"."
     voicevoxUrl: "VOICEVOX URL"
+    voicevoxPrePhoneme: "Hiljaisuus alussa"
+    voicevoxPostPhoneme: "Hiljaisuus lopussa"
+    voicevoxPauseScale: "Tauko pilkuissa"
+    voicevoxPauseScaleHint: "Skaalaa taukoa pilkuissa."
     enabled: Ota TTS käyttöön
     voice: Ääni
     loadVoices: Lataa äänet
