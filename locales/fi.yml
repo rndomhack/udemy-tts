@@ -59,6 +59,8 @@ options:
   translation:
     heading: Käännös
     translateEnabled: Ota käännös käyttöön
+    pauseUntilTranslated: "Keskeytä, kunnes ensimmäinen käännös saapuu"
+    pauseUntilTranslatedHint: "Kun luento avataan, video pysäytetään, kunnes ensimmäinen käännös on valmis, jotta alku ei jää väliin."
     personality: Käännöstyyli
     personalityStandard: Vakio
     personalityConcise: Tiivis

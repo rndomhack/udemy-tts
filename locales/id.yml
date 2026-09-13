@@ -59,6 +59,8 @@ options:
   translation:
     heading: Terjemahan
     translateEnabled: Aktifkan terjemahan
+    pauseUntilTranslated: "Jeda sampai terjemahan pertama tiba"
+    pauseUntilTranslatedHint: "Saat kuliah dibuka, video dijeda sampai terjemahan pertama siap, sehingga bagian awal tidak terlewat."
     personality: Gaya terjemahan
     personalityStandard: Standar
     personalityConcise: Ringkas

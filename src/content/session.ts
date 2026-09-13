@@ -10,6 +10,7 @@ import {
   RATE_STEP_BOOST_FACTOR_NATURAL,
   RATE_STEP_BOOST_FACTOR_STRONG,
   SEEK_THRESHOLD_SEC,
+  TRANSLATION_HOLD_MAX_MS,
   TTS_AUDIO_BYTES_PER_SEC,
 } from '../lib/constants';
 import { createLogger } from '../lib/logger';
@@ -61,6 +62,10 @@ export class LectureSession {
   private lastTriggeredIdx = -1;
   private lastVideoTime = 0;
   private warmupPending = false;
+  private holdPending = false;
+  private holdingVideo = false;
+  private ownPauseExpected = false;
+  private holdTimer: ReturnType<typeof setTimeout> | null = null;
 
   private translationTasks = new Map<number, Promise<void>>();
   private synthTasks = new Map<number, Promise<EnqueueItem | null>>();
@@ -74,6 +79,7 @@ export class LectureSession {
   volume: number;
   pitch: number;
   translateEnabled: boolean;
+  pauseUntilTranslated: boolean;
   subtitleEnabled: boolean;
 
   private lastSubtitleText: string | null = null;
@@ -81,15 +87,23 @@ export class LectureSession {
 
   private readonly onTimeUpdate = () => this.handleTimeUpdate();
   private readonly onSeeking = () => this.handleSeeking();
-  private readonly onPause = () => this.player.pause();
+  private readonly onPause = () => {
+    if (this.ownPauseExpected) this.ownPauseExpected = false;
+    else this.cancelHold();
+    this.player.pause();
+  };
   private readonly onPlay = () => {
+    if (this.holdingVideo) this.cancelHold();
+    else this.holdForFirstTranslation();
     if (this.ttsActive) this.player.resume();
   };
   private readonly onRateChange = () => this.handleRateChange();
   private readonly onLoadedMetadata = () => {
-    if (!this.warmupPending) return;
-    this.warmupPending = false;
-    this.warmupSynthesis(this.video.currentTime);
+    if (this.warmupPending) {
+      this.warmupPending = false;
+      this.warmupSynthesis(this.video.currentTime);
+    }
+    this.holdForFirstTranslation();
   };
 
   constructor(
@@ -105,6 +119,7 @@ export class LectureSession {
     this.volume = s.ttsVolume;
     this.pitch = s.ttsPitch;
     this.translateEnabled = s.translateEnabled && this.hasApiKey();
+    this.pauseUntilTranslated = s.pauseUntilTranslated;
     this.subtitleEnabled = s.subtitleOverlayEnabled;
 
     this.controller = new RateController({
@@ -126,6 +141,7 @@ export class LectureSession {
 
   destroy(): void {
     if (!this.active) return;
+    this.releaseHold();
     this.active = false;
     this.video.removeEventListener('timeupdate', this.onTimeUpdate);
     this.video.removeEventListener('seeking', this.onSeeking);
@@ -183,7 +199,10 @@ export class LectureSession {
     if ((this.ttsActive || this.subActive) && !this.loaded && !this.loading) {
       void this.load();
     }
-    if (!this.ttsActive) this.player.stop();
+    if (!this.ttsActive) {
+      this.player.stop();
+      this.releaseHold();
+    }
     if (!this.subActive) {
       this.onSubtitle?.(null);
     } else if (this.loaded) {
@@ -283,6 +302,7 @@ export class LectureSession {
       // 機械翻訳の場合は一括翻訳しても品質が変わらないため行わない
       if (isMtProvider(s.activeProvider)) {
         this.requestWarmup();
+        this.requestTranslationHold();
         this.updateSubtitle(this.video.currentTime);
         return;
       }
@@ -313,6 +333,7 @@ export class LectureSession {
       }
 
       this.requestWarmup();
+      this.requestTranslationHold();
       this.updateSubtitle(this.video.currentTime);
 
       const response = await sendMessage<TranslateResponse>({
@@ -351,6 +372,7 @@ export class LectureSession {
     });
     this.localDict = { ...this.localDict, ...response.pronunciationMap };
     this.localSubstituter = WordSubstituter.fromDict(this.localDict);
+    this.releaseHold();
   }
 
   private handleTimeUpdate(): void {
@@ -473,6 +495,51 @@ export class LectureSession {
   private warmupSynthesis(t: number): void {
     const idx = this.segmentIndexAt(t);
     this.prefetchAhead(idx < 0 ? -1 : idx - 1);
+  }
+
+  private requestTranslationHold(): void {
+    this.holdPending = true;
+    this.holdForFirstTranslation();
+  }
+
+  private holdForFirstTranslation(): void {
+    if (!this.holdPending || !this.active || !this.pauseUntilTranslated || !this.ttsActive) return;
+    // 再生位置が確定する前や、そもそも再生が始まる前は判定できないので要求を持ち越す
+    if (this.video.paused || this.video.readyState < HTMLMediaElement.HAVE_METADATA) return;
+    const idx = this.segmentIndexAt(this.video.currentTime);
+    if (idx < 0) return;
+    this.holdPending = false;
+    if (this.translations[idx] !== undefined) return;
+    this.holdingVideo = true;
+    this.ownPauseExpected = true;
+    this.video.pause();
+    this.holdTimer = setTimeout(() => {
+      log.warn(`translation hold timed out at segment ${idx}, resuming`);
+      this.releaseHold();
+    }, TRANSLATION_HOLD_MAX_MS);
+    log.info(`holding playback until segment ${idx} is translated`);
+    void this.ensureTranslation(idx).then(() => this.releaseHold());
+  }
+
+  private releaseHold(): void {
+    this.clearHoldTimer();
+    this.holdPending = false;
+    if (!this.holdingVideo) return;
+    this.holdingVideo = false;
+    log.info('translation ready, resuming playback');
+    void this.video.play().catch((e) => log.warn('resume after hold rejected:', e));
+  }
+
+  private cancelHold(): void {
+    this.clearHoldTimer();
+    this.holdPending = false;
+    this.holdingVideo = false;
+  }
+
+  private clearHoldTimer(): void {
+    if (!this.holdTimer) return;
+    clearTimeout(this.holdTimer);
+    this.holdTimer = null;
   }
 
   private prefetchAhead(fromIdx: number): void {

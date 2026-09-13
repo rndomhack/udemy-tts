@@ -47,6 +47,7 @@ export interface ExtensionSettings {
   customPersonality: string;
   enabled: boolean;
   translateEnabled: boolean;
+  pauseUntilTranslated: boolean;
   ttsEnabled: boolean;
   ttsProvider: TtsProviderId;
   voicevox: VoicevoxConfig;

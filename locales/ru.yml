@@ -59,6 +59,8 @@ options:
   translation:
     heading: Перевод
     translateEnabled: Включить перевод
+    pauseUntilTranslated: "Пауза до первого перевода"
+    pauseUntilTranslatedHint: "При открытии лекции видео ставится на паузу, пока не будет готов первый перевод, чтобы начало не пропускалось."
     personality: Стиль перевода
     personalityStandard: Стандартный
     personalityConcise: Краткий

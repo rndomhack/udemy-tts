@@ -59,6 +59,8 @@ options:
   translation:
     heading: Translation
     translateEnabled: Enable translation
+    pauseUntilTranslated: "Pause until the first translation arrives"
+    pauseUntilTranslatedHint: "When a lecture opens, the video is paused until the first translation is ready, so the opening is not skipped."
     personality: Translation style
     personalityStandard: Standard
     personalityConcise: Concise

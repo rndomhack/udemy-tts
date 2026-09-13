@@ -59,6 +59,8 @@ options:
   translation:
     heading: Tłumaczenie
     translateEnabled: Włącz tłumaczenie
+    pauseUntilTranslated: "Wstrzymaj do pierwszego tłumaczenia"
+    pauseUntilTranslatedHint: "Po otwarciu wykładu film jest wstrzymywany, dopóki pierwsze tłumaczenie nie będzie gotowe, aby początek nie został pominięty."
     personality: Styl tłumaczenia
     personalityStandard: Standardowy
     personalityConcise: Zwięzły

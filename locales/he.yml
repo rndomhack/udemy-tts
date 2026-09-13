@@ -59,6 +59,8 @@ options:
   translation:
     heading: תרגום
     translateEnabled: הפעלת תרגום
+    pauseUntilTranslated: "השהיה עד שמגיע התרגום הראשון"
+    pauseUntilTranslatedHint: "בפתיחת הרצאה הסרטון מושהה עד שהתרגום הראשון מוכן, כדי שההתחלה לא תידלג."
     personality: סגנון תרגום
     personalityStandard: רגיל
     personalityConcise: תמציתי

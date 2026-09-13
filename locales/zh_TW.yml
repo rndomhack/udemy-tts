@@ -59,6 +59,8 @@ options:
   translation:
     heading: 翻譯
     translateEnabled: 啟用翻譯
+    pauseUntilTranslated: "等待第一個翻譯後再播放"
+    pauseUntilTranslatedHint: "開啟課程後，影片會暫停，直到第一個翻譯準備就緒，以免跳過開頭。"
     personality: 翻譯風格
     personalityStandard: 標準
     personalityConcise: 簡潔

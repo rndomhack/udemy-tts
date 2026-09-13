@@ -59,6 +59,8 @@ options:
   translation:
     heading: Vertimas
     translateEnabled: Įjungti vertimą
+    pauseUntilTranslated: "Pristabdyti, kol bus gautas pirmasis vertimas"
+    pauseUntilTranslatedHint: "Atidarius paskaitą vaizdo įrašas pristabdomas, kol parengiamas pirmasis vertimas, kad nebūtų praleista pradžia."
     personality: Vertimo stilius
     personalityStandard: Standartinis
     personalityConcise: Glaustas

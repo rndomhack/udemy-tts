@@ -59,6 +59,8 @@ options:
   translation:
     heading: Traducere
     translateEnabled: Activează traducerea
+    pauseUntilTranslated: "Pune pe pauză până la prima traducere"
+    pauseUntilTranslatedHint: "La deschiderea unei lecții, videoclipul este pus pe pauză până când prima traducere este gata, astfel încât începutul să nu fie omis."
     personality: Stil de traducere
     personalityStandard: Standard
     personalityConcise: Concis

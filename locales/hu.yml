@@ -59,6 +59,8 @@ options:
   translation:
     heading: Fordítás
     translateEnabled: Fordítás engedélyezése
+    pauseUntilTranslated: "Szüneteltetés az első fordításig"
+    pauseUntilTranslatedHint: "Az előadás megnyitásakor a videó szünetel, amíg az első fordítás el nem készül, hogy az eleje ne maradjon ki."
     personality: Fordítási stílus
     personalityStandard: Normál
     personalityConcise: Tömör

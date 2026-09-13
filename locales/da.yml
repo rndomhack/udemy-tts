@@ -59,6 +59,8 @@ options:
   translation:
     heading: Oversættelse
     translateEnabled: Aktivér oversættelse
+    pauseUntilTranslated: "Sæt på pause, indtil den første oversættelse er klar"
+    pauseUntilTranslatedHint: "Når en forelæsning åbnes, sættes videoen på pause, indtil den første oversættelse er klar, så begyndelsen ikke springes over."
     personality: Oversættelsesstil
     personalityStandard: Standard
     personalityConcise: Kortfattet

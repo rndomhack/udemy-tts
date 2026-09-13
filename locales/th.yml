@@ -59,6 +59,8 @@ options:
   translation:
     heading: การแปล
     translateEnabled: เปิดใช้การแปล
+    pauseUntilTranslated: "หยุดชั่วคราวจนกว่าคำแปลแรกจะมาถึง"
+    pauseUntilTranslatedHint: "เมื่อเปิดบทเรียน วิดีโอจะหยุดชั่วคราวจนกว่าคำแปลแรกจะพร้อม เพื่อไม่ให้ข้ามช่วงต้น"
     personality: สไตล์การแปล
     personalityStandard: มาตรฐาน
     personalityConcise: กระชับ

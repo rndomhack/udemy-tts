@@ -59,6 +59,8 @@ options:
   translation:
     heading: Tõlkimine
     translateEnabled: Luba tõlkimine
+    pauseUntilTranslated: "Peata, kuni saabub esimene tõlge"
+    pauseUntilTranslatedHint: "Loengu avamisel peatatakse video, kuni esimene tõlge on valmis, et algus vahele ei jääks."
     personality: Tõlkestiil
     personalityStandard: Tavaline
     personalityConcise: Kokkuvõtlik

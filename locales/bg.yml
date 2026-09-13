@@ -59,6 +59,8 @@ options:
   translation:
     heading: Превод
     translateEnabled: Активиране на превода
+    pauseUntilTranslated: "Пауза до първия превод"
+    pauseUntilTranslatedHint: "При отваряне на лекция видеото се спира на пауза, докато първият превод е готов, за да не се пропусне началото."
     personality: Стил на превод
     personalityStandard: Стандартен
     personalityConcise: Кратък

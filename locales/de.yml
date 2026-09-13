@@ -59,6 +59,8 @@ options:
   translation:
     heading: Übersetzung
     translateEnabled: Übersetzung aktivieren
+    pauseUntilTranslated: "Pausieren, bis die erste Übersetzung vorliegt"
+    pauseUntilTranslatedHint: "Beim Öffnen einer Vorlesung wird das Video pausiert, bis die erste Übersetzung bereit ist, damit der Anfang nicht übersprungen wird."
     personality: Übersetzungsstil
     personalityStandard: Standard
     personalityConcise: Knapp

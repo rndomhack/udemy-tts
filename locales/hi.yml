@@ -59,6 +59,8 @@ options:
   translation:
     heading: अनुवाद
     translateEnabled: अनुवाद सक्षम करें
+    pauseUntilTranslated: "पहला अनुवाद आने तक रोकें"
+    pauseUntilTranslatedHint: "व्याख्यान खुलने पर वीडियो तब तक रुका रहता है जब तक पहला अनुवाद तैयार नहीं हो जाता, ताकि शुरुआत छूट न जाए।"
     personality: अनुवाद शैली
     personalityStandard: मानक
     personalityConcise: संक्षिप्त

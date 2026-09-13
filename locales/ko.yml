@@ -59,6 +59,8 @@ options:
   translation:
     heading: 번역
     translateEnabled: 번역 사용
+    pauseUntilTranslated: "첫 번역이 도착할 때까지 일시정지"
+    pauseUntilTranslatedHint: "강의를 열면 첫 번역이 준비될 때까지 동영상을 일시정지하여 도입부를 건너뛰지 않도록 합니다."
     personality: 번역 스타일
     personalityStandard: 표준
     personalityConcise: 간결

@@ -152,6 +152,7 @@ export default defineContentScript({
       session.setAutoRate(merged.autoRateAdjust);
       session.setAutoRateMode(merged.autoRateMode);
       session.pitch = merged.ttsPitch;
+      session.pauseUntilTranslated = merged.pauseUntilTranslated;
       if (merged.ttsEnabled !== session.ttsEnabled) session.setTtsEnabled(merged.ttsEnabled);
       if (subtitleEnabledChanged) session.setSubtitleEnabled(merged.subtitleOverlayEnabled);
       if (subtitleStyleChanged) currentOverlay?.setStyle(merged.subtitleStyle);

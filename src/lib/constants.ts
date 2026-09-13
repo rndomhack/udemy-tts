@@ -229,6 +229,7 @@ export const MERGE_MAX_CUES = 10;
 export const TRANSLATE_CHUNK_SIZE = 100;
 export const TRANSLATE_MAX_RETRIES = 2;
 export const TRANSLATE_MAX_OUTPUT_TOKENS = 16_384;
+export const TRANSLATION_HOLD_MAX_MS = 15_000;
 
 export const MAX_PLAYBACK_RATE = 4.0;
 export const RATE_STEP_PER_TICK = 0.05;
@@ -273,6 +274,7 @@ export const DEFAULT_SETTINGS: ExtensionSettings = {
   customPersonality: '',
   enabled: true,
   translateEnabled: true,
+  pauseUntilTranslated: true,
   ttsEnabled: true,
   ttsProvider: 'edge',
   voicevox: {

@@ -59,6 +59,8 @@ options:
   translation:
     heading: Μετάφραση
     translateEnabled: Ενεργοποίηση μετάφρασης
+    pauseUntilTranslated: "Παύση μέχρι την πρώτη μετάφραση"
+    pauseUntilTranslatedHint: "Όταν ανοίγει μια διάλεξη, το βίντεο τίθεται σε παύση μέχρι να είναι έτοιμη η πρώτη μετάφραση, ώστε να μην παραλειφθεί η αρχή."
     personality: Στυλ μετάφρασης
     personalityStandard: Τυπικό
     personalityConcise: Συνοπτικό

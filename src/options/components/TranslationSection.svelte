@@ -26,6 +26,16 @@
       <span>{i18n.t('options.translation.translateEnabled')}</span>
     </label>
 
+    <label class="field checkbox hold-toggle">
+      <input
+        type="checkbox"
+        checked={$settings.pauseUntilTranslated}
+        onchange={(e) => updateSettings({ pauseUntilTranslated: e.currentTarget.checked })}
+      />
+      <span>{i18n.t('options.translation.pauseUntilTranslated')}</span>
+    </label>
+    <small class="hold-hint">{i18n.t('options.translation.pauseUntilTranslatedHint')}</small>
+
     <label class="field">
       <span>{i18n.t('options.translation.personality')}</span>
       <select
@@ -59,3 +69,13 @@
     {/if}
   </section>
 {/if}
+
+<style>
+  .hold-toggle {
+    margin-bottom: 4px;
+  }
+  .hold-hint {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+</style>

@@ -59,6 +59,8 @@ options:
   translation:
     heading: Preklad
     translateEnabled: Povoliť preklad
+    pauseUntilTranslated: "Pozastaviť, kým nepríde prvý preklad"
+    pauseUntilTranslatedHint: "Po otvorení prednášky sa video pozastaví, kým nie je pripravený prvý preklad, aby sa nepreskočil začiatok."
     personality: Štýl prekladu
     personalityStandard: Štandardný
     personalityConcise: Stručný

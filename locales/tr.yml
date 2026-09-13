@@ -59,6 +59,8 @@ options:
   translation:
     heading: Çeviri
     translateEnabled: Çeviriyi etkinleştir
+    pauseUntilTranslated: "İlk çeviri gelene kadar duraklat"
+    pauseUntilTranslatedHint: "Bir ders açıldığında ilk çeviri hazır olana kadar video duraklatılır; böylece baş kısım atlanmaz."
     personality: Çeviri stili
     personalityStandard: Standart
     personalityConcise: Kısa ve öz

@@ -59,6 +59,8 @@ options:
   translation:
     heading: الترجمة
     translateEnabled: تفعيل الترجمة
+    pauseUntilTranslated: "الإيقاف المؤقت حتى وصول أول ترجمة"
+    pauseUntilTranslatedHint: "عند فتح محاضرة، يتم إيقاف الفيديو مؤقتًا حتى تصبح أول ترجمة جاهزة، حتى لا يتم تخطي البداية."
     personality: أسلوب الترجمة
     personalityStandard: قياسي
     personalityConcise: موجز

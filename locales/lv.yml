@@ -59,6 +59,8 @@ options:
   translation:
     heading: Tulkošana
     translateEnabled: Iespējot tulkošanu
+    pauseUntilTranslated: "Apturēt, līdz pienāk pirmais tulkojums"
+    pauseUntilTranslatedHint: "Atverot lekciju, video tiek apturēts, līdz ir gatavs pirmais tulkojums, lai netiktu izlaists sākums."
     personality: Tulkošanas stils
     personalityStandard: Standarta
     personalityConcise: Kodolīgs

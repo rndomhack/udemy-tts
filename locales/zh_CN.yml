@@ -59,6 +59,8 @@ options:
   translation:
     heading: 翻译
     translateEnabled: 启用翻译
+    pauseUntilTranslated: "等待首个翻译后再播放"
+    pauseUntilTranslatedHint: "打开讲座后，视频会暂停，直到首个翻译准备就绪，以免跳过开头。"
     personality: 翻译风格
     personalityStandard: 标准
     personalityConcise: 简洁

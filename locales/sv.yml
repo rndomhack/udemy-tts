@@ -59,6 +59,8 @@ options:
   translation:
     heading: Översättning
     translateEnabled: Aktivera översättning
+    pauseUntilTranslated: "Pausa tills den första översättningen kommer"
+    pauseUntilTranslatedHint: "När en föreläsning öppnas pausas videon tills den första översättningen är klar, så att början inte hoppas över."
     personality: Översättningsstil
     personalityStandard: Standard
     personalityConcise: Kortfattad

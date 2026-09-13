@@ -59,6 +59,8 @@ options:
   translation:
     heading: Переклад
     translateEnabled: Увімкнути переклад
+    pauseUntilTranslated: "Пауза до першого перекладу"
+    pauseUntilTranslatedHint: "Після відкриття лекції відео призупиняється, доки не буде готовий перший переклад, щоб початок не пропускався."
     personality: Стиль перекладу
     personalityStandard: Стандартний
     personalityConcise: Стислий

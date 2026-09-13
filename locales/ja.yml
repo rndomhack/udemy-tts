@@ -59,6 +59,8 @@ options:
   translation:
     heading: 翻訳
     translateEnabled: 翻訳を有効にする
+    pauseUntilTranslated: "最初の翻訳が届くまで一時停止する"
+    pauseUntilTranslatedHint: "講義を開いた直後、最初の翻訳が届くまで動画を一時停止します。冒頭の読み上げが飛ぶのを防ぎます。"
     personality: 翻訳スタイル
     personalityStandard: 標準
     personalityConcise: 簡潔

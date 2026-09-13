@@ -59,6 +59,8 @@ options:
   translation:
     heading: Vertaling
     translateEnabled: Vertaling inschakelen
+    pauseUntilTranslated: "Pauzeren tot de eerste vertaling binnen is"
+    pauseUntilTranslatedHint: "Bij het openen van een les wordt de video gepauzeerd totdat de eerste vertaling klaar is, zodat het begin niet wordt overgeslagen."
     personality: Vertaalstijl
     personalityStandard: Standaard
     personalityConcise: Beknopt

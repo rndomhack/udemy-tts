@@ -59,6 +59,8 @@ options:
   translation:
     heading: Dịch
     translateEnabled: Bật dịch
+    pauseUntilTranslated: "Tạm dừng cho đến khi có bản dịch đầu tiên"
+    pauseUntilTranslatedHint: "Khi mở một bài giảng, video sẽ tạm dừng cho đến khi bản dịch đầu tiên sẵn sàng, để không bỏ lỡ phần mở đầu."
     personality: Phong cách dịch
     personalityStandard: Tiêu chuẩn
     personalityConcise: Ngắn gọn
