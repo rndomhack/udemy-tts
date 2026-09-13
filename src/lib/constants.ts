@@ -5,6 +5,7 @@ import type { ExtensionSettings, ProviderId, ResponseFormat, SubtitleStyle } fro
 
 export interface ModelPreset {
   id: string;
+  model?: string;
   label: string;
   reasoning?: string;
   responseFormat?: ResponseFormat;
@@ -39,10 +40,18 @@ export const MODEL_PRESETS: Record<
   openrouter: [
     {
       id: 'deepseek/deepseek-v4-flash',
+      model: 'deepseek/deepseek-v4-flash-0731',
       label: 'DeepSeek V4 Flash',
       reasoning: 'none',
       responseFormat: 'jsonSchema',
       noteKey: 'deepseekV4Flash',
+    },
+    {
+      id: 'deepseek/deepseek-v4.1-flash',
+      label: 'DeepSeek V4.1 Flash',
+      reasoning: 'none',
+      responseFormat: 'jsonSchema',
+      noteKey: 'deepseekV41Flash',
     },
     {
       id: 'qwen/qwen3.6-flash',
@@ -51,8 +60,36 @@ export const MODEL_PRESETS: Record<
       responseFormat: 'jsonObject',
       noteKey: 'qwen36Flash',
     },
+    {
+      id: 'qwen/qwen3.7-flash',
+      label: 'Qwen 3.7 Flash',
+      reasoning: 'none',
+      responseFormat: 'jsonObject',
+      noteKey: 'qwen37Flash',
+    },
+    {
+      id: 'qwen/qwen3.8-flash',
+      label: 'Qwen 3.8 Flash',
+      reasoning: 'none',
+      responseFormat: 'jsonSchema',
+      noteKey: 'qwen38Flash',
+    },
+    {
+      id: 'z-ai/glm-5.3-flash',
+      label: 'GLM 5.3 Flash',
+      reasoning: 'low',
+      responseFormat: 'jsonObject',
+      noteKey: 'glm53Flash',
+    },
   ],
 };
+
+export function resolveModelName(
+  provider: Exclude<ProviderId, 'openai-compatible' | 'device'>,
+  model: string,
+): string {
+  return MODEL_PRESETS[provider].find((p) => p.id === model)?.model ?? model;
+}
 
 export function findModelReasoning(
   provider: Exclude<ProviderId, 'openai-compatible' | 'device'>,

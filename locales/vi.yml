@@ -154,8 +154,12 @@ guide:
     gpt54Mini: "Tốc độ: Trung bình | Độ chính xác: Cao | Chi phí: Cao | Chi phí cao, nên phù hợp khi bạn ưu tiên chất lượng."
     gpt54Nano: "Tốc độ: Trung bình | Độ chính xác: Trung bình | Chi phí: Thấp | Rẻ hơn mini, nhưng thực dụng cho việc dịch."
     gpt56Luna: "Tốc độ: Cao | Độ chính xác: Cao | Chi phí: Thấp | Rẻ như nano, với chất lượng dịch cao — được đề xuất."
-    deepseekV4Flash: "Tốc độ: Trung bình | Độ chính xác: Cao | Chi phí: Thấp | Khá rẻ nhưng độ chính xác cao. Lựa chọn hàng đầu khi chi phí quan trọng."
+    deepseekV4Flash: "Tốc độ: Cao | Độ chính xác: Cao | Chi phí: Thấp | Khá rẻ nhưng độ chính xác cao. Lựa chọn hàng đầu khi chi phí quan trọng."
+    deepseekV41Flash: "Tốc độ: Cao | Độ chính xác: Cao | Chi phí: Thấp | Bản kế nhiệm của V4 Flash, phản hồi nhanh và độ chính xác cao. Chi phí cao hơn một chút."
     qwen36Flash: "Tốc độ: Cao | Độ chính xác: Trung bình | Chi phí: Thấp | Rẻ, và độ chính xác cũng khá tốt."
+    qwen37Flash: "Tốc độ: Trung bình | Độ chính xác: Trung bình | Chi phí: Thấp | Tốc độ ở mức vừa phải, nhưng chi phí thuộc nhóm thấp nhất."
+    qwen38Flash: "Tốc độ: Trung bình | Độ chính xác: Cao | Chi phí: Thấp | Độ chính xác cao, nhưng phản hồi chậm hơn các mô hình khác."
+    glm53Flash: "Tốc độ: Cao | Độ chính xác: Cao | Chi phí: Thấp | Phản hồi nhanh và ổn định. Lựa chọn khi bạn muốn một phương án thay cho DeepSeek."
   gemini:
     tagline: "Có sẵn Gemini, cùng với Gemma miễn phí. Nên chọn nếu bạn chưa chắc dùng gì."
     step1: "Mở Google AI Studio và đăng nhập bằng tài khoản Google của bạn."

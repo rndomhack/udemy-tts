@@ -154,8 +154,12 @@ guide:
     gpt54Mini: "Hız: Orta | Doğruluk: Yüksek | Maliyet: Yüksek | Maliyet yüksek, bu yüzden kaliteyi önceliklendirdiğinizde uygundur."
     gpt54Nano: "Hız: Orta | Doğruluk: Orta | Maliyet: Düşük | mini'den daha ucuz, ancak çeviri için pratiktir."
     gpt56Luna: "Hız: Yüksek | Doğruluk: Yüksek | Maliyet: Düşük | nano kadar ucuz, yüksek çeviri kalitesiyle — önerilir."
-    deepseekV4Flash: "Hız: Orta | Doğruluk: Yüksek | Maliyet: Düşük | Oldukça ucuz, yine de doğruluğu yüksek. Maliyet önemliyken en iyi tercih."
+    deepseekV4Flash: "Hız: Yüksek | Doğruluk: Yüksek | Maliyet: Düşük | Oldukça ucuz, yine de doğruluğu yüksek. Maliyet önemliyken en iyi tercih."
+    deepseekV41Flash: "Hız: Yüksek | Doğruluk: Yüksek | Maliyet: Düşük | V4 Flash modelinin halefi; hızlı yanıt verir ve doğruluğu yüksektir. Maliyeti biraz daha yüksektir."
     qwen36Flash: "Hız: Yüksek | Doğruluk: Orta | Maliyet: Düşük | Ucuz, ve doğruluğu da fena değil."
+    qwen37Flash: "Hız: Orta | Doğruluk: Orta | Maliyet: Düşük | Hızı orta düzeydedir, ancak maliyeti en düşükler arasındadır."
+    qwen38Flash: "Hız: Orta | Doğruluk: Yüksek | Maliyet: Düşük | Doğruluğu yüksektir, ancak yanıtları diğerlerinden daha yavaştır."
+    glm53Flash: "Hız: Yüksek | Doğruluk: Yüksek | Maliyet: Düşük | Hızlı ve istikrarlı yanıtlar verir. DeepSeek dışında bir seçenek istediğinizde tercih edilir."
   gemini:
     tagline: "Gemini mevcut, ayrıca ücretsiz Gemma var. Hangisini seçeceğinizden emin değilseniz önerilir."
     step1: "Google AI Studio'yu açın ve Google hesabınızla oturum açın."

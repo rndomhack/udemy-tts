@@ -1,4 +1,4 @@
-import { findModelReasoning, modelResponseFormat } from '../../constants';
+import { findModelReasoning, modelResponseFormat, resolveModelName } from '../../constants';
 import { createLogger } from '../../logger';
 import type { ProviderConfig, ProviderId } from '../../types';
 import { createGeminiProvider } from './gemini';
@@ -21,14 +21,14 @@ export function createProvider(
     case 'gemini':
       return createGeminiProvider(
         config.apiKey,
-        config.model,
+        resolveModelName('gemini', config.model),
         findModelReasoning('gemini', config.model),
       );
     case 'openai':
       return createChatCompletionsProvider({
         id,
         apiKey: config.apiKey,
-        model: config.model,
+        model: resolveModelName('openai', config.model),
         baseUrl: 'https://api.openai.com/v1',
         tokenParam: 'max_completion_tokens',
         responseFormat: 'jsonSchema',
@@ -39,7 +39,7 @@ export function createProvider(
       return createChatCompletionsProvider({
         id,
         apiKey: config.apiKey,
-        model: config.model,
+        model: resolveModelName('openrouter', config.model),
         baseUrl: 'https://openrouter.ai/api/v1',
         tokenParam: 'max_tokens',
         responseFormat: modelResponseFormat('openrouter', config.model),

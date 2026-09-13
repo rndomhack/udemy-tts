@@ -154,8 +154,12 @@ guide:
     gpt54Mini: "Rýchlosť: Stredná | Presnosť: Vysoká | Cena: Vysoká | Cena je vysoká, preto sa hodí, keď uprednostňujete kvalitu."
     gpt54Nano: "Rýchlosť: Stredná | Presnosť: Stredná | Cena: Nízka | Lacnejší ako mini, no na preklad praktický."
     gpt56Luna: "Rýchlosť: Vysoká | Presnosť: Vysoká | Cena: Nízka | Rovnako lacný ako nano, s vysokou kvalitou prekladu — odporúčané."
-    deepseekV4Flash: "Rýchlosť: Stredná | Presnosť: Vysoká | Cena: Nízka | Dosť lacný, no s vysokou presnosťou. Najlepšia voľba, keď záleží na cene."
+    deepseekV4Flash: "Rýchlosť: Vysoká | Presnosť: Vysoká | Cena: Nízka | Dosť lacný, no s vysokou presnosťou. Najlepšia voľba, keď záleží na cene."
+    deepseekV41Flash: "Rýchlosť: Vysoká | Presnosť: Vysoká | Cena: Nízka | Nástupca V4 Flash s rýchlymi odpoveďami a vysokou presnosťou. Cena je o niečo vyššia."
     qwen36Flash: "Rýchlosť: Vysoká | Presnosť: Stredná | Cena: Nízka | Lacný a presnosť je tiež slušná."
+    qwen37Flash: "Rýchlosť: Stredná | Presnosť: Stredná | Cena: Nízka | Rýchlosť je priemerná, ale cena patrí k najnižším."
+    qwen38Flash: "Rýchlosť: Stredná | Presnosť: Vysoká | Cena: Nízka | Presnosť je vysoká, ale odpovede sú pomalšie než u ostatných."
+    glm53Flash: "Rýchlosť: Vysoká | Presnosť: Vysoká | Cena: Nízka | Rýchle a stabilné odpovede. Voľba, keď chcete alternatívu k DeepSeeku."
   gemini:
     tagline: "K dispozícii je Gemini, plus bezplatná Gemma. Odporúčané, ak si nie ste istí, čo vybrať."
     step1: "Otvorte Google AI Studio a prihláste sa účtom Google."

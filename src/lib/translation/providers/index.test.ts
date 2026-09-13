@@ -107,13 +107,39 @@ describe('createProvider request bodies', () => {
     expect(system).toBe('sys');
   });
 
-  it('openrouter: unlisted model defaults to "none" (no response_format, gets the suffix)', async () => {
+  it('openrouter: preset id is sent as the mapped API model name', async () => {
+    const fn = mockFetch(chatOk);
+    await createProvider('openrouter', {
+      apiKey: 'k',
+      model: 'deepseek/deepseek-v4-flash',
+    }).complete(req);
+    expect(sentBody(fn).model).toBe('deepseek/deepseek-v4-flash-0731');
+  });
+
+  it('openrouter: a preset without a model mapping is sent by its id', async () => {
+    const fn = mockFetch(chatOk);
+    await createProvider('openrouter', { apiKey: 'k', model: 'qwen/qwen3.8-flash' }).complete(req);
+    const body = sentBody(fn);
+    expect(body.model).toBe('qwen/qwen3.8-flash');
+    expect((body.response_format as { type: string }).type).toBe('json_schema');
+  });
+
+  it('openrouter: glm preset sends a reasoning effort instead of disabling it', async () => {
+    const fn = mockFetch(chatOk);
+    await createProvider('openrouter', { apiKey: 'k', model: 'z-ai/glm-5.3-flash' }).complete(req);
+    const body = sentBody(fn);
+    expect(body.reasoning).toEqual({ effort: 'low' });
+    expect(body.response_format).toEqual({ type: 'json_object' });
+  });
+
+  it('openrouter: unlisted model is sent as-is and defaults to "none" (no response_format, gets the suffix)', async () => {
     const fn = mockFetch(chatOk);
     await createProvider('openrouter', {
       apiKey: 'k',
       model: 'some/unknown-model',
     }).complete(req);
     const body = sentBody(fn);
+    expect(body.model).toBe('some/unknown-model');
     expect(body.response_format).toBeUndefined();
     const system = (body.messages as Array<{ role: string; content: string }>)[0].content;
     expect(system).toContain('Respond with only this JSON');

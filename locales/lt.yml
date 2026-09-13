@@ -154,8 +154,12 @@ guide:
     gpt54Mini: "Greitis: vidutinis | Tikslumas: aukštas | Kaina: aukštas | Kaina aukšta, todėl tinka, kai prioritetas – kokybė."
     gpt54Nano: "Greitis: vidutinis | Tikslumas: vidutinis | Kaina: žema | Pigesnis nei mini, bet praktiškas vertimui."
     gpt56Luna: "Greitis: aukštas | Tikslumas: aukštas | Kaina: žema | Toks pat pigus kaip nano, su aukšta vertimo kokybe — rekomenduojama."
-    deepseekV4Flash: "Greitis: vidutinis | Tikslumas: aukštas | Kaina: žema | Gana pigus, tačiau tikslumas aukštas. Geriausias pasirinkimas, kai svarbi kaina."
+    deepseekV4Flash: "Greitis: aukštas | Tikslumas: aukštas | Kaina: žema | Gana pigus, tačiau tikslumas aukštas. Geriausias pasirinkimas, kai svarbi kaina."
+    deepseekV41Flash: "Greitis: aukštas | Tikslumas: aukštas | Kaina: žema | V4 Flash įpėdinis: greiti atsakymai ir didelis tikslumas. Kaina šiek tiek didesnė."
     qwen36Flash: "Greitis: aukštas | Tikslumas: vidutinis | Kaina: žema | Nebrangus, o tikslumas taip pat neblogas."
+    qwen37Flash: "Greitis: vidutinis | Tikslumas: vidutinis | Kaina: žema | Greitis vidutinis, tačiau kaina viena mažiausių."
+    qwen38Flash: "Greitis: vidutinis | Tikslumas: aukštas | Kaina: žema | Tikslumas didelis, bet atsakymai lėtesni nei kitų."
+    glm53Flash: "Greitis: aukštas | Tikslumas: aukštas | Kaina: žema | Greiti ir stabilūs atsakymai. Pasirinkimas, kai norite DeepSeek alternatyvos."
   gemini:
     tagline: "Galimas Gemini, taip pat nemokamas Gemma. Rekomenduojama, jei nesate tikri, ką pasirinkti."
     step1: "Atidarykite Google AI Studio ir prisijunkite su Google paskyra."

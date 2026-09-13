@@ -154,8 +154,12 @@ guide:
     gpt54Mini: "Ātrums: vidēja | Precizitāte: augsts | Izmaksas: augsts | Izmaksas ir augstas, tāpēc piemērots, ja par prioritāti izvirzāt kvalitāti."
     gpt54Nano: "Ātrums: vidēja | Precizitāte: vidēja | Izmaksas: zemas | Lētāks par mini, taču praktisks tulkošanai."
     gpt56Luna: "Ātrums: augsts | Precizitāte: augsts | Izmaksas: zemas | Tikpat lēts kā nano, ar augstu tulkošanas kvalitāti — ieteicams."
-    deepseekV4Flash: "Ātrums: vidēja | Precizitāte: augsts | Izmaksas: zemas | Diezgan lēts, bet ar augstu precizitāti. Labākā izvēle, kad svarīgas izmaksas."
+    deepseekV4Flash: "Ātrums: augsts | Precizitāte: augsts | Izmaksas: zemas | Diezgan lēts, bet ar augstu precizitāti. Labākā izvēle, kad svarīgas izmaksas."
+    deepseekV41Flash: "Ātrums: augsts | Precizitāte: augsts | Izmaksas: zemas | V4 Flash pēctecis ar ātrām atbildēm un augstu precizitāti. Izmaksas ir nedaudz lielākas."
     qwen36Flash: "Ātrums: augsts | Precizitāte: vidēja | Izmaksas: zemas | Lēts, un precizitāte arī ir pieņemama."
+    qwen37Flash: "Ātrums: vidēja | Precizitāte: vidēja | Izmaksas: zemas | Ātrums ir vidējs, taču izmaksas ir vienas no zemākajām."
+    qwen38Flash: "Ātrums: vidēja | Precizitāte: augsts | Izmaksas: zemas | Precizitāte ir augsta, taču atbildes ir lēnākas nekā citiem."
+    glm53Flash: "Ātrums: augsts | Precizitāte: augsts | Izmaksas: zemas | Ātras un stabilas atbildes. Izvēle, kad vēlaties alternatīvu DeepSeek."
   gemini:
     tagline: "Pieejams Gemini, kā arī bezmaksas Gemma. Ieteicams, ja neesat pārliecināts, ko izvēlēties."
     step1: "Atveriet Google AI Studio un pierakstieties ar savu Google kontu."

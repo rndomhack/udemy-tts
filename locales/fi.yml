@@ -154,8 +154,12 @@ guide:
     gpt54Mini: "Nopeus: Keskitaso | Tarkkuus: Korkea | Hinta: Korkea | Hinta on korkea, joten sopii, kun priorisoit laatua."
     gpt54Nano: "Nopeus: Keskitaso | Tarkkuus: Keskitaso | Hinta: Matala | Halvempi kuin mini, mutta käytännöllinen käännökseen."
     gpt56Luna: "Nopeus: Korkea | Tarkkuus: Korkea | Hinta: Matala | Yhtä edullinen kuin nano, korkealla käännöslaadulla — suositeltu."
-    deepseekV4Flash: "Nopeus: Keskitaso | Tarkkuus: Korkea | Hinta: Matala | Melko halpa, silti tarkkuus on korkea. Paras valinta, kun hinnalla on merkitystä."
+    deepseekV4Flash: "Nopeus: Korkea | Tarkkuus: Korkea | Hinta: Matala | Melko halpa, silti tarkkuus on korkea. Paras valinta, kun hinnalla on merkitystä."
+    deepseekV41Flash: "Nopeus: Korkea | Tarkkuus: Korkea | Hinta: Matala | V4 Flashin seuraaja: nopeat vastaukset ja korkea tarkkuus. Hinta on hieman korkeampi."
     qwen36Flash: "Nopeus: Korkea | Tarkkuus: Keskitaso | Hinta: Matala | Edullinen, ja tarkkuuskin on kohtuullinen."
+    qwen37Flash: "Nopeus: Keskitaso | Tarkkuus: Keskitaso | Hinta: Matala | Nopeus on kohtalainen, mutta hinta on halvimpia."
+    qwen38Flash: "Nopeus: Keskitaso | Tarkkuus: Korkea | Hinta: Matala | Tarkkuus on korkea, mutta vastaukset ovat muita hitaampia."
+    glm53Flash: "Nopeus: Korkea | Tarkkuus: Korkea | Hinta: Matala | Nopeat ja vakaat vastaukset. Valinta silloin, kun haluat vaihtoehdon DeepSeekille."
   gemini:
     tagline: "Gemini on käytettävissä, samoin ilmainen Gemma. Suositeltu, jos et ole varma, minkä valitsisit."
     step1: "Avaa Google AI Studio ja kirjaudu sisään Google-tililläsi."

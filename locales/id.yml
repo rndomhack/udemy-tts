@@ -154,8 +154,12 @@ guide:
     gpt54Mini: "Kecepatan: Sedang | Akurasi: Tinggi | Biaya: Tinggi | Biayanya tinggi, jadi cocok saat Anda mengutamakan kualitas."
     gpt54Nano: "Kecepatan: Sedang | Akurasi: Sedang | Biaya: Rendah | Lebih murah dari mini, tetapi praktis untuk terjemahan."
     gpt56Luna: "Kecepatan: Tinggi | Akurasi: Tinggi | Biaya: Rendah | Semurah nano, dengan kualitas terjemahan tinggi — direkomendasikan."
-    deepseekV4Flash: "Kecepatan: Sedang | Akurasi: Tinggi | Biaya: Rendah | Cukup murah, namun akurasinya tinggi. Pilihan utama saat biaya menjadi pertimbangan."
+    deepseekV4Flash: "Kecepatan: Tinggi | Akurasi: Tinggi | Biaya: Rendah | Cukup murah, namun akurasinya tinggi. Pilihan utama saat biaya menjadi pertimbangan."
+    deepseekV41Flash: "Kecepatan: Tinggi | Akurasi: Tinggi | Biaya: Rendah | Penerus V4 Flash, dengan respons cepat dan akurasi tinggi. Biayanya sedikit lebih tinggi."
     qwen36Flash: "Kecepatan: Tinggi | Akurasi: Sedang | Biaya: Rendah | Murah, dan akurasinya juga cukup baik."
+    qwen37Flash: "Kecepatan: Sedang | Akurasi: Sedang | Biaya: Rendah | Kecepatannya sedang, tetapi biayanya termasuk yang paling murah."
+    qwen38Flash: "Kecepatan: Sedang | Akurasi: Tinggi | Biaya: Rendah | Akurasinya tinggi, tetapi responsnya lebih lambat dibandingkan yang lain."
+    glm53Flash: "Kecepatan: Tinggi | Akurasi: Tinggi | Biaya: Rendah | Respons cepat dan stabil. Pilihan saat Anda ingin alternatif selain DeepSeek."
   gemini:
     tagline: "Gemini tersedia, ditambah Gemma yang gratis. Direkomendasikan jika Anda ragu memilih yang mana."
     step1: "Buka Google AI Studio dan masuk dengan akun Google Anda."

@@ -154,8 +154,12 @@ guide:
     gpt54Mini: "Velocidade: Média | Precisão: Alta | Custo: Alta | O custo é alto, por isso é bom quando você prioriza a qualidade."
     gpt54Nano: "Velocidade: Média | Precisão: Média | Custo: Baixo | Mais barato que o mini, mas prático para tradução."
     gpt56Luna: "Velocidade: Alta | Precisão: Alta | Custo: Baixo | Tão barato quanto o nano, com alta qualidade de tradução — recomendado."
-    deepseekV4Flash: "Velocidade: Média | Precisão: Alta | Custo: Baixo | Bem barato, mas com alta precisão. A melhor escolha quando o custo importa."
+    deepseekV4Flash: "Velocidade: Alta | Precisão: Alta | Custo: Baixo | Bem barato, mas com alta precisão. A melhor escolha quando o custo importa."
+    deepseekV41Flash: "Velocidade: Alta | Precisão: Alta | Custo: Baixo | O sucessor do V4 Flash, com respostas rápidas e alta precisão. O custo sobe um pouco."
     qwen36Flash: "Velocidade: Alta | Precisão: Média | Custo: Baixo | Barato, e a precisão também é razoável."
+    qwen37Flash: "Velocidade: Média | Precisão: Média | Custo: Baixo | A velocidade é moderada, mas o custo está entre os mais baixos."
+    qwen38Flash: "Velocidade: Média | Precisão: Alta | Custo: Baixo | A precisão é alta, mas as respostas são mais lentas que as demais."
+    glm53Flash: "Velocidade: Alta | Precisão: Alta | Custo: Baixo | Respostas rápidas e estáveis. A escolha quando você quer uma alternativa ao DeepSeek."
   gemini:
     tagline: "O Gemini está disponível, além da Gemma gratuita. Recomendado se você está em dúvida sobre qual escolher."
     step1: "Abra o Google AI Studio e faça login com sua conta Google."

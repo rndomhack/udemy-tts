@@ -154,8 +154,12 @@ guide:
     gpt54Mini: "Hastighet: Medel | Noggrannhet: Hög | Kostnad: Hög | Kostnaden är hög, så den passar när du prioriterar kvalitet."
     gpt54Nano: "Hastighet: Medel | Noggrannhet: Medel | Kostnad: Låg | Billigare än mini, men praktisk för översättning."
     gpt56Luna: "Hastighet: Hög | Noggrannhet: Hög | Kostnad: Låg | Lika billig som nano, med hög översättningskvalitet — rekommenderas."
-    deepseekV4Flash: "Hastighet: Medel | Noggrannhet: Hög | Kostnad: Låg | Ganska billig, men ändå med hög noggrannhet. Det bästa valet när kostnaden spelar roll."
+    deepseekV4Flash: "Hastighet: Hög | Noggrannhet: Hög | Kostnad: Låg | Ganska billig, men ändå med hög noggrannhet. Det bästa valet när kostnaden spelar roll."
+    deepseekV41Flash: "Hastighet: Hög | Noggrannhet: Hög | Kostnad: Låg | Efterföljaren till V4 Flash, med snabba svar och hög noggrannhet. Kostnaden är något högre."
     qwen36Flash: "Hastighet: Hög | Noggrannhet: Medel | Kostnad: Låg | Billig, och noggrannheten är också hyfsad."
+    qwen37Flash: "Hastighet: Medel | Noggrannhet: Medel | Kostnad: Låg | Hastigheten är måttlig, men kostnaden är bland de lägsta."
+    qwen38Flash: "Hastighet: Medel | Noggrannhet: Hög | Kostnad: Låg | Noggrannheten är hög, men svaren är långsammare än de andras."
+    glm53Flash: "Hastighet: Hög | Noggrannhet: Hög | Kostnad: Låg | Snabba och stabila svar. Valet när du vill ha ett alternativ till DeepSeek."
   gemini:
     tagline: "Gemini är tillgänglig, plus gratis Gemma. Rekommenderas om du är osäker på vad du ska välja."
     step1: "Öppna Google AI Studio och logga in med ditt Google-konto."

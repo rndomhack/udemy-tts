@@ -154,8 +154,12 @@ guide:
     gpt54Mini: "Sebesség: Közepes | Pontosság: Magas | Költség: Magas | A költség magas, ezért akkor illik, ha a minőséget helyezi előtérbe."
     gpt54Nano: "Sebesség: Közepes | Pontosság: Közepes | Költség: Alacsony | Olcsóbb, mint a mini, de a fordításhoz praktikus."
     gpt56Luna: "Sebesség: Magas | Pontosság: Magas | Költség: Alacsony | Ugyanolyan olcsó, mint a nano, magas fordítási minőséggel — ajánlott."
-    deepseekV4Flash: "Sebesség: Közepes | Pontosság: Magas | Költség: Alacsony | Elég olcsó, mégis magas pontosságú. A legjobb választás, ha a költség számít."
+    deepseekV4Flash: "Sebesség: Magas | Pontosság: Magas | Költség: Alacsony | Elég olcsó, mégis magas pontosságú. A legjobb választás, ha a költség számít."
+    deepseekV41Flash: "Sebesség: Magas | Pontosság: Magas | Költség: Alacsony | A V4 Flash utódja: gyors válaszok és magas pontosság. A költség kissé magasabb."
     qwen36Flash: "Sebesség: Magas | Pontosság: Közepes | Költség: Alacsony | Olcsó, és a pontossága is tisztességes."
+    qwen37Flash: "Sebesség: Közepes | Pontosság: Közepes | Költség: Alacsony | A sebesség közepes, de a költség a legalacsonyabbak közé tartozik."
+    qwen38Flash: "Sebesség: Közepes | Pontosság: Magas | Költség: Alacsony | A pontosság magas, de a válaszok lassabbak a többinél."
+    glm53Flash: "Sebesség: Magas | Pontosság: Magas | Költség: Alacsony | Gyors és stabil válaszok. A választás, ha alternatívát szeretne a DeepSeek helyett."
   gemini:
     tagline: "A Gemini elérhető, plusz az ingyenes Gemma. Ajánlott, ha bizonytalan a választásban."
     step1: "Nyissa meg a Google AI Studiót, és jelentkezzen be Google-fiókjával."

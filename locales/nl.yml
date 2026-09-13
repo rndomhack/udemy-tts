@@ -154,8 +154,12 @@ guide:
     gpt54Mini: "Snelheid: Gemiddeld | Nauwkeurigheid: Hoog | Kosten: Hoog | De kosten zijn hoog, dus geschikt wanneer u kwaliteit vooropstelt."
     gpt54Nano: "Snelheid: Gemiddeld | Nauwkeurigheid: Gemiddeld | Kosten: Laag | Goedkoper dan mini, maar praktisch voor vertaling."
     gpt56Luna: "Snelheid: Hoog | Nauwkeurigheid: Hoog | Kosten: Laag | Net zo goedkoop als nano, met hoge vertaalkwaliteit — aanbevolen."
-    deepseekV4Flash: "Snelheid: Gemiddeld | Nauwkeurigheid: Hoog | Kosten: Laag | Vrij goedkoop, met toch een hoge nauwkeurigheid. De beste keuze wanneer kosten belangrijk zijn."
+    deepseekV4Flash: "Snelheid: Hoog | Nauwkeurigheid: Hoog | Kosten: Laag | Vrij goedkoop, met toch een hoge nauwkeurigheid. De beste keuze wanneer kosten belangrijk zijn."
+    deepseekV41Flash: "Snelheid: Hoog | Nauwkeurigheid: Hoog | Kosten: Laag | De opvolger van V4 Flash, met snelle antwoorden en hoge nauwkeurigheid. De kosten liggen iets hoger."
     qwen36Flash: "Snelheid: Hoog | Nauwkeurigheid: Gemiddeld | Kosten: Laag | Goedkoop, en de nauwkeurigheid is ook redelijk."
+    qwen37Flash: "Snelheid: Gemiddeld | Nauwkeurigheid: Gemiddeld | Kosten: Laag | De snelheid is gematigd, maar de kosten behoren tot de laagste."
+    qwen38Flash: "Snelheid: Gemiddeld | Nauwkeurigheid: Hoog | Kosten: Laag | De nauwkeurigheid is hoog, maar de antwoorden zijn trager dan bij de andere."
+    glm53Flash: "Snelheid: Hoog | Nauwkeurigheid: Hoog | Kosten: Laag | Snelle en stabiele antwoorden. De keuze wanneer u een alternatief voor DeepSeek wilt."
   gemini:
     tagline: "Gemini is beschikbaar, plus het gratis Gemma. Aanbevolen als u twijfelt welke u moet kiezen."
     step1: "Open Google AI Studio en meld u aan met uw Google-account."

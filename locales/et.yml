@@ -154,8 +154,12 @@ guide:
     gpt54Mini: "Kiirus: Keskmine | Täpsus: Kõrge | Hind: Kõrge | Hind on kõrge, seega sobib, kui seate esikohale kvaliteedi."
     gpt54Nano: "Kiirus: Keskmine | Täpsus: Keskmine | Hind: Madal | Odavam kui mini, kuid tõlkimiseks praktiline."
     gpt56Luna: "Kiirus: Kõrge | Täpsus: Kõrge | Hind: Madal | Sama odav kui nano, kõrge tõlkekvaliteediga — soovitatav."
-    deepseekV4Flash: "Kiirus: Keskmine | Täpsus: Kõrge | Hind: Madal | Üsna odav, ent täpsus on kõrge. Parim valik, kui hind on oluline."
+    deepseekV4Flash: "Kiirus: Kõrge | Täpsus: Kõrge | Hind: Madal | Üsna odav, ent täpsus on kõrge. Parim valik, kui hind on oluline."
+    deepseekV41Flash: "Kiirus: Kõrge | Täpsus: Kõrge | Hind: Madal | V4 Flashi järeltulija: kiired vastused ja kõrge täpsus. Hind on veidi kõrgem."
     qwen36Flash: "Kiirus: Kõrge | Täpsus: Keskmine | Hind: Madal | Soodne, ja täpsus on samuti korralik."
+    qwen37Flash: "Kiirus: Keskmine | Täpsus: Keskmine | Hind: Madal | Kiirus on keskmine, kuid hind on üks madalamaid."
+    qwen38Flash: "Kiirus: Keskmine | Täpsus: Kõrge | Hind: Madal | Täpsus on kõrge, kuid vastused on teistest aeglasemad."
+    glm53Flash: "Kiirus: Kõrge | Täpsus: Kõrge | Hind: Madal | Kiired ja stabiilsed vastused. Valik, kui soovite DeepSeekile alternatiivi."
   gemini:
     tagline: "Saadaval on Gemini ja lisaks tasuta Gemma. Soovitatav, kui te pole kindel, millist valida."
     step1: "Avage Google AI Studio ja logige sisse oma Google’i kontoga."
